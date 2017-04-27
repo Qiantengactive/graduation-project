@@ -91,7 +91,6 @@ app.get("/delete_gongyingxiangqing", newRouter.delete_seller_goods);
 app.get("/modify_gongyingxiangqing", newRouter.modify_seller_goods);
 /*确认修改供应信息*/
 app.get("/affirm_modify_seller_goods_info", newRouter.affirm_modify_seller_goods);
-app.get("/aaa", newRouter.aaa);
 
 /*删除我的求购==》我的求购列表*/
 app.get("/delete_my-qiugoulist-xiangqing", newRouter.delete_my_qiugoulistxiangqing);
