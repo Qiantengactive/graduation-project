@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
+    <title>Title</title>
+    <script src="js/resize.js"></script>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            font-weight: normal;
+            list-style: none;
+            font-family: 微软雅黑;
+            text-decoration: none;
+            box-sizing: border-box;
+        }
+
+        body {
+            background: #f3f3f4;
+        }
+
+        .contian-wrapper {
+            width: 100%;
+            height:100vh;
+        }
+
+        .contian {
+            width: 7.5rem;
+            margin: 0 auto;
+        }
+        .login-contian{
+            height: 100%;
+            background: #f8f8f8;
+        }
+
+        .login-header {
+            width: inherit;
+            padding-top: 1.3rem;
+        }
+
+        .login-header-top {
+            width: inherit;
+            height: 1.3rem;
+            text-align: center;
+            background: #ededed;
+            position: fixed;
+            top: 0;
+            border-bottom: 0.01rem solid #c1c1c1;
+        }
+        .login-header-top-back{
+            width: 100%;
+            height: 100%;
+        }
+        .login-header-top i{
+            display: inline-block;
+            position: absolute;
+            top: 0.64rem;
+            left: 0.32rem;
+            width: 0.23rem;
+            height: 0.41rem;
+            font-size: 0;
+            cursor: pointer;
+            background: url("./img/back_03.png") no-repeat;
+            background-size: contain;
+
+        }
+        .login-header-top span {
+            width: inherit;
+            height: inherit;
+            font-size: 0.36rem;
+            color: #333333;
+            text-align: center;
+            vertical-align: middle;
+        }
+        .login-body {
+            width: 100%;
+            margin-bottom: 1.2rem;
+            font-size: 0;
+            background: #f8f8f8;
+        }
+        /*success页面*/
+        .login-body-success {
+            padding: 0.9rem 0 0.5rem 0 ;
+            text-align: center;
+
+        }
+        .login-body-success img{
+            width: 0.9rem;
+        }
+        .login-body-success-text{
+            font-size: 0.28rem;
+            line-height: 0.28rem;
+            margin-bottom: 1.25rem;
+            text-align: center;
+            color: #333333;
+        }
+        .login-body-wrapper{
+            width: 100%;
+            height: 0.95rem;
+            padding: 0 0.40rem;
+        }
+        .login-body-btn{
+            display: inline-block;
+            width: 3.15rem;
+            height: 0.95rem;
+            border: 0.01rem solid #59bb43;
+            border-radius: 0.05rem;
+            text-align: center;
+            line-height: 0.95rem;
+        }
+        .login-body-btn-1{
+            font-size: 0.3rem;
+            color: #59bb43;
+            margin-right: 0.4rem;
+            background: transparent;
+        }
+        .login-body-btn-2{
+            font-size: 0.3rem;
+            color: #ffffff;
+            background: #59bb43;
+        }
+    </style>
+</head>
+<body>
+<div class="contian-wrapper">
+    <div class="contian login-contian">
+        <div class="login-header">
+            <div class="login-header-top">
+                <i><a href="javascript:void(0)" onclick="history.go(-1)"  class="login-header-top-back"></a></i>
+                <span>发布成功</span>
+            </div>
+        </div>
+        <div class="login-body">
+            <div class="login-body-success">
+                <img src="./img/success_03.png" alt="">
+            </div>
+            <p class="login-body-success-text">
+                您的供应信息已发布成功
+            </p>
+            <p class="login-body-wrapper">
+                <span><a href="/bianjigongyingxinxi/<%=seller_tel%>" class="login-body-btn login-body-btn-1 ">继续发布</a></span>
+                <span><a href="/my-gongyinglist/<%=seller_tel%>" class="login-body-btn login-body-btn-2">我的供应列表</a></span>
+            </p>
+        </div>
+    </div>
+</div>
+</body>
+</html>

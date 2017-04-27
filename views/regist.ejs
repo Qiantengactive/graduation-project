@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
+    <title>Title</title>
+    <script src="js/resize.js"></script>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            font-weight: normal;
+            list-style: none;
+            font-family: 微软雅黑;
+            text-decoration: none;
+            box-sizing: border-box;
+        }
+
+        body {
+            background: #f3f3f4;
+        }
+
+        .contian-wrapper {
+            width: 100%;
+            height: 100vh;
+        }
+
+        .contian {
+            width: 7.5rem;
+            margin: 0 auto;
+        }
+
+        .my-header {
+            width: inherit;
+            padding-top: 1.3rem;
+        }
+
+        .my-header-top {
+            position: fixed;
+            top: 0;
+            z-index: 30;
+            width: inherit;
+            height: 1.3rem;
+            border-bottom: 0.01rem solid #c1c1c1;
+            text-align: center;
+            background: #ededed;
+        }
+
+        .my-header-top-back {
+            display: inline-block;
+            width: 100%;
+            height: 100%;
+        }
+
+        .my-header-top i {
+            display: inline-block;
+            position: absolute;
+            top: 0.64rem;
+            left: 0.32rem;
+            width: 0.23rem;
+            height: 0.41rem;
+            font-size: 0;
+            cursor: pointer;
+            background: url("./img/back_03.png") no-repeat;
+            background-size: contain;
+        }
+
+        .my-header-top span {
+            width: inherit;
+            height: inherit;
+            font-size: 0.36rem;
+            color: #333333;
+            text-align: center;
+            vertical-align: middle;
+        }
+
+        .my-contain {
+            height: 100vh;
+        }
+
+        .my-body {
+            width: 100%;
+            margin-bottom: 1.2rem;
+            background: #ffffff;
+        }
+
+        .my-body-space {
+            height: 0.12rem;
+            width: inherit;
+            background: #f9f9f9;
+            border-bottom: 0.01rem solid #c1c1c1;
+        }
+
+        .my-body-top {
+            width: inherit;
+            height: 1rem;
+            line-height: 1rem;
+            border-bottom: 0.01rem solid #c1c1c1;
+            font-size: 0;
+            background: #f9f9f9;
+        }
+
+        .label {
+            font-size: 0.28rem;
+            padding-left: 0.8rem;
+        }
+
+        .info_tel {
+            font-size: 0.26rem;
+            width: 5rem;
+            outline: none;
+            border: none;
+            background: transparent;
+        }
+
+        .login-body-submit {
+            display: block;
+            width: 5.9rem;
+            height: 0.8rem;
+            font-size: 0.3rem;
+            outline: none;
+            border: none;
+            border-radius: 0.1rem;
+            color: #ffffff;
+            background: #59bb43;
+            margin: 0.85rem auto 0.7rem auto;
+        }
+
+        .hidden {
+            opacity: 0;
+        }
+    </style>
+</head>
+<body>
+<div class="contian-wrapper">
+    <div class="contian my-contain">
+        <div class="my-header">
+            <div class="my-header-top">
+                <i><a href="javascript:void(0)" onclick="history.go(-1)" class="my-header-top-back"></a></i>
+                <span>注册</span>
+            </div>
+        </div>
+        <div class="my-body">
+            <div class="my-body-space"></div>
+            <div class="my-body-top">
+                <form action="/do_regist">
+                    <label for="info_tel" class="label">手机号：</label>
+                    <input type="text" maxlength="11" name="info_tel" class="info_tel" id="info_tel" value=""
+                           placeholder="请您输入手机号进行注册">
+                    <input type="button" value="下一步" class="login-body-submit">
+                </form>
+            </div>
+        </div>
+    </div>
+</body>
+<script src="/js/jquery.min.js"></script>
+<script>
+    $(function () {
+        var a = false;
+        $(".info_tel").blur(function () {
+            var phone = $('#info_tel').val().trim();
+            var mobile_reg = /^((13[0-9])|((17[0-9]))|(14[0-9])|(15([0-9]))|(18[0-9]))\d{8}$/;
+            if (!mobile_reg.test(phone)) {
+                alert("请输入有效的手机号码");
+                return;
+            }
+            var info_tel = $(".info_tel").val().trim();
+            $.get("/judge_Tel?info_tel=" + info_tel, function (data) {
+                if (data.code) {
+                    alert("手机号已经注册，请更换手机号码")
+                    return;
+                } else {
+                    a = true;
+                }
+            }, "json")
+        });
+        $(".login-body-submit").click(function () {
+            if (a) {
+                $("form").submit();
+            }else{
+                alert('请再次点击');
+            }
+        });
+    })
+</script>
+</html>

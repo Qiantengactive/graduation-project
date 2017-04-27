@@ -1,0 +1,243 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
+    <title>Title</title>
+    <script src="js/resize.js"></script>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            font-weight: normal;
+            list-style: none;
+            font-family: 微软雅黑;
+            text-decoration: none;
+            box-sizing: border-box;
+        }
+
+        body {
+            background: #f3f3f4;
+        }
+
+        .contian-wrapper {
+            width: 100%;
+            height: 100vh;
+        }
+
+        .contian {
+            width: 7.5rem;
+            margin: 0 auto;
+        }
+
+        .login-contian {
+            height: 100%;
+            background: #f8f8f8;
+        }
+
+        .login-header {
+            width: inherit;
+            padding-top: 1.3rem;
+        }
+
+        .login-header-top {
+            width: inherit;
+            height: 1.3rem;
+            text-align: center;
+            background: #ededed;
+            position: fixed;
+            top: 0;
+            border-bottom: 0.01rem solid #c1c1c1;
+        }
+
+        .login-header-top-back {
+            width: 100%;
+            height: 100%;
+        }
+
+        .login-header-top i {
+            display: inline-block;
+            position: absolute;
+            top: 0.64rem;
+            left: 0.32rem;
+            width: 0.23rem;
+            height: 0.41rem;
+            font-size: 0;
+            cursor: pointer;
+            background: url("img/back_03.png") no-repeat;
+            background-size: contain;
+
+        }
+
+        .login-header-top span {
+            width: inherit;
+            height: inherit;
+            font-size: 0.36rem;
+            color: #333333;
+            text-align: center;
+            vertical-align: middle;
+        }
+
+        .login-body {
+            width: 100%;
+            margin-bottom: 1.2rem;
+            background: #f8f8f8;
+        }
+
+        .login-body-img {
+            width: 5.9rem;
+            height: 3.8rem;
+            margin: 0 auto;
+        }
+
+        .p-img {
+            width: 2rem;
+            height: 2rem;
+            margin: 0.3rem 0.5rem 0.7rem 2rem;
+            background: url("img/login-body-img") no-repeat;
+        }
+
+        .login-body-txt {
+            width: 2.3rem;
+            height: 0.5rem;
+            margin: 3rem 0rem 0rem -2.6rem;
+            font-size: 0.4rem;
+        }
+
+        .login-body-input {
+            width: inherit;
+            font-size: 0;
+            border-top: 0.01rem solid #d9d9d9;
+        }
+
+        .login-body-input-wrapper {
+            width: inherit;
+            height: 1.1rem;
+            background: #ffffff;
+            border-bottom: 0.01rem solid #d9d9d9;
+        }
+
+        .login-body-input-wrapper-1 {
+            height: 1rem;
+            width: 5.9rem;
+            margin: 0 auto;
+            font-size: 0;
+        }
+
+        .login-img {
+            display: inline-block;
+            width: 0.92rem;
+        }
+
+        .login-body-input-wrapper-text {
+            height: inherit;
+            width: 4.98rem;
+            vertical-align: top;
+            outline: none;
+            border: none;
+            border-radius: 0.05rem;
+            color: #bbbbbb;
+            font-size: 0.36rem;
+        }
+
+        .login-body-submit {
+            display: block;
+            width: 5.9rem;
+            height: 0.8rem;
+            font-size: 0.3rem;
+            outline: none;
+            border: none;
+            border-radius: 0.1rem;
+            color: #ffffff;
+            background: #59bb43;
+            margin: 0.85rem auto 0.7rem auto;
+            -webkit-appearance: none; /*去除系统默认的样式*/
+            -webkit-tap-highlight-color: rgba(0, 0, 0, 0); /* 点击高亮的颜色*/
+        }
+
+        .login-free {
+            width: 5.9rem;
+            margin: 0 auto;
+            font-size: 0.32rem;
+        }
+
+        .login-free a {
+            color: #535353;
+        }
+    </style>
+</head>
+<body>
+<div class="contian-wrapper">
+    <div class="contian login-contian">
+        <div class="login-header">
+            <div class="login-header-top">
+                <i><a href="javascript:void(0)" onclick="history.go(-1)" class="login-header-top-back"></a></i>
+                <span>会员登录</span>
+            </div>
+        </div>
+        <div class="login-body">
+            <div class="login-body-img">
+                <img class="p-img" src="/img/login-body-img.png">
+                <span class="login-body-txt">豫农管家</span>
+            </div>
+            <div class="login-body-input">
+                <form action="/do_login">
+                    <div class="login-body-input-wrapper">
+                        <div class="login-body-input-wrapper-1">
+                            <img src="img/login-_01.png" alt="" class="login-img">
+                            <input type="text" id="tel" name="user_tel" placeholder="请输入登录手机号"
+                                   class="login-body-input-wrapper-text">
+                        </div>
+                    </div>
+                    <div class="login-body-input-wrapper">
+                        <div class="login-body-input-wrapper-1">
+                            <img src="img/login-_02.png" alt="" class="login-img">
+                            <input type="password" id="user_pwd" name="user_pwd" placeholder="请输入密码"
+                                   class="login-body-input-wrapper-text">
+                        </div>
+                    </div>
+                    <input type="button" id="btn" value="登陆" class="login-body-submit">
+                </form>
+                <div class="login-free"><a href="/regist">免费注册</a></div>
+            </div>
+        </div>
+    </div>
+</div>
+</body>
+<script src="/js/jquery.min.js"></script>
+<script>
+    $(function () {
+        $("#btn").click(function () {
+            var a = true;
+            var phone = $('#tel').val().trim();
+            if (!phone) {
+                alert("请输入有效的手机号码");
+                a = false;
+                return;
+            }
+
+            var pwd = $("#btn").val().trim();
+            if (!pwd) {
+                alert("请输入密码");
+                a = false;
+                return;
+            }
+//            $.get("/judge_Tel?info_tel=" + info_tel, function (data) {
+//                if (data.code) {
+//                    alert("手机号已经注册，请更换手机号码")
+//                    return;
+//                } else {
+//                    a = true;
+//                }
+//            }, "json")
+//                });
+//        $(".login-body-submit").click(function () {
+            if (a) {
+                $("form").submit();
+            } else {
+                alert('请再次点击');
+            }
+        });
+    });
+</script>
+</html>

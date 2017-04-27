@@ -1,0 +1,592 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
+    <title>Title</title>
+    <script src="/js/resize.js"></script>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            font-weight: normal;
+            list-style: none;
+            font-family: 微软雅黑;
+            text-decoration: none;
+            box-sizing: border-box;
+        }
+
+        body {
+            background: #f3f3f4;
+        }
+
+        .contian-wrapper {
+            width: 100%;
+        }
+
+        .contian {
+            width: 7.5rem;
+            margin: 0 auto;
+        }
+
+        .qiugouxinagqing-header {
+            width: inherit;
+            padding-top: 1.3rem;
+        }
+
+        .qiugouxinagqing-header-top {
+            position: fixed;
+            top: 0;
+            z-index: 30;
+            width: inherit;
+            height: 1.3rem;
+            border-bottom: 0.01rem solid #c1c1c1;
+            text-align: center;
+            background: #ededed;
+        }
+
+        .qiugouxinagqing-header-top-back {
+            display: inline-block;
+            width: 100%;
+            height: 100%;
+        }
+
+        .qiugouxinagqing-header-top i {
+            display: inline-block;
+            position: absolute;
+            top: 0.64rem;
+            left: 0.32rem;
+            width: 0.23rem;
+            height: 0.41rem;
+            font-size: 0;
+            cursor: pointer;
+            background: url("/img/back_03.png") no-repeat;
+            background-size: contain;
+        }
+
+        .qiugouxinagqing-header-top span {
+            width: inherit;
+            height: inherit;
+            font-size: 0.36rem;
+            color: #333333;
+            text-align: center;
+            vertical-align: middle;
+        }
+
+        .qiugouxinagqing-contain {
+            /*height:100vh;*/
+        }
+
+        .qiugouxinagqing-body {
+            width: 100%;
+            background: #e3e3e3;
+        }
+
+        /*.qiugouxinagqing-tel {*/
+        /*width: 100%;*/
+        /*!*height: 0.8rem;*!*/
+        /*font-size: 0;*/
+        /*border-radius: 0.05rem;*/
+        /*padding: 1rem 0 2rem 0;*/
+
+        /*}*/
+
+        .qiugouxinagqing-tel {
+            display: block;
+            width: 6.7rem;
+            height: 0.8rem;
+            outline: none;
+            border: none;
+            margin: 0.5rem auto 1rem auto;
+            font-size: 0.3rem;
+            line-height: 0.8rem;
+            text-align: center;
+            color: #ffffff;
+            background: #59bb43;
+            border-radius: 0.1rem;
+            -webkit-appearance: none; /*清除浏览器默认的样式 */
+        }
+
+        /*编辑*/
+        .qiugouxinagqing-body-top {
+            width: inherit;
+            height: 1.15rem;
+            padding-left: 0.2rem;
+            padding-right: 0.2rem;
+            padding-top: 0.25rem;
+            /*margin-bottom: 0.85rem;*/
+            font-size: 0;
+            background: #ffffff;
+        }
+
+        .qiugouxinagqing-body-top span {
+            display: inline-block;
+            width: 1.25rem;
+            height: 0.9rem;
+            font-size: 0.22rem;
+            vertical-align: top;
+            color: #ff0000;
+
+        }
+
+        .qiugouxinagqing-body-top p {
+            display: inline-block;
+            width: 5.45rem;
+            font-size: 0.22rem;
+            color: #777777;
+        }
+
+        .contian-info-body {
+            background: #f8f8f8;
+            font-size: 0;
+            /*padding-bottom: 0.35rem;*/
+        }
+
+        /*#chanpin-info-title-right-p-1{*/
+        /*margin-top: 0;*/
+        /*}*/
+        .contian-info-body p {
+            padding: 0 0.3rem;
+            padding-top: 0.35rem;
+        }
+
+        .contian-info-body p span {
+            font-size: 0.3rem;
+            color: #777777;
+        }
+
+        .contian-info-body-title-1 {
+            display: inline-block;
+            width: 2rem;
+        }
+
+        /*.qgxq-desc {*/
+        /*font-size: 0.28rem;*/
+        /*color: #777777;*/
+        /*}*/
+
+        .qgxq-btn {
+            padding: 0.4rem 0.3rem 0 0.3rem;
+            width: 100%;
+            height: 1.3rem;
+        }
+
+        .qgxq-button {
+            display: inline-block;
+            width: 1.55rem;
+            height: 0.5rem;
+            line-height: 0.5rem;
+            font-size: 0;
+            border: 0.01rem solid #59bb43;
+            border-radius: 0.02rem;
+            float: left;
+        }
+
+        .qgxq-button a {
+            display: inline-block;
+            width: 100%;
+            height: 100%;
+            text-align: center;
+            font-size: 0.24rem;
+        }
+
+        .qgxq—de a {
+            color: #ffffff;
+        }
+
+        .qgxq—de {
+            background: #59bb43;
+            margin-right: 0.5rem;
+            float: right;
+        }
+
+        .qgxq-set a {
+            color: #59bb43;
+        }
+
+        .qgxq-set {
+            background: #ffffff;
+            margin-right: 0.3rem;
+            float: right;
+        }
+
+        .contian-info-body-title-1-desc {
+            display: block;
+            color: #777777;
+            padding-left: 0.3rem;
+            font-size: 0.3rem;
+            padding-top: 0.35rem;
+        }
+
+        .bianji-bg {
+            /*background: #ffffff;*/
+        }
+
+        .bianji-des-wrapper {
+            padding-bottom: 0.35rem;
+            font-size: 0;
+        }
+
+        .contian-info-body-info-1 {
+            outline: none;
+            border: none;
+            font-size: 0.3rem;
+            color: #777777;
+        }
+
+        .qgxq-desc {
+            width: 6.9rem;
+            height: 2rem;
+            margin: 0.3rem 0.3rem 0 0.3rem;
+            outline: none;
+            font-size: 0.28rem;
+            color: #777777;
+            resize: none;
+            -webkit-appearance:none;
+            border-radius:0;
+        }
+
+        #shengyu {
+            color: #777777;
+            font-size: 0.3rem;
+            padding: 0 0 0 0.3rem;
+        }
+
+        .hidden {
+            position: absolute;
+            top: 0;
+            left: 0;
+            z-index: -100;
+            opacity: 0;
+        }
+
+        /*图片上传*/
+        .ajax-photoseller {
+            width: inherit;
+            height: 2.5rem;
+            padding: 0 0.3rem;
+        }
+
+        .photo {
+            position: relative;
+            display: inline-block;
+            width: 2rem;
+            height: 2rem;
+            border: 1px solid #777777;
+            overflow: hidden;
+        }
+
+        .photo-1 {
+            margin-left: 0.1rem;
+            margin-right: 0.35rem;
+        }
+
+        .photo-3 {
+            margin-left: 0.35rem;
+            margin-right: 0.1rem;
+        }
+
+        .photo-file {
+            position: absolute;
+            top: 0;
+            left: 0;
+            z-index: 10;
+            border: none;
+            outline: none;
+            opacity: 0;
+            width: inherit;
+            height: inherit;
+            overflow: hidden;
+        }
+
+        .photo img {
+            position: absolute;
+            top: 0;
+            left: 0;
+            z-index: 9;
+            width: inherit;
+            height: inherit;
+        }
+
+        /*图片上传==插件*/
+        /*图片上传*/
+        .upload {
+            display: none;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            /*background: #494A5F;*/
+            height: 100vh;
+            /*opacity: 0.8;*/
+            z-index: 1000;
+        }
+
+        .bg {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: inherit;
+            height: inherit;
+            background: #494A5F;
+            opacity: 0.8;
+            z-index: 1010;
+        }
+
+        .zzsc-container {
+            position: relative;
+            z-index: 1020;
+            margin: 0 auto;
+            text-align: center;
+            overflow: hidden;
+        }
+
+        /*.zzsc-content {*/
+        /*font-size: 150%;*/
+        /*padding: 1em 0;*/
+        /*}*/
+        #clipArea1 {
+            margin: 0.2rem;
+            height: 3rem;
+        }
+
+        #clipArea2 {
+            margin: 0.2rem;
+            height: 3rem;
+        }
+
+        #clipArea3 {
+            margin: 0.2rem;
+            height: 3rem;
+        }
+
+        #file,
+        #clipBtn {
+            /*margin: 20px;*/
+        }
+
+        /*#view {*/
+        /*margin: 0 auto;*/
+        /*width: 200px;*/
+        /*height: 200px;*/
+        /*}*/
+        input{
+            background: transparent;
+        }
+
+    </style>
+</head>
+<body>
+<div class="contian-wrapper">
+    <div class="contian qiugouxinagqing-contain">
+        <div class="qiugouxinagqing-header">
+            <div class="qiugouxinagqing-header-top">
+                <i><a href="javascript:void(0)" onclick="history.go(-1)"
+                      class="qiugouxinagqing-header-top-back"></a></i>
+                <span>编辑供应信息</span>
+            </div>
+        </div>
+        <div class="qiugouxinagqing-body">
+            <div class="qiugouxinagqing-body-top">
+                <span>温馨提示：</span>
+                <p>我们将根据您填写的供应品类、规格、数量免费为您寻找符合要求的求购信息进行匹配。</p>
+            </div>
+            <div class="contian-info-body">
+                <form id="form_id" action="/gongying-success">
+                    <div class="hidden">
+                        <input type="text" name="tel" value="<%= info_tel %>">
+                    </div>
+                    <p id="chanpin-info-title-right-p-1" class="bianji-bg">
+                        <span class="contian-info-body-title-1">供应商品：</span>
+                        <input type="text" value="" placeholder="请输入供应商品名" class="contian-info-body-info-1 gysp" name="gysp">
+                    </p>
+                    <p class="bianji-bg">
+                        <span class="contian-info-body-title-1">类&emsp;&emsp;别：</span>
+                        <input type="text" value="" class="contian-info-body-info-1 qglb" placeholder="蔬菜、水果、水产、禽畜" name="qglb">
+                    </p>
+                    <p class="bianji-bg">
+                        <span class="contian-info-body-title-1">单&emsp;&emsp;价：</span>
+                        <input type="text" value="" class="contian-info-body-info-1 qgdj" placeholder="请输入产品价格" name="qgdj">
+                    </p>
+                    <p class="bianji-bg">
+                        <span class="contian-info-body-title-1">数&emsp;&emsp;量：</span>
+                        <input type="text" value="" class="contian-info-body-info-1 qgsl" placeholder="请输入供应数量" name="qgsl">
+                    </p>
+                    <p class="bianji-bg">
+                        <span class="contian-info-body-title-1">产&emsp;&emsp;地：</span>
+                        <input type="text" value="" class="contian-info-body-info-1 cd" placeholder="请输入产地" name="cd">
+                    </p>
+                    <div class="bianji-bg bianji-des-wrapper">
+                        <span class="contian-info-body-title-1 contian-info-body-title-1-desc">产品描述：</span>
+                        <textarea class="qgxq-desc seller_desc" form="form_id" name="seller_desc" maxlength="120"
+                                  placeholder="请对货品进行描述，如货品特色、种植情况、供货量。更详细、更精准的描述能吸引更多的供应商（不超过120字）"></textarea>
+                        <p id="shengyu">剩余120字</p>
+                    </div>
+                    <div class="ajax-photoseller bianji-bg">
+                        <div class="photo-1 photo">
+                            <input type="file" class="photo-file file1">
+                            <img src="/img/slect-pic.png" alt="" class="file-img-1">
+                        </div>
+                        <div class="photo-2 photo">
+                            <input type="file" class="photo-file file2">
+                            <img src="/img/slect-pic.png" alt="" class="file-img-2">
+                        </div>
+                        <div class="photo-3 photo">
+                            <input type="file" class="photo-file file3">
+                            <img src="/img/slect-pic.png" alt="" class="file-img-3">
+                        </div>
+                    </div>
+                    <!--临时-->
+                    <!--<a href="gongying-success.html">-->
+                    <input type="button" id="TextArea1" class="qiugouxinagqing-tel" value="保存并发布">
+                    <!--</a>-->
+                </form>
+            </div>
+        </div>
+    </div>
+    <div class="upload upload1">
+        <div class="zzsc-container">
+            <div id="clipArea1"></div>
+            <!--<input type="file" id="file">-->
+            <button id="clipBtn1">上传图片</button>
+            <button class="closeBtn">关闭</button>
+            <!--<div id="view"></div>-->
+        </div>
+        <div class="bg">
+        </div>
+    </div>
+    <div class="upload upload2">
+        <div class="zzsc-container">
+            <div id="clipArea2"></div>
+            <!--<input type="file" id="file">-->
+            <button id="clipBtn2">上传图片</button>
+            <button class="closeBtn">关闭</button>
+            <!--<div id="view"></div>-->
+        </div>
+        <div class="bg">
+        </div>
+    </div>
+    <div class="upload upload3">
+        <div class="zzsc-container">
+            <div id="clipArea3"></div>
+            <!--<input type="file" id="file">-->
+            <button id="clipBtn3">上传图片</button>
+            <button class="closeBtn">关闭</button>
+            <!--<div id="view"></div>-->
+        </div>
+        <div class="bg">
+        </div>
+    </div>
+</div>
+</body>
+<script src="/js/jquery.min.js"></script>
+<script src="/js/iscroll-zoom.js"></script>
+<script src="/js/hammer.js"></script>
+<script src="/js/jquery.photoClip.js"></script>
+<script>
+    //    发送数据
+    //    设置字体
+    $(".qgxq-desc").on("keyup", function () {
+        var txtval = $('.qgxq-desc').val().length;
+        console.log(txtval);
+        var str = parseInt(120 - txtval);
+        console.log(str);
+        if (str > 0) {
+            $('#shengyu').html('剩余可输入' + str + '字');
+        } else {
+            $('#shengyu').html('剩余可输入0字');
+            $('.qgxq-desc').val($('.qgxq-desc').val().substring(0, 120));
+        }
+    })
+    /* 手动存储数据  使用ajax提交数据
+     ajax上传本数据
+     * 1.存储三个图片数据 三次ajax请求 直接上传三张图片
+     * 2.完成上传编辑
+     * 3.开始上传全部信息
+     * 4.处理全部信息
+     * */
+    var pictData = [];
+    $("#clipArea1").photoClip({
+        width: 120, //截取区域的宽度
+        height: 120, //截取区域的高度
+        file: ".file1",  //上传图片的<input      type="file">控件的选择器或者DOM对象
+//        view: "#view",  //显示截取后图像的容器的选择器或者DOM对象。
+        ok: "#clipBtn1", //确认截图按钮的选择器或者DOM对象。
+        loadStart: function () {  //开始加载的回调函数。this指向 fileReader 对象，并将正在加载的 file 对象作为参数传入。
+            console.log("照片读取中");
+            $(".upload1").css("display", "block")
+        },
+        loadComplete: function () { //loadComplete：加载完成的回调函数。this指向图片对象，并将图片地址作为参数传入。
+            console.log("照片读取完成");
+            //打开截图页面   截图页面有两个按钮 一个上传完成一个退出
+        },
+        clipFinish: function (dataURL) { //裁剪完成的回调函数。this指向图片对象，会将裁剪出的图像数据DataURL作为参数传入。
+            /*裁剪完成 上传数据*/
+            alert("裁剪完成了");
+            alert(typeof dataURL);
+            pictData[0] =dataURL+"";
+            $(".file-img-1").attr('src', dataURL);
+        }
+    });
+    $("#clipArea2").photoClip({
+        width: 120, //截取区域的宽度
+        height: 120, //截取区域的高度
+        file: ".file2",  //上传图片的<input      type="file">控件的选择器或者DOM对象
+        ok: "#clipBtn2", //确认截图按钮的选择器或者DOM对象。
+        loadStart: function () {  //开始加载的回调函数。this指向 fileReader 对象，并将正在加载的 file 对象作为参数传入。
+            console.log("照片读取中");
+            $(".upload2").css("display", "block")
+        },
+        loadComplete: function () {
+            console.log("照片读取完成");
+        },
+        clipFinish: function (dataURL) {
+            /*裁剪完成 上传数据*/
+            alert("裁剪完成了");
+            pictData[1] = dataURL;
+            $(".file-img-2").attr('src', dataURL);
+        }
+    });
+    $("#clipArea3").photoClip({
+        width: 120, //截取区域的宽度
+        height: 120, //截取区域的高度
+        file: ".file3",  //上传图片的<input      type="file">控件的选择器或者DOM对象
+        ok: "#clipBtn3", //确认截图按钮的选择器或者DOM对象。
+        loadStart: function () {  //开始加载的回调函数。this指向 fileReader 对象，并将正在加载的 file 对象作为参数传入。
+            console.log("照片读取中");
+            $(".upload3").css("display", "block")
+        },
+        loadComplete: function () {
+            console.log("照片读取完成");
+        },
+        clipFinish: function (dataURL) {
+            /*裁剪完成 上传数据*/
+            alert("裁剪完成了");
+            pictData[2] = dataURL;
+            $(".file-img-3").attr('src', dataURL);
+        }
+    });
+    $(".closeBtn").click(function () {
+        $(".upload").css("display", "none");
+        console.log(pictData);
+    });
+    $("#TextArea1").click(function () {
+        alert(1111)
+        var userdata = {
+            tel:<%= info_tel %>,
+            gysp: $(".gysp").val(),
+            qglb: $(".qglb").val(),
+            qgdj: $(".qgdj").val(),
+            qgsl: $(".qgsl").val(),
+            cd: $(".cd").val(),
+            seller_desc: $(".seller_desc").val(),
+            pictData: pictData
+        }
+        $.post("/gongying-success", userdata, function (data) {
+            alert("window");
+            window.open("/open_seller_success?tel="+data.seller_tel, "_self");
+        });
+    });
+
+</script>
+</html>

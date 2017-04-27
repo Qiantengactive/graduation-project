@@ -1,0 +1,355 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
+    <title>Title</title>
+    <script src="js/resize.js"></script>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            font-weight: normal;
+            list-style: none;
+            font-family: 微软雅黑;
+            text-decoration: none;
+            box-sizing: border-box;
+        }
+
+        body {
+            background: #f3f3f4;
+        }
+
+        .contian-wrapper {
+            width: 100%;
+            height: 100vh;
+        }
+
+        .contian {
+            width: 7.5rem;
+            margin: 0 auto;
+        }
+
+        .login-contian {
+            height: 100%;
+            background: #f8f8f8;
+        }
+
+        .login-header {
+            width: inherit;
+            padding-top: 1.3rem;
+        }
+
+        .login-header-top {
+            width: inherit;
+            height: 1.3rem;
+            text-align: center;
+            background: #ededed;
+            position: fixed;
+            top: 0;
+            border-bottom: 0.01rem solid #c1c1c1;
+        }
+
+        .login-header-top-back {
+            width: 100%;
+            height: 100%;
+        }
+
+        .login-header-top i {
+            display: inline-block;
+            position: absolute;
+            top: 0.64rem;
+            left: 0.32rem;
+            width: 0.23rem;
+            height: 0.41rem;
+            font-size: 0;
+            cursor: pointer;
+            background: url("./img/back_03.png") no-repeat;
+            background-size: contain;
+
+        }
+
+        .login-header-top span {
+            width: inherit;
+            height: inherit;
+            font-size: 0.36rem;
+            color: #333333;
+            text-align: center;
+            vertical-align: middle;
+        }
+
+        .login-body {
+            width: 100%;
+            margin-bottom: 1.2rem;
+            background: #f8f8f8;
+        }
+
+        .login-body-input {
+            width: inherit;
+            font-size: 0;
+            border-top: 0.01rem solid #d9d9d9;
+        }
+
+        .login-body-input-wrapper {
+            width: inherit;
+            height: 1.1rem;
+            background: #ffffff;
+            border-bottom: 0.01rem solid #d9d9d9;
+        }
+
+        .login-body-input-wrapper-1 {
+            position: relative;
+            height: 1rem;
+            width: 5.9rem;
+            margin: 0 auto;
+            font-size: 0;
+            line-height: 1rem;
+        }
+
+        .reminder {
+            display: inline-block;
+            float: right;
+            height: 0.6rem;
+            width: 1.925rem;
+            line-height: 0.6rem;
+            margin-top: 0.25rem;
+            padding: 0 0.1rem;
+            font-size: 0.22rem;
+            border-radius: 0.05rem;
+            text-align: center;
+            color: #ffffff;
+            background: #59bb43;
+        }
+
+        .supernatant {
+            display: inline-block;
+            position: absolute;
+            top: 0.25rem;
+            right: 0;
+            height: 0.6rem;
+            width: 1.925rem;
+        }
+
+        .login-body-input-wrapper-text {
+            height: inherit;
+            width: 4.98rem;
+            vertical-align: top;
+            outline: none;
+            border: none;
+            border-radius: 0.05rem;
+            color: #bbbbbb;
+            font-size: 0.36rem;
+        }
+
+        .login-body-input-wrapper-text-code {
+            height: inherit;
+            width: 2.98rem;
+            outline: none;
+            border: none;
+            border-radius: 0.05rem;
+            color: #bbbbbb;
+            font-size: 0.36rem;
+        }
+
+        .login-body-submit {
+            display: block;
+            width: 5.9rem;
+            height: 0.8rem;
+            font-size: 0.3rem;
+            outline: none;
+            border: none;
+            border-radius: 0.1rem;
+            color: #ffffff;
+            background: #59bb43;
+            margin: 0.85rem auto 0.7rem auto;
+            -webkit-appearance: none;
+        }
+
+        .login-free {
+            width: 5.9rem;
+            margin: 0 auto;
+            font-size: 0.32rem;
+        }
+
+        .login-free a {
+            color: #535353;
+        }
+
+        .qiugouxinagqing-body-top {
+            width: inherit;
+            height: 0.8rem;
+            padding-left: 0.8rem;
+            padding-right: 0.2rem;
+            margin-bottom: 0.1rem;
+            font-size: 0;
+            background: #ffffff;
+        }
+
+        .qiugouxinagqing-body-top span {
+            display: inline-block;
+            width: 1.25rem;
+            height: 0.8rem;
+            font-size: 0.22rem;
+            vertical-align: top;
+            line-height: 0.8rem;
+            color: #ff0000;
+
+        }
+
+        .qiugouxinagqing-body-top p {
+            display: inline-block;
+            height: 0.8rem;
+            width: 4.45rem;
+            line-height: 0.8rem;
+            font-size: 0.22rem;
+            color: #777777;
+        }
+
+    </style>
+    <link rel="stylesheet" href="css/LArea.css">
+</head>
+<body>
+<div class="contian-wrapper">
+    <div class="contian login-contian">
+        <div class="login-header">
+            <div class="login-header-top">
+                <i><a href="javascript:void(0)" onclick="history.go(-1)" class="login-header-top-back"></a></i>
+                <span>会员注册</span>
+            </div>
+        </div>
+        <div class="login-body">
+            <div class="qiugouxinagqing-body-top">
+                <span>温馨提示：</span>
+                <p>验证码已经发送至手机+86<%= info_tel %></p>
+            </div>
+            <div class="login-body-input">
+                <form action="/regist_info" id="form_id">
+                    <div class="login-body-input-wrapper">
+                        <div class="login-body-input-wrapper-1">
+                            <input type="text" maxlength="4" id="info_ok_code" name="info_ok_code"
+                                   placeholder="请输入手机验证码"
+                                   class="login-body-input-wrapper-text-code info_ok_code">
+                            <span id="countDown" class="trigger reminder">获取验证码(60秒)</span>
+                            <span class="supernatant"></span>
+                        </div>
+                    </div>
+                    <div class="login-body-input-wrapper">
+                        <div class="login-body-input-wrapper-1">
+                            <input type="text" name="info_name" class="info_name login-body-input-wrapper-text"
+                                   placeholder="姓名">
+                        </div>
+                    </div>
+                    <div class="login-body-input-wrapper">
+                        <div class="login-body-input-wrapper-1">
+                            <input type="password" name="info_pwd" class="info_pwd login-body-input-wrapper-text"
+                                   placeholder="密码">
+                        </div>
+                    </div>
+                    <div class="login-body-input-wrapper">
+                        <div class="login-body-input-wrapper-1">
+                            <input id="demo2" type="text" readonly="" name="info_city"
+                                   class="info_city login-body-input-wrapper-text" value="河南省,郑州市,中原区"
+                                   placeholder="所在地">
+                            <input id="value2" type="hidden"/>
+                        </div>
+                    </div>
+                    <div class="login-body-input-wrapper">
+                        <div class="login-body-input-wrapper-1">
+                            <input type="text" name="info_detail_add"
+                                   class="info_detail_add login-body-input-wrapper-text" placeholder="详细地址">
+                        </div>
+                    </div>
+                    <input type="button" value="登陆" class="login-body-submit">
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
+</body>
+<script src="/js/jquery.min.js"></script>
+<!--<script src="../public/js/jquery.min.js"></script>-->
+<script src="/js/LAreaData2.js"></script>
+<script src="/js/LArea.js"></script>
+<script>
+    var area2 = new LArea();
+    area2.init({
+        'trigger': '#demo2',
+        'valueTo': '#value2',
+        'keys': {
+            id: 'value',
+            name: 'text'
+        },
+        'type': 2,
+        'data': [provs_data, citys_data, dists_data]
+    });
+    /*判断是否相等*/
+    $(function () {
+
+        /*判断相等才能提交*/
+        var RandomCode = <%= RandomCode %>;
+
+        function countDown(obj) {
+            var timeRun = 5;
+            var timer = setInterval(function () {
+                timeRun--;
+                var str = "获取验证码(" + timeRun + "秒)";
+                $(obj).html(str);
+                if (timeRun == 0) {
+                    $(obj).html('获取验证码');
+                    $(".supernatant").css("display", "none");
+                    clearInterval(timer);
+                } else {
+                    $(".supernatant").css("display", "inline-block");
+                }
+            }, 1000);
+        }
+
+        countDown("#countDown");
+        $(".trigger").click(function () {
+//        触发ajax请求
+            countDown("#countDown");
+            $.get("/againCode", function (data) {
+                RandomCode = data.RandomCode;
+            }, "json");
+        });
+        $(":button").click(function () {
+            var objCode = $(".info_ok_code").val().trim();
+            var info_name = $(".info_name").val().trim();
+            var info_pwd = $(".info_pwd").val().trim();
+            var info_detail_add = $(".info_detail_add").val().trim();
+            console.log(objCode);
+            console.log(info_name);
+            console.log(info_pwd);
+            console.log(info_detail_add);
+            if (objCode == "" || objCode == null) {
+                alert("验证码不能为空");
+                $(".info_ok_code").attr("placeholder", "验证码不能为空");
+                return false;
+            }
+            if (objCode == RandomCode) {
+                console.log("ok");
+            } else {
+                alert("您输入的验证码不对，请重新输入");
+                $(".info_ok_code").attr("value", "请重新输入");
+                return false;
+            }
+            if (info_name == "" || info_name == null) {
+                alert("名字不能为空");
+                $(".info_name").attr("placeholder", "名字不能为空");
+                return false;
+            }
+            if (info_pwd == "" || info_pwd == null) {
+                alert("密码不能为空");
+                $(".info_pwd").attr("placeholder", "密码不能为空");
+                return false;
+            }
+            if (info_detail_add == "" || info_detail_add == null) {
+                alert("详细地址不能为空");
+                $(".info_detail_add").attr("placeholder", "详细地址不能为空");
+                return false;
+            }
+            $("#form_id").submit();
+        });
+    });
+</script>
+</html>

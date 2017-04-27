@@ -1,0 +1,418 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
+    <title>Title</title>
+    <script src="js/resize.js"></script>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            font-weight: normal;
+            list-style: none;
+            font-family: 微软雅黑;
+            text-decoration: none;
+            box-sizing: border-box;
+        }
+
+        body {
+            /*background: #f3f3f4;*/
+        }
+
+        .contian-wrapper {
+            width: 100%;
+        }
+
+        .contian {
+            width: 7.5rem;
+            margin: 0 auto;
+        }
+
+        .qiugoudating-header {
+            width: inherit;
+            padding-top: 1.3rem;
+        }
+
+        .qiugoudating-header-top {
+            position: fixed;
+            top: 0;
+            z-index: 30;
+            width: inherit;
+            height: 1.3rem;
+            border-bottom: 0.01rem solid #c1c1c1;
+            text-align: center;
+            background: #ededed;
+        }
+
+        .qiugoudating-header-top-back {
+            display: inline-block;
+            width: 100%;
+            height: 100%;
+        }
+
+        .qiugoudating-header-top i {
+            display: inline-block;
+            position: absolute;
+            top: 0.64rem;
+            left: 0.32rem;
+            width: 0.23rem;
+            height: 0.41rem;
+            font-size: 0;
+            cursor: pointer;
+            background: url("./img/back_03.png") no-repeat;
+            background-size: contain;
+        }
+
+        .qiugoudating-header-top span {
+            width: inherit;
+            height: inherit;
+            font-size: 0.36rem;
+            color: #333333;
+            text-align: center;
+            vertical-align: middle;
+        }
+
+        /*底部导航*/
+        .home-footer {
+            position: fixed;
+            bottom: 0;
+            width: inherit;
+            height: 1.2rem;
+            font-size: 0;
+            border-top: 0.02rem solid #c1c1c1;
+            background: #f5f5f5;
+        }
+
+        .home-footer-bottom {
+            display: inline-block;
+            width: 25%;
+            height: inherit;
+            font-size: 0.28rem;
+            color: #7a7a7a;
+        }
+
+        .home-footer-bottom a {
+            display: inline-block;
+            width: 100%;
+            height: inherit;
+            font-size: 0;
+            padding-top: 0.2rem;
+            text-align: center;
+        }
+
+        .home-footer-bottom a p {
+            font-size: 0.28rem;
+            color: #7a7a7a;
+        }
+
+        .home-footer-bottom a i {
+            display: inline-block;
+            width: 0.45rem;
+            height: 0.41rem;
+            margin-bottom: 0.15rem;
+            background-size: contain;
+        }
+
+        .home-footer-bottom-1 {
+            background: url("./img/index_icon-2-_1.png") no-repeat;
+        }
+
+        .home-footer-bottom-2 {
+            background: url("./img/index_icon-2-_2.png") no-repeat;
+        }
+
+        .home-footer-bottom-3 {
+            background: url("./img/index_icon-2-_3.png") no-repeat;
+        }
+
+        .home-footer-bottom-4 {
+            background: url("./img/index_icon-2-_4.png") no-repeat;
+        }
+
+        .home:hover a i {
+            background: url("./img/index_icon-1-_1.png") no-repeat;
+            background-size: contain;
+            color: #59bb43;
+        }
+
+        .qiugou:hover a i {
+            background: url("./img/index_icon-1-_2.png") no-repeat;
+            background-size: contain;
+            color: #59bb43;
+        }
+
+        #active {
+            background: url("./img/index_icon-1-_2.png") no-repeat;
+            background-size: contain;
+            color: #59bb43;
+
+        }
+
+        .gongying:hover a i {
+            background: url("./img/index_icon-1-_3.png") no-repeat;
+            background-size: contain;
+            color: #59bb43;
+        }
+
+        .my:hover a i {
+            background: url("./img/index_icon-1-_4.png") no-repeat;
+            background-size: contain;
+            color: #59bb43;
+        }
+
+        .home-footer-bottom:hover a p {
+            color: #ff8536;
+        }
+
+        /*本页数据*/
+        .qgdt-search {
+            width: inherit;
+            font-size: 0;
+            padding: 0.2rem 0.2rem 0.15rem 0.2rem;
+            background: #f9f9f9;
+            border-bottom: 0.01rem solid #d2d2d2;
+
+        }
+
+        .qgdt-search-img {
+            width: 0.6rem;
+        }
+
+        .qgdt-search-text {
+            display: inline-block;
+            width: 7.1rem;
+            height: 0.6rem;
+            margin: 0 auto;
+            border-radius: 0.05rem;
+            background: #eaeaea;
+        }
+
+        .qgdt-search-text-2 {
+            width: 6.5rem;
+            height: inherit;
+            font-size: 0.26rem;
+            border: none;
+            vertical-align: top;
+            outline: none;
+            background: transparent;
+            color: #777777;
+
+        }
+
+        .home-body-qiugou {
+            width: inherit;
+            background: #ffffff;
+            margin-bottom: 1.2rem;
+        }
+
+        .home-body-gongying-body {
+            width: inherit;
+            /*padding-bottom: 0.2rem;*/
+            padding-top: 0.2rem;
+            font-size: 0;
+            background: #ffffff;
+        }
+
+        .home-body-gongying-body-list {
+            display: inline-block;
+            width: 2.87rem;
+            margin: 0 auto;
+            font-size: 0;
+            padding-bottom: 0.2rem;
+        }
+
+        /*渲染*/
+        .home-body-gongying-body-list-img {
+            width: 2.87rem;
+            height: 2.87rem;
+            border: 0.02rem solid #d4d4d4;
+        }
+
+        .home-body-gongying-body-list-wrapper {
+            width: inherit;
+            display: inline-block;
+            float: left;
+        }
+
+        .home-body-gongying-body-list-wrapper-title {
+            font-size: 0.2177rem;
+            height: 0.8rem;
+            padding-top: 0.19rem;
+            overflow: hidden;
+        }
+
+        .home-body-gongying-body-list-wrapper-weight {
+            font-size: 0.2177rem;
+            color: #f02b2b;
+            float: right;
+
+        }
+
+        .home-body-gongying-body-list-wrapper-price {
+            font-size: 0.2177rem;
+            margin-bottom: 0.2rem;
+            color: #f02b2b;
+        }
+
+        .home-body-qiugou-body-list {
+            width: 6.7rem;
+            margin: 0 auto;
+            font-size: 0;
+            border-bottom: 1px solid #f1f1f1;
+        }
+
+        .home-body-qiugou-body-list-wrapper {
+            position: relative;
+        }
+
+        .home-body-qiugou-body-list-wrapper-title {
+            font-size: 0.28rem;
+            margin: 0.2rem 0;
+            color: #535353;
+        }
+
+        .home-body-qiugou-body-list-wrapper-weight {
+            position: absolute;
+            top: 0;
+            right: 0;
+            font-size: 0.26rem;
+            color: #ee0202;
+
+        }
+
+        .home-body-qiugou-body-list-wrapper-price {
+            font-size: 0.24rem;
+            color: #777;
+            padding-bottom: 0.17rem;
+        }
+
+        #fontColor {
+            color: #59bb43;
+        }
+
+        /*select*/
+        .serch-body-nav {
+            width: inherit;
+            height: 0.7rem;
+            line-height: 0.7rem;
+            padding: 0 0.2rem;
+            font-size: 0rem;
+            border-bottom: 0.01rem solid #d2d2d2;
+            background: #f9f9f9;
+
+        }
+        .serch-body-nav-span-1:hover {
+            color: #59bb43;
+        }
+
+        .serch-body-nav span {
+            color: #333333;
+            font-size: 0.3rem;
+            width: 2.5rem;
+            height: 1rem;
+            padding: 0 0.56rem;
+            text-align: center;
+            cursor: pointer;
+
+        }
+
+        .serch-body-nav span:hover {
+            color: #59bb43;
+        }
+
+        .serch-body-nav-sp {
+            border-left: 0.01rem solid #d2d2d2;
+        }
+    </style>
+</head>
+<body>
+<div class="contian-wrapper">
+    <div class="contian qiugoudating-contain">
+        <div class="qiugoudating-header">
+            <div class="qiugoudating-header-top">
+                <i><a href="javascript:void(0)" onclick="history.go(-1)" class="qiugoudating-header-top-back"></a></i>
+                <span>求购大厅</span>
+            </div>
+        </div>
+        <div class="qiugoudating-body">
+            <div class="qgdt-search">
+                <span class="qgdt-search-text">
+                    <img src="./img/search_03.png" class="qgdt-search-img" alt="">
+                    <input type="text" class="qgdt-search-text-2" placeholder="输入商品名称">
+                </span>
+            </div>
+            <div class="serch-body-nav">
+                <span class="a a1 serch-body-nav-span-1">蔬菜</span>
+                <span class="a a2 serch-body-nav-sp serch-body-nav-span-2">水果</span>
+                <span class="a a3 serch-body-nav-sp serch-body-nav-span-3">家禽</span>
+                <span class="a a4 serch-body-nav-sp serch-body-nav-span-4">水产</span>
+            </div>
+            <div class="home-body-gongying-body">
+                <% for (var i = 0; i < get_all.length; i++){ %>
+                <a href="/qiugouxiangqing?tel=<%= get_all[i].tel %>&number=<%= get_all[i].number %>">
+                    <div class="home-body-qiugou-body-list">
+                        <div class="home-body-qiugou-body-list-wrapper">
+                            <h1 class="home-body-qiugou-body-list-wrapper-title"><%= get_all[i].get_name %></h1>
+                            <p class="home-body-qiugou-body-list-wrapper-weight"><%= get_all[i].get_weight %></p>
+                            <p class="home-body-qiugou-body-list-wrapper-price">价格：<%= get_all[i].get_price %></p>
+                            <p class="home-body-qiugou-body-list-wrapper-price">指定产地：<%= get_all[i].get_site.city %></p>
+                        </div>
+                    </div>
+                </a>
+                <% } %>
+            </div>
+        </div>
+
+
+    </div>
+
+    <div class="home-footer">
+        <div class="home-footer-bottom home">
+            <a href="/">
+                <i class="home-footer-bottom-1"></i>
+                <p>首页</p>
+            </a>
+        </div>
+        <div class="home-footer-bottom qiugou">
+            <a href="/qiugoudating">
+                <i class="home-footer-bottom-2 " id="active"></i>
+                <p id="fontColor">求购大厅</p>
+            </a>
+        </div>
+        <div class="home-footer-bottom gongying">
+            <a href="/gongyingdating">
+                <i class="home-footer-bottom-3"></i>
+                <p>供应大厅</p>
+            </a>
+        </div>
+        <div class="home-footer-bottom my">
+            <a href="/judge_login">
+                <i class="home-footer-bottom-4"></i>
+                <p>个人中心</p>
+            </a>
+        </div>
+    </div>
+</div>
+</div>
+</body>
+<script src="/js/jquery.min.js"></script>
+<script>
+    $(".a1").click(function () {
+        $(".a1").css("color","#59bb43");
+        $(".a:not(.a1)").css("color","#333333");
+    });
+    $(".a2").click(function () {
+        $(".a2").css("color","#59bb43");
+        $(".a:not(.a2)").css("color","#333333");
+    });
+    $(".a3").click(function () {
+        $(".a3").css("color","#59bb43");
+        $(".a:not(.a3)").css("color","#333333");
+    });
+    $(".a4").click(function () {
+        $(".a4").css("color","#59bb43");
+        $(".a:not(.a4)").css("color","#333333");
+    });
+</script>
+</html>

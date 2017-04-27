@@ -1,0 +1,338 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
+    <title>Title</title>
+    <script src="/js/resize.js"></script>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            font-weight: normal;
+            list-style: none;
+            font-family: 微软雅黑;
+            text-decoration: none;
+            box-sizing: border-box;
+        }
+
+        body {
+            background: #f3f3f4;
+        }
+
+        .contian-wrapper {
+            width: 100%;
+        }
+
+        .contian {
+            width: 7.5rem;
+            margin: 0 auto;
+        }
+
+        .qiugouxinagqing-header {
+            width: inherit;
+            padding-top: 1.3rem;
+        }
+
+        .qiugouxinagqing-header-top {
+            position: fixed;
+            top: 0;
+            z-index: 30;
+            width: inherit;
+            height: 1.3rem;
+            border-bottom: 0.01rem solid #c1c1c1;
+            text-align: center;
+            background: #ededed;
+        }
+
+        .qiugouxinagqing-header-top-back {
+            display: inline-block;
+            width: 100%;
+            height: 100%;
+        }
+
+        .qiugouxinagqing-header-top i {
+            display: inline-block;
+            position: absolute;
+            top: 0.64rem;
+            left: 0.32rem;
+            width: 0.23rem;
+            height: 0.41rem;
+            font-size: 0;
+            cursor: pointer;
+            background: url("/img/back_03.png") no-repeat;
+            background-size: contain;
+        }
+
+        .qiugouxinagqing-header-top span {
+            width: inherit;
+            height: inherit;
+            font-size: 0.36rem;
+            color: #333333;
+            text-align: center;
+            vertical-align: middle;
+        }
+
+        .qiugouxinagqing-contain {
+            /*height:100vh;*/
+        }
+
+        .qiugouxinagqing-body {
+            width: 100%;
+        }
+
+        /*.qiugouxinagqing-tel {*/
+        /*width: 100%;*/
+        /*!*height: 0.8rem;*!*/
+        /*font-size: 0;*/
+        /*border-radius: 0.05rem;*/
+        /*padding: 1rem 0 2rem 0;*/
+
+        /*}*/
+
+        .qiugouxinagqing-tel {
+            display: inline-block;
+            width: 5.9rem;
+            height: 0.8rem;
+            outline: none;
+            border: none;
+            margin: 1rem 0.6rem 0 0.6rem;
+            font-size: 0.3rem;
+            line-height: 0.8rem;
+            text-align: center;
+            color: #ffffff;
+            background: #59bb43;
+            border-radius: 0.1rem;
+        }
+
+        /*编辑*/
+        .qiugouxinagqing-body-top {
+            width: inherit;
+            height: 1.15rem;
+            padding-left: 0.2rem;
+            padding-right: 0.2rem;
+            padding-top: 0.25rem;
+            margin-bottom: 0.85rem;
+            font-size: 0;
+            background: #ffffff;
+        }
+
+        .qiugouxinagqing-body-top span {
+            display: inline-block;
+            width: 1.25rem;
+            height: 0.9rem;
+            font-size: 0.22rem;
+            vertical-align: top;
+            color: #ff0000;
+
+        }
+
+        .qiugouxinagqing-body-top p {
+            display: inline-block;
+            width: 5.45rem;
+            font-size: 0.22rem;
+            color: #777777;
+        }
+
+        .contian-info-body {
+            font-size: 0;
+            /*padding-bottom: 0.35rem;*/
+        }
+
+        /*#chanpin-info-title-right-p-1{*/
+        /*margin-top: 0;*/
+        /*}*/
+        .contian-info-body p {
+            padding: 0 0.3rem;
+            padding-top: 0.35rem;
+        }
+
+        .contian-info-body p span {
+            font-size: 0.3rem;
+            color: #777777;
+        }
+
+        .contian-info-body-title-1 {
+            display: inline-block;
+            width: 2rem;
+        }
+
+        /*.qgxq-desc {*/
+        /*font-size: 0.28rem;*/
+        /*color: #777777;*/
+        /*}*/
+
+        .qgxq-btn {
+            padding: 0.4rem 0.3rem 0 0.3rem;
+            width: 100%;
+            height: 1.3rem;
+        }
+
+        .qgxq-button {
+            display: inline-block;
+            width: 1.55rem;
+            height: 0.5rem;
+            line-height: 0.5rem;
+            font-size: 0;
+            border: 0.01rem solid #59bb43;
+            border-radius: 0.02rem;
+            float: left;
+        }
+
+        .qgxq-button a {
+            display: inline-block;
+            width: 100%;
+            height: 100%;
+            text-align: center;
+            font-size: 0.24rem;
+        }
+
+        .qgxq—de a {
+            color: #ffffff;
+        }
+
+        .qgxq—de {
+            background: #59bb43;
+            margin-right: 0.5rem;
+            float: right;
+        }
+
+        .qgxq-set a {
+            color: #59bb43;
+        }
+
+        .qgxq-set {
+            background: #ffffff;
+            margin-right: 0.3rem;
+            float: right;
+        }
+
+        .contian-info-body-title-1-desc {
+            display: block;
+            color: #777777;
+            padding-left: 0.3rem;
+            font-size: 0.3rem;
+            padding-top: 0.35rem;
+        }
+
+        .bianji-bg {
+            background: #ffffff;
+        }
+
+        .bianji-des-wrapper {
+            padding-bottom: 0.35rem;
+            font-size: 0;
+        }
+
+        .contian-info-body-info-1 {
+            outline: none;
+            border: none;
+            font-size: 0.3rem;
+            color: #777777;
+        }
+
+        .qgxq-desc {
+            width: 6.9rem;
+            height: 2rem;
+            margin: 0.3rem 0.3rem 0 0.3rem;
+            outline: none;
+            font-size: 0.28rem;
+            color: #777777;
+            resize: none;
+        }
+
+        #shengyu {
+            color: #777777;
+            font-size: 0.3rem;
+            padding: 0 0 0 0.3rem;
+        }
+        .hidden{
+            position: absolute;
+            top:0;
+            left: 0;
+            z-index: -100;
+            opacity: 0;
+        }
+    </style>
+</head>
+<body>
+<div class="contian-wrapper">
+    <div class="contian qiugouxinagqing-contain">
+        <div class="qiugouxinagqing-header">
+            <div class="qiugouxinagqing-header-top">
+                <i><a href="javascript:void(0)" onclick="history.go(-1)"  class="qiugouxinagqing-header-top-back"></a></i>
+                <span>编辑求购信息</span>
+            </div>
+        </div>
+        <div class="qiugouxinagqing-body">
+            <div class="qiugouxinagqing-body-top">
+                <span>温馨提示：</span>
+                <p>我们将根据您填写的求购品类、规格、数量免费为您寻找符合要求的供应信息进行匹配。</p>
+            </div>
+            <div class="contian-info-body">
+                <form  id="form_id"  action="/qiugou-success">
+                    <div class="hidden">
+                        <input type="text" name="tel" value="<%=info_tel%>">
+                    </div>
+                    <p id="chanpin-info-title-right-p-1" class="bianji-bg">
+                        <span class="contian-info-body-title-1">求购商品：</span>
+                        <input type="text" value="" class="contian-info-body-info-1 gysp" name="gysp">
+                        <!--<span class="contian-info-body-info-1">草莓</span>-->
+                    </p>
+                    <p class="bianji-bg">
+                        <span class="contian-info-body-title-1">求购类别：</span>
+                        <input type="text" value="" class="contian-info-body-info-1 qglb" name="qglb">
+                        <!--<span class="contian-info-body-info-1">水果</span>-->
+                    </p>
+                    <p class="bianji-bg">
+                        <span class="contian-info-body-title-1">求购单价：</span>
+                        <input type="text" value="" class="contian-info-body-info-1 qgdj" name="qgdj">
+                        <!--<span class="contian-info-body-info-1">2.00元/斤</span>-->
+                    </p>
+                    <p class="bianji-bg">
+                        <span class="contian-info-body-title-1">求购数量：</span>
+                        <input type="text" value="" class="contian-info-body-info-1 qgsl" name="qgsl">
+                        <!--<span class="contian-info-body-info-1">500公斤</span>-->
+                    </p>
+                    <p class="bianji-bg">
+                        <span class="contian-info-body-title-1">产地：</span>
+                        <input type="text" value="" class="contian-info-body-info-1 cd" name="cd">
+                        <!--<span class="contian-info-body-info-1">郑州</span>-->
+                    </p>
+                    <div class="bianji-bg bianji-des-wrapper">
+                        <span class="contian-info-body-title-1 contian-info-body-title-1-desc">产品描述：</span>
+                        <textarea class="qgxq-desc" maxlength="100" name="form_id"
+                                  placeholder="请对货品进行描述，如货品特色、种植情况、供货量。更详细、更精准的描述能吸引更多的供应商（不超过200字）" title=""></textarea>
+                        <p id="shengyu">剩余120字</p>
+                    </div>
+                    <div>
+                        <span>添加图片</span>
+                    </div>
+                    <!--<a href="qiugou-success.ejs">-->
+                        <input type="submit" id="TextArea1" class="qiugouxinagqing-tel" value="保存并发布">
+                    <!--</a>-->
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
+</body>
+<script src="/js/jquery.min.js"></script>
+<script>
+    $(".qgxq-desc").on("keyup",function () {
+        var txtval = $('.qgxq-desc').val().length;
+        console.log(txtval);
+        var str = parseInt(120-txtval);
+        console.log(str);
+        if(str > 0 ){
+            $('#shengyu').html('剩余可输入'+str+'字');
+        }else{
+            $('#shengyu').html('剩余可输入0字');
+            $('.qgxq-desc').val($('.qgxq-desc').val().substring(0,120));
+        }
+    });
+//    $("#TextArea1").click(function () {
+//
+//    });
+</script>
+</html>

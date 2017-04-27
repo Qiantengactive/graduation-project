@@ -1,0 +1,890 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
+    <title>Title</title>
+    <script src="js/resize.js"></script>
+    <script src="js/jquery.min.js"></script>
+    <link rel="stylesheet" href="css/swiper-3.4.2.min.css">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            font-weight: normal;
+            list-style: none;
+            font-family: 微软雅黑;
+            text-decoration: none;
+            box-sizing: border-box;
+        }
+
+        body {
+            background: #f3f3f4;
+        }
+
+        .contian-wrapper {
+            width: 100%;
+            position: relative;
+        }
+
+        .contian {
+            width: 7.5rem;
+            margin: 0 auto;
+        }
+
+        .home-header {
+            width: inherit;
+            padding-top: 1.3rem;
+        }
+
+        .home-header-top {
+            width: inherit;
+            height: 1.3rem;
+            text-align: center;
+            background: #59bb43;
+            position: fixed;
+            top: 0;
+            z-index: 200;
+        }
+
+        .home-header-top span {
+            width: inherit;
+            height: inherit;
+            font-size: 0.36rem;
+            color: #ffffff;
+            text-align: center;
+            vertical-align: middle;
+        }
+
+        .home-header-search {
+            width: inherit;
+            height: 0.9rem;
+            padding-top: 0.125rem;
+            font-size: 0;
+            background: #93d386;
+        }
+
+        .home-header-search-input {
+            position: relative;
+            width: 6.25rem;
+            height: 0.65rem;
+            margin: auto;
+        }
+
+        .home-header-search-input-text {
+            width: 100%;
+            height: 0.65rem;
+            font-size: 0.26rem;
+            color: #ffffff;
+            border: none;
+            border-radius: 0.1rem;
+            background: #bde4b5;
+            outline: none;
+            -webkit-appearance: none; /*清除浏览器默认的样式 */
+            padding-left: 0.3rem;
+        }
+
+        .home-header-banner {
+            width: inherit;
+            height: 2.14rem;
+            background: yellow;
+        }
+
+        /*swiper插件*/
+        .swiper-container-banner {
+            width: inherit !important;
+            height: inherit !important;
+        }
+
+        .swiper-wrapper-banner {
+            width: inherit !important;
+            height: inherit !important;
+        }
+
+        .swiper-slide-banner {
+            width: inherit !important;
+            text-align: center;
+            font-size: 0.18rem;
+        }
+
+        .swiper-slide-1 {
+            background: url("img/index_banner-_01.png") no-repeat;
+            background-size: 100% 100%;
+        }
+
+        .swiper-slide-2 {
+            background: url("img/index_banner-_02.png") no-repeat;
+            background-size: 100% 100%;
+        }
+
+        .swiper-slide-3 {
+            background: url("img/index_banner-_03.png") no-repeat;
+            background-size: 100% 100%;
+        }
+
+        .swiper-pagination {
+            bottom: -0.1rem !important;
+        }
+
+        .home-header-submit {
+            width: inherit;
+            height: 1.1rem;
+            margin-bottom: 0.2rem;
+            border-bottom: 0.01rem solid #c1c1c1;
+            background: #ffffff;
+            font-size: 0;
+        }
+
+        /*.home-header-submit-button {*/
+        /*width: 6rem;*/
+        /*height: inherit;*/
+        /*font-size: 0;*/
+        /*margin: auto;*/
+        /*}*/
+
+        /*.home-header-submit-button a {*/
+        /*display: inline-block;*/
+        /*width: 3rem;*/
+        /*height: inherit;*/
+        /*margin: auto;*/
+        /*text-align: center;*/
+        /*}*/
+
+        /*.home-header-submit-button a img {*/
+        /*width: 0.93rem;*/
+        /*height: 0.93rem;*/
+        /*margin-top: 0.25rem;*/
+        /*}*/
+
+        /*.home-header-submit-button a p {*/
+        /*width: 100%;*/
+        /*padding-top: 0.25rem;*/
+        /*font-size: 0.28rem;*/
+        /*text-align: center;*/
+        /*color: #000;*/
+        /*}*/
+
+        .home-body {
+            width: 100%;
+            margin-bottom: 1.2rem;
+            border-top: 0.01rem solid #c1c1c1;
+        }
+
+        .home-body-gongying {
+            width: inherit;
+            background: #ffffff;
+            border-bottom: 0.01rem solid #c1c1c1;
+        }
+
+        .home-body-qiugou {
+            width: inherit;
+            margin-top: 0.2rem;
+            background: #ffffff;
+            border-top: 0.01rem solid #c1c1c1;
+        }
+
+        /*底部导航*/
+        .home-footer {
+
+            position: fixed;
+            bottom: 0;
+            width: inherit;
+            height: 1.2rem;
+            font-size: 0;
+            border-top: 0.02rem solid #d4d4d4;
+            background: #f5f5f5;
+        }
+
+        .home-body-gongying-top {
+            width: 100%;
+            height: 0.8rem;
+            font-size: 0;
+            line-height: 0.8rem;
+        }
+
+        .home-body-gongying-top-font {
+            font-size: 0.28rem;
+            color: #333333;
+        }
+
+        .home-body-gongying-top-font-1-1:after {
+            display: inline-block;
+            content: "";
+            width: 0.38rem;
+            height: 0.32rem;
+            margin-bottom: -0.05rem;
+            margin-right: 0.16rem;
+            background: url("img/arrow_05.png") no-repeat;
+            background-size: contain;
+        }
+
+        .home-body-gongying-top-font-1 {
+            float: left;
+        }
+
+        .home-body-gongying-top-font-1:before {
+            width: 0.08rem;
+            height: 0.32rem;
+            content: " ";
+            display: inline-block;
+            font-size: 0.28rem;
+            background: #59bb43;
+            vertical-align: middle;
+            margin-left: 0.2rem;
+            margin-right: 0.12rem;
+            margin-bottom: 0.05rem;
+        }
+
+        .home-body-gongying-top-font-2 {
+            float: right;
+            color: #989898;
+        }
+
+        .home-body-gongying-select {
+            width: inherit;
+            /*height: 0.9rem;*/
+            font-size: 0;
+        }
+
+        .home-body-gongying-select span {
+            display: inline-block;
+            width: 1.28rem;
+            height: 1.02rem;
+            /*padding-bottom: 0.1rem;*/
+            font-size: 0.25rem;
+            text-align: center;
+            margin-left: 0.1rem;
+            background-image: url('/img/bg-index-_05.png');
+            background-repeat: no-repeat;
+            background-size: contain;
+            color: #333333;
+        }
+
+        .home-body-gongying-select span:hover {
+            background-image: url('/img/bg-index-_03.png');
+        }
+
+        .home-body-gongying-select span:hover p {
+            color: #ffffff;
+        }
+
+        .home-body-gongying-select span p {
+            color: #333333;
+        }
+
+        .home-body-gongying-select-5 {
+            margin-right: 0.1rem;
+        }
+
+        .home-body-gongying-body {
+            width: inherit;
+            /*padding-bottom: 0.2rem;*/
+            padding-top: 0.2rem;
+            font-size: 0;
+        }
+
+        .home-body-gongying-body-list {
+            display: inline-block;
+            width: 3.14rem;
+            margin: 0 auto;
+            font-size: 0;
+            padding-bottom: 0.2rem;
+        }
+
+        .home-body-gongying-body-list:nth-child(odd) {
+            margin-left: 0.4rem;
+            margin-right: 0.46rem;
+        }
+
+        .home-body-gongying-body-list:nth-child(even) {
+            /*margin-right: 0.5rem;*/
+        }
+
+        /*渲染*/
+        .home-body-gongying-body-list-img {
+            width: 3.14rem;
+            height: 2.8rem;
+            border: 0.02rem solid #d4d4d4;
+        }
+
+        .home-body-gongying-body-list-wrapper {
+            width: inherit;
+            display: inline-block;
+            float: left;
+        }
+
+        .home-body-gongying-body-list-wrapper-title {
+            font-size: 0.2177rem;
+            height: 0.8rem;
+            padding-top: 0.19rem;
+            overflow: hidden;
+            color: #333333;
+        }
+
+        .home-body-gongying-body-list-wrapper-weight {
+            font-size: 0.2177rem;
+            color: #f02b2b;
+            float: right;
+            color: #777777;
+
+        }
+
+        .home-body-gongying-body-list-wrapper-price {
+            font-size: 0.2177rem;
+            margin-bottom: 0.2rem;
+            color: #f02b2b;
+        }
+
+        /*求购*/
+        .home-body-qiugou-body-list {
+            width: 6.7rem;
+            margin: 0 auto;
+            font-size: 0;
+            border-bottom: 1px solid #f1f1f1;
+        }
+
+        .home-body-qiugou-body-list-wrapper {
+            position: relative;
+        }
+
+        .home-body-qiugou-body-list-wrapper-title {
+            font-size: 0.28rem;
+            margin: 0.2rem 0;
+            color: #535353;
+        }
+
+        .home-body-qiugou-body-list-wrapper-weight {
+            position: absolute;
+            top: 0;
+            right: 0;
+            font-size: 0.26rem;
+            color: #ee0202;
+
+        }
+
+        .home-body-qiugou-body-list-wrapper-price {
+            font-size: 0.24rem;
+            color: #777;
+            padding-bottom: 0.17rem;
+        }
+
+        /*脚步*/
+        .home-footer-bottom {
+            display: inline-block;
+            width: 25%;
+            height: inherit;
+            font-size: 0.28rem;
+            color: #7a7a7a;
+        }
+
+        .home-footer-bottom a {
+            display: inline-block;
+            width: 100%;
+            height: inherit;
+            font-size: 0;
+            padding-top: 0.2rem;
+            text-align: center;
+        }
+
+        .home-footer-bottom a p {
+            font-size: 0.28rem;
+            color: #7a7a7a;
+        }
+
+        .home-footer-bottom a i {
+            display: inline-block;
+            width: 0.45rem;
+            height: 0.41rem;
+            margin-bottom: 0.15rem;
+            background-size: contain;
+        }
+
+        .home-footer-bottom-1 {
+            background: url("./img/index_icon-2-_1.png") no-repeat;
+        }
+
+        .home-footer-bottom-2 {
+            background: url("./img/index_icon-2-_2.png") no-repeat;
+        }
+
+        .home-footer-bottom-3 {
+            background: url("./img/index_icon-2-_3.png") no-repeat;
+        }
+
+        .home-footer-bottom-4 {
+            background: url("./img/index_icon-2-_4.png") no-repeat;
+        }
+
+        .home:hover a i {
+            background: url("./img/index_icon-1-_1.png") no-repeat;
+            background-size: contain;
+            color: #59bb43;
+        }
+
+        .qiugou:hover a i {
+            background: url("./img/index_icon-1-_2.png") no-repeat;
+            background-size: contain;
+            color: #59bb43;
+        }
+
+        .gongying:hover a i {
+            background: url("./img/index_icon-1-_3.png") no-repeat;
+            background-size: contain;
+            color: #59bb43;
+        }
+
+        .my:hover a i {
+            background: url("./img/index_icon-1-_4.png") no-repeat;
+            background-size: contain;
+            color: #59bb43;
+        }
+
+        .home-footer-bottom:hover a p {
+            color: #ff8536;
+        }
+
+        .home-footer-bottom-1 {
+            background: url("./img/index_icon-1-_1.png") no-repeat;
+        }
+
+        #fontColor {
+            color: #59bb43;
+        }
+
+        .img-new {
+            width: 1.19rem;
+            vertical-align: top;
+        }
+
+        .new-title {
+            display: inline-block;
+            height: 1.08rem;
+            width: 6rem;
+            overflow: hidden;
+        }
+
+        .nav-div {
+            display: table-cell;
+            white-space: nowrap;
+            font-size: 0.14rem;
+            color: #333333;
+            height: 1.08rem !important;
+            width: 6.55rem !important;
+            vertical-align: middle;
+        }
+
+        .nav-div-p {
+            width: 6.55rem;
+            height: 0.3rem;
+            padding-top: 0.02rem;
+            font-size: 0.19rem;
+            overflow: hidden;
+        }
+
+        .nav-div-p-span {
+            font-size: 0.14rem;
+            color: #f93333;
+            border: 0.01rem solid #f06671;
+            padding: 0 0.06rem;
+            border-radius: 0.05rem;
+            margin-right: 0.17rem;
+        }
+
+        .select b {
+            display: block;
+            height: 0.38rem;
+            margin: 0.1rem auto 0 auto;
+            background-size: contain;
+            background-repeat: no-repeat;
+        }
+
+        .select-2 b {
+            display: block;
+            height: 0.38rem;
+            margin: 0.1rem auto 0 auto;
+            background-size: contain;
+            background-repeat: no-repeat;
+        }
+
+        .select:nth-child(1) b {
+            width: 0.32rem;
+            background-image: url("/img/index-1-1.png");
+        }
+
+        .select-2:nth-child(1) b {
+            width: 0.32rem;
+            background-image: url("/img/index-1-1.png");
+        }
+
+        .select:nth-child(1):hover b {
+            background-image: url("/img/index-2-1.png");
+        }
+
+        .select-2:nth-child(1):hover b {
+            background-image: url("/img/index-2-1.png");
+        }
+
+        .select:nth-child(2) b {
+            width: 0.29rem;
+            background-image: url("/img/index-1-2.png");
+        }
+
+        .select-2:nth-child(2) b {
+            width: 0.29rem;
+            background-image: url("/img/index-1-2.png");
+        }
+
+        .select:nth-child(2):hover b {
+            background-image: url("/img/index-2-2.png");
+        }
+
+        .select-2:nth-child(2):hover b {
+            background-image: url("/img/index-2-2.png");
+        }
+
+        .select:nth-child(3) b {
+            width: 0.46rem;
+            background-image: url("/img/index-1-3.png");
+        }
+
+        .select-2:nth-child(3) b {
+            width: 0.46rem;
+            background-image: url("/img/index-1-3.png");
+        }
+
+        .select:nth-child(3):hover b {
+            background-image: url("/img/index-2-3.png");
+        }
+
+        .select-2:nth-child(3):hover b {
+            background-image: url("/img/index-2-3.png");
+        }
+
+        .select:nth-child(4) b {
+            width: 0.52rem;
+            background-image: url("/img/index-1-4.png");
+        }
+
+        .select-2:nth-child(4) b {
+            width: 0.52rem;
+            background-image: url("/img/index-1-4.png");
+        }
+
+        .select:nth-child(4):hover b {
+            background-image: url("/img/index-2-4.png");
+        }
+
+        .select-2:nth-child(4):hover b {
+            background-image: url("/img/index-2-4.png");
+        }
+
+        .select:nth-child(5) b {
+            width: 0.46rem;
+            background-image: url("/img/index-1-5.png");
+        }
+
+        .select-2:nth-child(5) b {
+            width: 0.46rem;
+            background-image: url("/img/index-1-5.png");
+        }
+
+        .select:nth-child(5):hover b {
+            background-image: url("/img/index-2-5.png");
+        }
+
+        .select-2:nth-child(5):hover b {
+            background-image: url("/img/index-2-5.png");
+        }
+
+        /*欢迎页*/
+        /*.welcome {*/
+        /*position: fixed;*/
+        /*top: 0;*/
+        /*left: 0;*/
+        /*z-index: 2000;*/
+        /*width: 100%;*/
+        /*height: 100vh;*/
+        /*background: url("/img/welcome.png") no-repeat;*/
+        /*background-size: 100% 100%;*/
+        /*}*/
+        .swiper-slide-topic {
+            height: 1.08rem !important;
+        }
+
+        .swiper-container-topic {
+            height: 1.08rem !important;
+        }
+        /*.input-search*/
+
+        input::-webkit-input-placeholder {
+            color: #ffffff;
+        }
+
+        input:-moz-placeholder {
+            color: #ffffff;
+        }
+
+        input::-moz-placeholder {
+            color: #ffffff;
+        }
+
+        input:-ms-input-placeholder {
+            color: #ffffff;
+        }
+        .input-search-2{
+            position: absolute;
+            top: 0;
+            right: 0.1rem;
+            width: 0.59rem;
+        }
+        input::-webkit-search-decoration,
+        input::-webkit-search-cancel-button {
+            display: none;
+        }
+    </style>
+</head>
+<body>
+<div class="contian-wrapper">
+    <div class="contian">
+        <div class="home-header">
+            <div class="home-header-top">
+                <span>豫农管家</span>
+            </div>
+            <div class="home-header-search">
+                <div class="home-header-search-input">
+                    <input type="search" class="home-header-search-input-text input-search" placeholder="搜索农产品，如：红富士苹果">
+                    <img src="/img/search_04.png" alt="" class="input-search-2">
+                </div>
+            </div>
+            <div class="home-header-banner">
+                <div class="swiper-container swiper-container-banner">
+                    <div class="swiper-wrapper swiper-wrapper-banner ">
+                        <div class="swiper-slide swiper-slide-banner swiper-slide-1"></div>
+                        <div class="swiper-slide swiper-slide-banner swiper-slide-2"></div>
+                        <div class="swiper-slide swiper-slide-banner swiper-slide-3"></div>
+                    </div>
+                    <!-- 如果需要分页器 -->
+                    <div class="swiper-pagination"></div>
+                </div>
+            </div>
+            <div class="home-header-submit">
+                <img src="/img/new-ban_02.png" alt="" class="img-new">
+                <span class="new-title">
+                    <div class="swiper-container-topic">
+                        <div class="swiper-wrapper">
+                             <div class="swiper-slide swiper-slide-topic">
+                                <div class="nav-div">
+                                    <p class="nav-div-p">
+                                        <span class="nav-div-p-span">最新</span>惠农网网惠农网网惠农网网惠农网网惠农网网
+                                    </p>
+                                    <p class="nav-div-p">
+                                        <span class="nav-div-p-span">最新</span>惠农网网惠农网网惠农网网惠农网网惠农网网
+                                    </p>
+                                </div>
+                            </div>
+                            <div class="swiper-slide swiper-slide-topic">
+                                 <div class="nav-div">
+                                    <p class="nav-div-p">
+                                        <span class="nav-div-p-span">最新</span>惠农网网惠农网网惠农网网惠农网网惠农网网
+                                    </p>
+                                        <p class="nav-div-p">
+                                        <span class="nav-div-p-span">最新</span>惠农网网惠农网网惠农网网惠农网网惠农网网
+                                    </p>
+                                 </div>
+                             </div>
+                            <div class="swiper-slide swiper-slide-topic">
+                                 <div class="nav-div">
+                                    <p class="nav-div-p">
+                                        <span class="nav-div-p-span">最新</span>惠农网网惠农网网惠农网网惠农网网惠农网网
+                                    </p>
+                                    <p class="nav-div-p">
+                                        <span class="nav-div-p-span">最新</span>惠农网网惠农网网惠农网网惠农网网惠农网网
+                                    </p>
+                                 </div>
+                            </div>
+                        </div>
+                    </div>
+                </span>
+            </div>
+        </div>
+        <div class="home-body">
+            <div class="home-body-gongying">
+                <div class="home-body-gongying-top">
+                    <a href="" class="home-body-gongying-top-left">
+                        <span class="home-body-gongying-top-font home-body-gongying-top-font-1">供应大厅</span>
+                    </a>
+                    <a href="/gongyingdating" class="home-body-gongying-top-right">
+                        <span class="home-body-gongying-top-font home-body-gongying-top-font-1-1 home-body-gongying-top-font-2">更多</span>
+                    </a>
+                </div>
+                <div class="home-body-gongying-select">
+                    <span class="select  be-select-2-span" id="home-body-gongying-select-1">
+                        <b class="select-1 be-select-2-img"></b>
+                        <p class="p1 be-select-2-p" id="p1">全部</p>
+                    </span>
+                    <span class="select ">
+                        <b class="select-1"></b>
+                        <p class="p2">水果</p>
+                    </span>
+                    <span class="select  home-body-gongying-select-3-2">
+                        <b class="select-1"></b>
+                        <p class="p3">蔬菜</p>
+                    </span>
+                    <span class="select home-body-gongying-select-4-2">
+                        <b class="select-1"></b>
+                        <p class="p4">禽畜</p>
+                    </span>
+                    <span class="select  home-body-gongying-select-5-2">
+                        <b class="select-1"></b>
+                        <p class="p5">水产</p>
+                    </span>
+                </div>
+                <div class="home-body-gongying-body">
+                    <% for (var i = 0; i < seller_all.length; i++){ %>
+                    <div class="home-body-gongying-body-list home-body-gongying-body-1">
+                        <a href="gongyingxiangqing?tel=<%= seller_all[i].tel %>&number=<%= seller_all[i].number %>">
+                            <img src="<%= seller_all[i].pics[0] %>" class="home-body-gongying-body-list-img">
+                        </a>
+                        <div class="home-body-gongying-body-list-wrapper">
+                            <a href="gongyingxiangqing?tel=<%= seller_all[i].tel %>&number=<%= seller_all[i].number %>">
+                                <h1 class="home-body-gongying-body-list-wrapper-title">
+                                    【自营水果】<%= seller_all[i].seller_name %></h1>
+                            </a>
+                            <a href="gongyingxiangqing?tel=<%= seller_all[i].tel %>&number=<%= seller_all[i].number %>">
+                                <p class="home-body-gongying-body-list-wrapper-price">&ensp;<%= seller_all[i].seller_price %>
+                                    <span class="home-body-gongying-body-list-wrapper-weight">&ensp;&ensp;<%= seller_all[i].seller_weight %></span>
+                                </p>
+                            </a>
+                        </div>
+                    </div>
+                    <% } %>
+                </div>
+            </div>
+            <div class="home-body-qiugou">
+                <div class="home-body-gongying-top">
+                    <a href="" class="home-body-gongying-top-left">
+                        <span class="home-body-gongying-top-font home-body-gongying-top-font-1">求购大厅</span>
+                    </a>
+                    <a href="/qiugoudating" class="home-body-gongying-top-right">
+                        <span class="home-body-gongying-top-font home-body-gongying-top-font-1-1 home-body-gongying-top-font-2">更多</span>
+                    </a>
+                </div>
+                <div class="home-body-gongying-select">
+                    <span class="select-2  be-select-2-span-2" id="home-body-gongying-select-1">
+                        <b class="select-1 be-select-2-img-2"></b>
+                        <p class="p1 be-select-2-p-2" id="p1">全部</p>
+                    </span>
+                    <span class="select-2 ">
+                        <b class="select-1"></b>
+                        <p class="p2">水果</p>
+                    </span>
+                    <span class="select-2  home-body-gongying-select-3-2">
+                        <b class="select-1"></b>
+                        <p class="p3">蔬菜</p>
+                    </span>
+                    <span class="select-2 home-body-gongying-select-4-2">
+                        <b class="select-1"></b>
+                        <p class="p4">禽畜</p>
+                    </span>
+                    <span class="select-2  home-body-gongying-select-5-2">
+                        <b class="select-1"></b>
+                        <p class="p5">水产</p>
+                    </span>
+                </div>
+                <div class="home-body-gongying-body">
+                    <% for (var i = 0; i < get_all.length; i++){ %>
+                    <a href="/qiugouxiangqing?tel=<%= get_all[i].tel %>&number=<%= get_all[i].number %>">
+                        <div class="home-body-qiugou-body-list ">
+                            <div class="home-body-qiugou-body-list-wrapper">
+                                <h1 class="home-body-qiugou-body-list-wrapper-title"><%= get_all[i].get_name %>
+                                </h1>
+                                <p class="home-body-qiugou-body-list-wrapper-weight"><%= get_all[i].get_weight %>
+                                </p>
+                                <p class="home-body-qiugou-body-list-wrapper-price">价格：<%= get_all[i].get_price %></p>
+                                <p class="home-body-qiugou-body-list-wrapper-price">指定产地：<%= get_all[i].get_site.city %></p>
+                            </div>
+                        </div>
+                    </a>
+                    <% } %>
+                </div>
+            </div>
+        </div>
+        <div class="home-footer">
+            <div class="home-footer-bottom home">
+                <a href="/">
+                    <i class="home-footer-bottom-1"></i>
+                    <p id="fontColor">首页</p>
+                </a>
+            </div>
+            <div class="home-footer-bottom qiugou">
+                <a href="/qiugoudating">
+                    <i class="home-footer-bottom-2"></i>
+                    <p>求购大厅</p>
+                </a>
+            </div>
+            <div class="home-footer-bottom gongying">
+                <a href="/gongyingdating">
+                    <i class="home-footer-bottom-3"></i>
+                    <p>供应大厅</p>
+                </a>
+            </div>
+            <div class="home-footer-bottom my">
+                <a href="/judge_login">
+                    <i class="home-footer-bottom-4"></i>
+                    <p>个人中心</p>
+                </a>
+            </div>
+        </div>
+        <div class="welcome"></div>
+    </div>
+</div>
+</body>
+<script src="js/swiper-3.4.2.min.js"></script>
+<script>
+    $(document).ready(function () {
+        var mySwiper = new Swiper('.swiper-container', {
+            autoplay: 5000,
+            loop: true,
+            pagination: '.swiper-pagination'
+        });
+
+        var mySwiper = new Swiper('.swiper-container-topic', {
+            autoplay: 3000,
+            loop: true,
+            direction: 'vertical',
+        })
+
+
+        $(".welcome").fadeOut(2000);
+        /*选择框-默认选择全部*/
+        $(".be-select-2-span").css("backgroundImage", "url(/img/bg-index-_03.png)");
+        $(".be-select-2-img").css("backgroundImage", "url(/img/index-2-1.png)");
+        $(".be-select-2-p").css("color", "#ffffff");
+        $(".be-select-2-span-2").css("backgroundImage", "url(/img/bg-index-_03.png)");
+        $(".be-select-2-img-2").css("backgroundImage", "url(/img/index-2-1.png)");
+        $(".be-select-2-p-2").css("color", "#ffffff");
+
+        $(".select:not(.be-select-2-span)").click(function () {
+            $(".be-select-2-span").css("backgroundImage", "url(/img/bg-index-_05.png)");
+            $(".be-select-2-img").css("backgroundImage", "url(/img/index-1-1.png)");
+            $(".be-select-2-p").css("color", "#333333");
+        })
+        $(".be-select-2-span").click(function () {
+            $(".be-select-2-span").css("backgroundImage", "url(/img/bg-index-_03.png)");
+            $(".be-select-2-img").css("backgroundImage", "url(/img/index-2-1.png)");
+            $(".be-select-2-p").css("color", "#ffffff");
+        })
+
+        $(".select-2:not(.be-select-2-span-2)").click(function () {
+            $(".be-select-2-span-2").css("backgroundImage", "url(/img/bg-index-_05.png)");
+            $(".be-select-2-img-2").css("backgroundImage", "url(/img/index-1-1.png)");
+            $(".be-select-2-p-2").css("color", "#333333");
+        })
+        $(".be-select-2-span-2").click(function () {
+            $(".be-select-2-span-2").css("backgroundImage", "url(/img/bg-index-_03.png)");
+            $(".be-select-2-img-2").css("backgroundImage", "url(/img/index-2-1.png)");
+            $(".be-select-2-p-2").css("color", "#ffffff");
+        })
+    })
+</script>
+</html>

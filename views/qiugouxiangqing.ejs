@@ -1,0 +1,368 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
+    <title>Title</title>
+    <script src="/js/resize.js"></script>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            font-weight: normal;
+            list-style: none;
+            font-family: 微软雅黑;
+            text-decoration: none;
+            box-sizing: border-box;
+        }
+
+        body {
+            background: #f3f3f4;
+        }
+
+        .contian-wrapper {
+            width: 100%;
+        }
+
+        .contian {
+            width: 7.5rem;
+            margin: 0 auto;
+        }
+
+        .qiugouxinagqing-header {
+            width: inherit;
+            padding-top: 1.3rem;
+        }
+
+        .qiugouxinagqing-header-top {
+            position: fixed;
+            top: 0;
+            z-index: 30;
+            width: inherit;
+            height: 1.3rem;
+            border-bottom: 0.01rem solid #c1c1c1;
+            text-align: center;
+            background: #ededed;
+        }
+
+        .qiugouxinagqing-header-top-back {
+            display: inline-block;
+            width: 100%;
+            height: 100%;
+        }
+
+        .qiugouxinagqing-header-top i {
+            display: inline-block;
+            position: absolute;
+            top: 0.64rem;
+            left: 0.32rem;
+            width: 0.23rem;
+            height: 0.41rem;
+            font-size: 0;
+            cursor: pointer;
+            background: url("/img/back_03.png") no-repeat;
+            background-size: contain;
+        }
+
+        .qiugouxinagqing-header-top span {
+            width: inherit;
+            height: inherit;
+            font-size: 0.36rem;
+            color: #333333;
+            text-align: center;
+            vertical-align: middle;
+        }
+
+        .qiugouxinagqing-contain {
+            /*height:100vh;*/
+        }
+
+        .qiugouxinagqing-body {
+            width: 100%;
+            background: #f8f8f8
+        }
+
+        /*添加css*/
+        .floatright {
+            float: right;
+        }
+
+        .chanpin-info div {
+            font-size: 0;
+            background: #ffffff;
+            padding-bottom: 0.2rem;
+        }
+
+        .chanpin-info-title {
+            font-size: 0;
+            height: 0.954rem;
+            line-height: 0.954rem;
+            padding: 0 0.3rem;
+            background: #ffffff;
+            border-bottom: 0.02rem solid #a3a3a3;
+        }
+
+        .chanpin-info-title span {
+            font-size: 0.3rem;
+            color: #333333;
+        }
+
+        #chanpin-info-title-right {
+            color: #ff0000;
+        }
+
+        .contian-info-body {
+            font-size: 0;
+            /*padding-bottom: 0.35rem;*/
+        }
+
+        .contian-info-body p {
+            padding: 0 0.3rem;
+            margin-top: 0.35rem;
+        }
+
+        .contian-info-body p span {
+            font-size: 0.3rem;
+            color: #777777;
+        }
+
+        .contian-info-body-title-1 {
+            display: inline-block;
+            width: 2rem;
+        }
+
+        .qgxq-desc {
+            font-size: 0.28rem;
+            color: #777777;
+        }
+
+        .qgxq-btn {
+            padding: 0.4rem 0.3rem 0 0.3rem;
+            width: 100%;
+            height: 1.3rem;
+        }
+
+        .qgxq-button {
+            display: inline-block;
+            width: 1.55rem;
+            height: 0.5rem;
+            line-height: 0.5rem;
+            font-size: 0;
+            border: 0.01rem solid #59bb43;
+            border-radius: 0.02rem;
+            float: left;
+        }
+
+        .qgxq-button a {
+            display: block;
+            width: 100%;
+            height: 100%;
+            text-align: center;
+            font-size: 0.24rem;
+        }
+
+        .qgxq—de a {
+            color: #ffffff;
+        }
+
+        .qgxq—de {
+            background: #59bb43;
+            margin-right: 0.5rem;
+            float: right;
+        }
+
+        .qgxq-set a {
+            color: #59bb43;
+        }
+
+        .qgxq-set {
+            background: #ffffff;
+            margin-right: 0.3rem;
+            float: right;
+            margin-left: 0.2rem;
+            display: inline-block;
+        }
+
+        .qiugouxinagqing-body-top-2-info-title {
+            font-size: 0;
+            height: 0.954rem;
+            line-height: 0.954rem;
+            padding: 0 0.3rem;
+        }
+
+        .qiugouxinagqing-body-top-2-info-title span {
+            font-size: 0.3rem;
+            color: #333333;
+        }
+
+        .qiugouxinagqing-body-top-wrapper p {
+            padding: 0 0.3rem;
+            font-size: 0;
+            margin-top: 0.35rem;
+
+        }
+
+        .qiugouxinagqing-body-top-wrapper p span {
+            font-size: 0.3rem;
+            color: #777777;
+        }
+
+        .qiugouxinagqing-body-top-wrapper-title {
+            display: inline-block;
+            width: 2rem;
+        }
+
+        .qiugouxinagqing-tel {
+            width: 100%;
+            /*height: 0.8rem;*/
+            font-size: 0;
+            border-radius: 0.05rem;
+            padding: 1rem 0 2rem 0;
+
+        }
+
+        .qiugouxinagqing-tel a {
+            display: block;
+            width: 6.7rem;
+            height: 0.8rem;
+            margin: 0 auto;
+            font-size: 0.3rem;
+            line-height: 0.8rem;
+            text-align: center;
+            color: #ffffff;
+            background: #59bb43;
+            border-radius: 0.1rem;
+        }
+
+        .noShow {
+            opacity: 0;
+        }
+
+        .contian-info-body-title-1-desc {
+            display: block;
+            color: #777777;
+            padding-left: 0.3rem;
+            font-size: 0.3rem;
+            padding-top: 0.35rem;
+        }
+
+        .seller-info {
+            padding-bottom: 0.3rem;
+            background: #ffffff;
+        }
+        #link{
+            margin-top: 0;
+        }
+        #code{
+            margin-top: 0;
+            padding-top: 0.35rem;
+        }
+        #btn{
+            background: #f8f8f8;
+        }
+    </style>
+</head>
+<body>
+<div class="contian-wrapper">
+    <div class="contian qiugouxinagqing-contain">
+        <div class="qiugouxinagqing-header">
+            <div class="qiugouxinagqing-header-top">
+                <i><a href="javascript:void(0)" onclick="history.go(-1)"
+                      class="qiugouxinagqing-header-top-back"></a></i>
+                <span>求购详情</span>
+            </div>
+        </div>
+        <div class="qiugouxinagqing-body">
+            <div class="chanpin-info">
+                <p class="chanpin-info-title">
+                    <span class=""><%= get_obj.get_name %></span>
+                    <span class="floatright" id="chanpin-info-title-right"><%= get_obj.get_weight %></span>
+                </p>
+                <div class="contian-info-body">
+                    <p id="code">
+                        <span class="contian-info-body-title-1">求购编号：</span>
+                        <span class="contian-info-body-info-1">16060615444462610</span>
+                    </p>
+                    <p>
+                        <!--
+                         蔬菜：1
+                         水果：2
+                         禽类：3
+                         水产：4
+                        -->
+                        <span class="contian-info-body-title-1">求购类别：</span>
+                        <% if(get_obj.type == 1){ %>
+                        <span class="contian-info-body-info-1">蔬菜</span>
+                        <% } else if (get_obj.type == 2){ %>
+                        <span class="contian-info-body-info-1">水果</span>
+
+                        <% } else if (get_obj.type == 3){ %>
+                        <span class="contian-info-body-info-1">禽类</span>
+
+                        <% } else if (get_obj.type == 4){ %>
+                        <span class="contian-info-body-info-1">水产</span>
+
+                        <% } else{ %>
+                        <span class="contian-info-body-info-1">其他</span>
+                        <% } %>
+                    </p>
+                    <p>
+                        <span class="contian-info-body-title-1">求购单价：</span>
+                        <span class="contian-info-body-info-1"><%= get_obj.get_price %></span>
+                    </p>
+                    <p>
+                        <span class="contian-info-body-title-1">求购数量：</span>
+                        <span class="contian-info-body-info-1"><%= get_obj.get_weight %></span>
+                    </p>
+                    <p>
+                        <span class="contian-info-body-title-1">产地：</span>
+                        <span class="contian-info-body-info-1"><%= get_obj.get_site.get_city %></span>
+                    </p>
+                    <div>
+                        <span class="contian-info-body-title-1 contian-info-body-title-1-desc">产品描述：</span>
+                        <p class="qgxq-desc"><%= get_obj.get_desc %></p>
+                    </div>
+                </div>
+                <% if(get_obj.isme){ %>
+                <div class="qgxq-btn" id="btn">
+                    <% } else{ %>
+                    <div class="qgxq-btn  noShow" id="btn">
+                        <% } %>
+                        <!--get_obj.get_tel get_obj.number  get_obj.isme-->
+                        <span class="qgxq-button qgxq-set"><a
+                                    href="/modify_qiugouxiangqing?detele_tel=<%= get_obj.info_tel %>&delete_get_number=<%= get_obj.number %>">修改</a></span>
+                        <span class="qgxq-button qgxq—de"><a
+                                    href="/delete_qiugouxiangqing?detele_tel=<%= get_obj.info_tel %>&delete_get_number=<%= get_obj.number %>">删除</a></span>
+                    </div>
+                </div>
+                <div class="seller-info">
+                    <div class="qiugouxinagqing-body-top-2-info">
+                        <div class="qiugouxinagqing-body-top-2-info-title">
+                            <span class="qiugouxinagqing-body-top-2-info-title-1">求购者信息</span>
+                        </div>
+                        <div class="qiugouxinagqing-body-top-wrapper">
+                            <p id="link">
+                                <span class="qiugouxinagqing-body-top-wrapper-title">联系人:</span>
+                                <span><%= get_obj.info_name %></span>
+                            </p>
+                            <p>
+                                <span class="qiugouxinagqing-body-top-wrapper-title">联系电话:</span>
+                                <span><%= get_obj.info_tel %></span>
+                            </p>
+                            <p>
+                                <span class="qiugouxinagqing-body-top-wrapper-title">地址:</span>
+                                <span><%= get_obj.info_site.info_pro %>-<%= get_obj.info_site.info_city %></span>
+                            </p>
+                            <p>
+                                <span class="qiugouxinagqing-body-top-wrapper-title">详细地址:</span>
+                                <span>高新技术开发区</span>
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                <div class="qiugouxinagqing-tel"><a href="tel:<%= get_obj.info_tel %>">联系买家</a></div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

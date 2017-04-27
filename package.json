@@ -1,0 +1,27 @@
+{
+  "name": "huinong",
+  "version": "1.0.0",
+  "description": "",
+  "main": "app.js",
+  "dependencies": {
+    "alidayu-node": "^1.0.3",
+    "express": "^4.13.3",
+    "formidable": "^1.0.17",
+    "gm": "^1.20.0",
+    "ejs": "^2.3.4",
+    "mongoose": "^4.1.8",
+    "mongodb": "^2.0.43",
+    "express-session": "^1.11.3"
+  },
+  "devDependencies": {
+    "body-parser": "^1.17.1",
+    "express-session": "^1.15.2",
+    "mongoose-auto-increment": "^5.0.1",
+    "multer": "^0.1.8"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC"
+}
