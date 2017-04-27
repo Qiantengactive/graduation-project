@@ -96,9 +96,7 @@ app.get("/affirm_modify_seller_goods_info", newRouter.affirm_modify_seller_goods
 app.get("/delete_my-qiugoulist-xiangqing", newRouter.delete_my_qiugoulistxiangqing);
 app.get("/modify_my-qiugoulist-xiangqing", newRouter.modify_my_qiugoulistxiangqing);
 
-app.get('*', function (req, res) {
-    res.render('404.ejs', {
-        title: 'No Found'
-    });
+app.use(function (req, res) {
+    res.render('404.ejs');
 });
 app.listen(3030);
