@@ -440,10 +440,7 @@ exports.charge_Tel = function (req, res, next) {
             /*存在可以登录*/
             res.json({"code": 1});
         }
-
-
     })
-
 };
 
 /*编辑供应信息 - 发布供应信息*/

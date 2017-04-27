@@ -100,7 +100,7 @@
             width: 2rem;
             height: 2rem;
             margin: 0.3rem 0.5rem 0.7rem 2rem;
-            background: url("img/login-body-img") no-repeat;
+            background: url("img/login-body-img.png") no-repeat;
         }
 
         .login-body-txt {
@@ -246,6 +246,7 @@
                 var info_tel = $("#tel").val().trim();
                 $.get("/charge_Tel?info_tel=" + info_tel, function (data) {
                     /*1注册*/
+                    alert
                     if (!data.code) {
                         alert("手机号不存在，请登录注册后登录");
                         return;
