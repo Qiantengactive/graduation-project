@@ -245,7 +245,6 @@
                 var info_tel = $("#tel").val().trim();
                 $.get("/charge_Tel?info_tel=" + info_tel, function (data) {
                     /*1注册*/
-                    alert
                     if (!data.code) {
                         alert("手机号不存在，请登录注册后登录");
                         return;

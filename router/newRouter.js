@@ -422,25 +422,26 @@ exports.do_my_info = function (req, res, next) {
 };
 /*判断是否登录过*/
 exports.charge_Tel = function (req, res, next) {
-    var info_tel = req.query.info_tel;
-    /*查询数据库*/
-    var user_tel_data = {
-        "info_tel": info_tel
-    };
-    huinong_info.login_info(user_tel_data, function (err, result) {
-        if (err) {
-            // 错误
-            // res.json({"code": 1});
-        }
-        console.log(result);
-        if (result.length == 0) {
-            // 不存在不可以登录
-            res.json({"code": 0});
-        } else {
-            /*存在可以登录*/
-            res.json({"code": 1});
-        }
-    })
+    // var info_tel = req.query.info_tel;
+    // /*查询数据库*/
+    // var user_tel_data = {
+    //     "info_tel": info_tel
+    // };
+    // huinong_info.login_info(user_tel_data, function (err, result) {
+    //     if (err) {
+    //         // 错误
+    //         // res.json({"code": 1});
+    //     }
+    //     console.log(result);
+    //     if (result.length == 0) {
+    //         // 不存在不可以登录
+    //         res.json({"code": 0});
+    //     } else {
+    //         /*存在可以登录*/
+    //         res.json({"code": 1});
+    //     }
+    // })
+    req.send("11111");
 };
 
 /*编辑供应信息 - 发布供应信息*/
