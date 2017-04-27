@@ -94,19 +94,4 @@ app.get("/affirm_modify_seller_goods_info", newRouter.affirm_modify_seller_goods
 app.get("/delete_my-qiugoulist-xiangqing",newRouter.delete_my_qiugoulistxiangqing);
 app.get("/modify_my-qiugoulist-xiangqing",newRouter.modify_my_qiugoulistxiangqing);
 
-
-
-
-
-
-/*修改我的求购==》我的求购列表*/
-
-
-
-
-/*删除我的求购==》我的求购列表*/
-
-
-
-
 app.listen(3030);
