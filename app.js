@@ -12,8 +12,8 @@ var newRouter = require("./router/newRouter.js");
 
 app.set("view engine", "ejs");
 
-app.use(bodyParser.json({limit:'50mb'})); // for parsing application/json
-app.use(bodyParser.urlencoded({ limit:'50mb',extended: true })); // for parsing application/x-www-form-urlencoded
+app.use(bodyParser.json({limit: '50mb'})); // for parsing application/json
+app.use(bodyParser.urlencoded({limit: '50mb', extended: true})); // for parsing application/x-www-form-urlencoded
 app.use(multer()); // for parsing multipart/form-data
 
 app.use(session({
@@ -25,7 +25,8 @@ app.use(session({
 app.use(express.static("./public"));
 // app.use("/avatar",express.static("./avatar"));
 
-app.post("/info_avater",newRouter.info_avater);
+app.post("/info_avater", newRouter.info_avater);
+app.get("/charge_tel", newRouter.charge_Tel);
 // 显示首页
 app.get("/", newRouter.showIndex);
 // 判断登录
@@ -33,15 +34,14 @@ app.get("/judge_login", newRouter.judge_login);
 app.get("/do_login", newRouter.do_login);
 app.get("/my/:info_tel", newRouter.do_my_info);
 /*判断数据库是否存在*/
-app.get("/charge_tel",newRouter.charge_Tel);
 // 注册
 app.get("/regist", newRouter.regist);
 app.get("/do_regist", newRouter.do_regist);
 app.get("/regist_info", newRouter.regist_info);
 /*注册--获取验证码*/
-app.get("/againCode",newRouter.again_code);
+app.get("/againCode", newRouter.again_code);
 /*注册--判断手机号是否被注册*/
-app.get("/judge_Tel",newRouter.judge_Tel);
+app.get("/judge_Tel", newRouter.judge_Tel);
 /*首页头像---设置*/
 
 /*路由到求购大厅*/
@@ -54,7 +54,7 @@ app.get("/bianjigongyingxinxi/:info_tel", newRouter.edit_seller_goods);
 app.get("/issue_seller_detail", newRouter.edit_seller_goods_index);
 /*供应信息发布成功*/
 app.post("/gongying-success/", newRouter.seller_success);
-app.get("/open_seller_success",newRouter.open_seller_success_page);
+app.get("/open_seller_success", newRouter.open_seller_success_page);
 
 /*编辑求购信息-发布求购信息*/
 app.get("/bianjiqiugouxinxi/:info_tel", newRouter.edit_get_goods);
@@ -93,10 +93,12 @@ app.get("/modify_gongyingxiangqing", newRouter.modify_seller_goods);
 app.get("/affirm_modify_seller_goods_info", newRouter.affirm_modify_seller_goods);
 
 /*删除我的求购==》我的求购列表*/
-app.get("/delete_my-qiugoulist-xiangqing",newRouter.delete_my_qiugoulistxiangqing);
-app.get("/modify_my-qiugoulist-xiangqing",newRouter.modify_my_qiugoulistxiangqing);
+app.get("/delete_my-qiugoulist-xiangqing", newRouter.delete_my_qiugoulistxiangqing);
+app.get("/modify_my-qiugoulist-xiangqing", newRouter.modify_my_qiugoulistxiangqing);
 
-app.use(function (request,response) {
-    response.render('err');
+app.get('*', function (req, res) {
+    res.render('404.ejs', {
+        title: 'No Found'
+    });
 });
 app.listen(3030);
