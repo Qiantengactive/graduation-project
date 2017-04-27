@@ -216,7 +216,7 @@
         /*判断是否注册过*/
         $("#tel").blur(function () {
             var info_tel = $("#tel").val().trim();
-            $.get("/charge_Tel?info_tel=" + info_tel, function (data) {
+            $.get("/charge_tel?info_tel=" + info_tel, function (data) {
                 /*1注册*/
                 if (!data.code) {
                     alert("手机号不存在，请登录注册后登录");
@@ -243,7 +243,7 @@
             }
             if(!a){
                 var info_tel = $("#tel").val().trim();
-                $.get("/charge_Tel?info_tel=" + info_tel, function (data) {
+                $.get("/charge_tel?info_tel=" + info_tel, function (data) {
                     /*1注册*/
                     if (!data.code) {
                         alert("手机号不存在，请登录注册后登录");
