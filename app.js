@@ -32,6 +32,8 @@ app.get("/", newRouter.showIndex);
 app.get("/judge_login", newRouter.judge_login);
 app.get("/do_login", newRouter.do_login);
 app.get("/my/:info_tel", newRouter.do_my_info);
+/*判断数据库是否存在*/
+app.get("/charge_Tel",newRouter.charge_Tel);
 // 注册
 app.get("/regist", newRouter.regist);
 app.get("/do_regist", newRouter.do_regist);

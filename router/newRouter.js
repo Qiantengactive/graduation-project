@@ -95,9 +95,9 @@ exports.my_seller_info = function (req, res, next) {
         info_tel: tel
     };
     huinong_info.login_info(user_tel_data, function (err, result) {
-        var obj=result[0].seller_all[number];
-        obj.number=number;
-        obj.info_tel=tel;
+        var obj = result[0].seller_all[number];
+        obj.number = number;
+        obj.info_tel = tel;
         /*打包数组后传递*/
         if (obj.pics[0]) {
             var pic1 = obj.pics[0];
@@ -419,6 +419,31 @@ exports.do_my_info = function (req, res, next) {
         /*查询数据库显示 个人资料*/
         // console.log("do_my_info-2");
     })
+};
+/*判断是否登录过*/
+exports.charge_Tel = function (req, res, next) {
+    var info_tel = req.query.info_tel;
+    /*查询数据库*/
+    var user_tel_data = {
+        "info_tel": info_tel
+    };
+    huinong_info.login_info(user_tel_data, function (err, result) {
+        if (err) {
+            // 错误
+            // res.json({"code": 1});
+        }
+        console.log(result);
+        if (result.length == 0) {
+            // 不存在不可以登录
+            res.json({"code": 0});
+        } else {
+            /*存在可以登录*/
+            res.json({"code": 1});
+        }
+
+
+    })
+
 };
 
 /*编辑供应信息 - 发布供应信息*/
@@ -885,15 +910,16 @@ exports.delete_my_qiugoulistxiangqing = function (req, res, next) {
         huinong_info.delet_get_id(tel, result[0].get_all[number], function (err) {
             if (err) {
                 console.log("删除失败");
-            };
+            }
+            ;
             // /my-qiugoulist/:info_tel", newRouter.my_get
             console.log("删除成功");
             /*重定向到my-qiugoulist*/
-            res.redirect("/my-qiugoulist/"+tel);
+            res.redirect("/my-qiugoulist/" + tel);
         });
     });
 };
-exports.modify_my_qiugoulistxiangqing=function (req, res, next) {
+exports.modify_my_qiugoulistxiangqing = function (req, res, next) {
     var number = req.query.delete_get_number;
     var tel = req.query.detele_tel;
     var user_tel_data = {

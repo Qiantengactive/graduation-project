@@ -242,8 +242,8 @@
             font-size: 0.28rem;
             color: #777777;
             resize: none;
-            -webkit-appearance:none;
-            border-radius:0;
+            -webkit-appearance: none;
+            border-radius: 0;
         }
 
         #shengyu {
@@ -370,7 +370,7 @@
         /*width: 200px;*/
         /*height: 200px;*/
         /*}*/
-        input{
+        input {
             background: transparent;
         }
 
@@ -398,19 +398,23 @@
                     </div>
                     <p id="chanpin-info-title-right-p-1" class="bianji-bg">
                         <span class="contian-info-body-title-1">供应商品：</span>
-                        <input type="text" value="" placeholder="请输入供应商品名" class="contian-info-body-info-1 gysp" name="gysp">
+                        <input type="text" value="" placeholder="请输入供应商品名" class="contian-info-body-info-1 gysp"
+                               name="gysp">
                     </p>
                     <p class="bianji-bg">
                         <span class="contian-info-body-title-1">类&emsp;&emsp;别：</span>
-                        <input type="text" value="" class="contian-info-body-info-1 qglb" placeholder="蔬菜、水果、水产、禽畜" name="qglb">
+                        <input type="text" value="" class="contian-info-body-info-1 qglb" placeholder="蔬菜、水果、水产、禽畜"
+                               name="qglb">
                     </p>
                     <p class="bianji-bg">
                         <span class="contian-info-body-title-1">单&emsp;&emsp;价：</span>
-                        <input type="text" value="" class="contian-info-body-info-1 qgdj" placeholder="请输入产品价格" name="qgdj">
+                        <input type="text" value="" class="contian-info-body-info-1 qgdj" placeholder="请输入产品价格"
+                               name="qgdj">
                     </p>
                     <p class="bianji-bg">
                         <span class="contian-info-body-title-1">数&emsp;&emsp;量：</span>
-                        <input type="text" value="" class="contian-info-body-info-1 qgsl" placeholder="请输入供应数量" name="qgsl">
+                        <input type="text" value="" class="contian-info-body-info-1 qgsl" placeholder="请输入供应数量"
+                               name="qgsl">
                     </p>
                     <p class="bianji-bg">
                         <span class="contian-info-body-title-1">产&emsp;&emsp;地：</span>
@@ -524,7 +528,7 @@
             /*裁剪完成 上传数据*/
             alert("裁剪完成了");
             alert(typeof dataURL);
-            pictData[0] =dataURL+"";
+            pictData[0] = dataURL + "";
             $(".file-img-1").attr('src', dataURL);
         }
     });
@@ -571,20 +575,58 @@
         console.log(pictData);
     });
     $("#TextArea1").click(function () {
-        alert(1111)
-        var userdata = {
-            tel:<%= info_tel %>,
-            gysp: $(".gysp").val(),
-            qglb: $(".qglb").val(),
-            qgdj: $(".qgdj").val(),
-            qgsl: $(".qgsl").val(),
-            cd: $(".cd").val(),
-            seller_desc: $(".seller_desc").val(),
-            pictData: pictData
+        var gysp = $(".gysp").val().trim();
+        var qglb = $(".qglb").val().trim();
+        var qgdj = $(".qgdj").val().trim();
+        var qgsl = $(".qgsl").val().trim();
+        var cd = $(".cd").val().trim();
+        var seller_desc = $(".seller_desc").val().trim();
+            i
+        /*判断不能为空*/
+        if (!gysp) {
+            alert("供应商品名称不能为空");
+            return;
         }
+        if (!qglb) {
+            alert("供应商品类别不能为空");
+            return;
+        }
+        if (!qgdj) {
+            alert("供应商品单价不能为空");
+            return;
+        }
+        if (!qgsl) {
+            alert("供应商品数量不能为空");
+            return;
+        }
+        if (!cd){
+            alert("供应商品产地不能为空");
+            return;
+        }
+        if (!seller_desc){
+            alert("供应商品描述不能为空");
+            return;
+        }
+        for(var i=0;i<pictData.length;i++){
+            if(!pictData[i]){
+                alert("第"+i+"张没上传图片");
+                return;
+            }
+        }
+            var userdata = {
+                tel:<%= info_tel %>,
+                gysp: $(".gysp").val(),
+                qglb: $(".qglb").val(),
+                qgdj: $(".qgdj").val(),
+                qgsl: $(".qgsl").val(),
+                cd: $(".cd").val(),
+                seller_desc: $(".seller_desc").val(),
+                pictData: pictData
+            }
+
+
         $.post("/gongying-success", userdata, function (data) {
-            alert("window");
-            window.open("/open_seller_success?tel="+data.seller_tel, "_self");
+            window.open("/open_seller_success?tel=" + data.seller_tel, "_self");
         });
     });
 

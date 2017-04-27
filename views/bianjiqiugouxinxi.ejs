@@ -246,9 +246,10 @@
             font-size: 0.3rem;
             padding: 0 0 0 0.3rem;
         }
-        .hidden{
+
+        .hidden {
             position: absolute;
-            top:0;
+            top: 0;
             left: 0;
             z-index: -100;
             opacity: 0;
@@ -260,7 +261,8 @@
     <div class="contian qiugouxinagqing-contain">
         <div class="qiugouxinagqing-header">
             <div class="qiugouxinagqing-header-top">
-                <i><a href="javascript:void(0)" onclick="history.go(-1)"  class="qiugouxinagqing-header-top-back"></a></i>
+                <i><a href="javascript:void(0)" onclick="history.go(-1)"
+                      class="qiugouxinagqing-header-top-back"></a></i>
                 <span>编辑求购信息</span>
             </div>
         </div>
@@ -270,9 +272,9 @@
                 <p>我们将根据您填写的求购品类、规格、数量免费为您寻找符合要求的供应信息进行匹配。</p>
             </div>
             <div class="contian-info-body">
-                <form  id="form_id"  action="/qiugou-success">
+                <form id="form_id" action="/qiugou-success">
                     <div class="hidden">
-                        <input type="text" name="tel" value="<%=info_tel%>">
+                        <input type="text" name="tel" value="<%= info_tel %>">
                     </div>
                     <p id="chanpin-info-title-right-p-1" class="bianji-bg">
                         <span class="contian-info-body-title-1">求购商品：</span>
@@ -295,21 +297,22 @@
                         <!--<span class="contian-info-body-info-1">500公斤</span>-->
                     </p>
                     <p class="bianji-bg">
-                        <span class="contian-info-body-title-1">产地：</span>
+                        <span class="contian-info-body-title-1">产&emsp;&emsp;地：</span>
                         <input type="text" value="" class="contian-info-body-info-1 cd" name="cd">
                         <!--<span class="contian-info-body-info-1">郑州</span>-->
                     </p>
                     <div class="bianji-bg bianji-des-wrapper">
                         <span class="contian-info-body-title-1 contian-info-body-title-1-desc">产品描述：</span>
                         <textarea class="qgxq-desc" maxlength="100" name="form_id"
-                                  placeholder="请对货品进行描述，如货品特色、种植情况、供货量。更详细、更精准的描述能吸引更多的供应商（不超过200字）" title=""></textarea>
+                                  placeholder="请对货品进行描述，如货品特色、种植情况、供货量。更详细、更精准的描述能吸引更多的供应商（不超过200字）"
+                                  title=""></textarea>
                         <p id="shengyu">剩余120字</p>
                     </div>
                     <div>
                         <span>添加图片</span>
                     </div>
                     <!--<a href="qiugou-success.ejs">-->
-                        <input type="submit" id="TextArea1" class="qiugouxinagqing-tel" value="保存并发布">
+                    <input type="button" id="TextArea1" class="qiugouxinagqing-tel" value="保存并发布">
                     <!--</a>-->
                 </form>
             </div>
@@ -319,20 +322,53 @@
 </body>
 <script src="/js/jquery.min.js"></script>
 <script>
-    $(".qgxq-desc").on("keyup",function () {
+    $(".qgxq-desc").on("keyup", function () {
         var txtval = $('.qgxq-desc').val().length;
         console.log(txtval);
-        var str = parseInt(120-txtval);
+        var str = parseInt(120 - txtval);
         console.log(str);
-        if(str > 0 ){
-            $('#shengyu').html('剩余可输入'+str+'字');
-        }else{
+        if (str > 0) {
+            $('#shengyu').html('剩余可输入' + str + '字');
+        } else {
             $('#shengyu').html('剩余可输入0字');
-            $('.qgxq-desc').val($('.qgxq-desc').val().substring(0,120));
+            $('.qgxq-desc').val($('.qgxq-desc').val().substring(0, 120));
         }
     });
-//    $("#TextArea1").click(function () {
-//
-//    });
+
+    $("#TextArea1").click(function () {
+        var gysp = $(".gysp").val().trim();
+        var qglb = $(".qglb").val().trim();
+        var qgdj = $(".qgdj").val().trim();
+        var qgsl = $(".qgsl").val().trim();
+        var cd = $(".cd").val().trim();
+        var qgxq_desc = $(".qgxq-desc").val().trim();
+        i
+        /*判断不能为空*/
+        if (!gysp) {
+            alert("求购商品名称不能为空");
+            return;
+        }
+        if (!qglb) {
+            alert("求购商品类别不能为空");
+            return;
+        }
+        if (!qgdj) {
+            alert("求购商品单价不能为空");
+            return;
+        }
+        if (!qgsl) {
+            alert("求购商品数量不能为空");
+            return;
+        }
+        if (!cd) {
+            alert("求购商品产地不能为空");
+            return;
+        }
+        if (!qgxq_desc) {
+            alert("求购商品描述不能为空");
+            return;
+        }
+        $("#TextArea1").submit();
+    });
 </script>
 </html>

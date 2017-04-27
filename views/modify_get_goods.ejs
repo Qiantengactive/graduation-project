@@ -277,7 +277,7 @@
                     </div>
                     <p id="chanpin-info-title-right-p-1" class="bianji-bg">
                         <span class="contian-info-body-title-1">求购商品：</span>
-                        <input type="text" value="<%=modify_get_goods.get_name%>" class="contian-info-body-info-1" name="gysp">
+                        <input type="text" value="<%=modify_get_goods.get_name%>" class="contian-info-body-info-1 gysp" name="gysp">
                         <!--<span class="contian-info-body-info-1">草莓</span>-->
                     </p>
                     <p class="bianji-bg">
@@ -291,30 +291,30 @@
 
                         <span class="contian-info-body-title-1">求购类别：</span>
                         <%if(modify_get_goods.type==1){%>
-                            <input type="text" value="蔬菜" class="contian-info-body-info-1" name="qglb">
+                            <input type="text" value="蔬菜" class="contian-info-body-info-1 qglb" name="qglb">
                         <%}else if(modify_get_goods.type== 2){%>
-                            <input type="text" value="水果" class="contian-info-body-info-1" name="qglb">
+                            <input type="text" value="水果" class="contian-info-body-info-1 qglb" name="qglb">
                         <%}else if(modify_get_goods.type== 3){%>
-                            <input type="text" value="禽类" class="contian-info-body-info-1" name="qglb">
+                            <input type="text" value="禽类" class="contian-info-body-info-1 qglb" name="qglb">
                         <%}else if(modify_get_goods.type== 4){%>
-                            <input type="text" value="水产" class="contian-info-body-info-1" name="qglb">
+                            <input type="text" value="水产" class="contian-info-body-info-1 qglb" name="qglb">
                         <%}else{%>
-                            <input type="text" value="其他" class="contian-info-body-info-1" name="qglb">
+                            <input type="text" value="其他" class="contian-info-body-info-1 qglb" name="qglb">
                         <%}%>
                     </p>
                     <p class="bianji-bg">
                         <span class="contian-info-body-title-1">求购单价：</span>
-                        <input type="text" value="<%=modify_get_goods.get_price%>" class="contian-info-body-info-1" name="qgdj">
+                        <input type="text" value="<%=modify_get_goods.get_price%>" class="contian-info-body-info-1 qgdj" name="qgdj">
                         <!--<span class="contian-info-body-info-1">2.00元/斤</span>-->
                     </p>
                     <p class="bianji-bg">
                         <span class="contian-info-body-title-1">求购数量：</span>
-                        <input type="text" value="<%=modify_get_goods.get_weight%>" class="contian-info-body-info-1" name="qgsl">
+                        <input type="text" value="<%=modify_get_goods.get_weight%>" class="contian-info-body-info-1 qgsl" name="qgsl">
                         <!--<span class="contian-info-body-info-1">500公斤</span>-->
                     </p>
                     <p class="bianji-bg">
                         <span class="contian-info-body-title-1">产地：</span>
-                        <input type="text" value="<%=modify_get_goods.get_site.get_city%>" class="contian-info-body-info-1" name="cd">
+                        <input type="text" value="<%=modify_get_goods.get_site.get_city%>" class="contian-info-body-info-1 cd" name="cd">
                         <!--<span class="contian-info-body-info-1">郑州</span>-->
                     </p>
                     <div class="bianji-bg bianji-des-wrapper">
@@ -348,5 +348,41 @@
             $('.qgxq-desc').val($('.qgxq-desc').val().substring(0,120));
         }
     })
+    $("#TextArea1").click(function () {
+        var gysp = $(".gysp").val().trim();
+        var qglb = $(".qglb").val().trim();
+        var qgdj = $(".qgdj").val().trim();
+        var qgsl = $(".qgsl").val().trim();
+        var cd = $(".cd").val().trim();
+        var qgxq_desc = $(".qgxq-desc").val().trim();
+        i
+        /*判断不能为空*/
+        if (!gysp) {
+            alert("求购商品名称不能为空");
+            return;
+        }
+        if (!qglb) {
+            alert("求购商品类别不能为空");
+            return;
+        }
+        if (!qgdj) {
+            alert("求购商品单价不能为空");
+            return;
+        }
+        if (!qgsl) {
+            alert("求购商品数量不能为空");
+            return;
+        }
+        if (!cd) {
+            alert("求购商品产地不能为空");
+            return;
+        }
+        if (!qgxq_desc) {
+            alert("求购商品描述不能为空");
+            return;
+        }
+        $("#TextArea1").submit();
+    });
+
 </script>
 </html>

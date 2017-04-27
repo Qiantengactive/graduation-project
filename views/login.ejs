@@ -68,6 +68,7 @@
             background-size: contain;
 
         }
+
         .login-header-top i a {
             display: inline-block;
             width: inherit;
@@ -176,7 +177,7 @@
     <div class="contian login-contian">
         <div class="login-header">
             <div class="login-header-top">
-                <i><a href="/"  class="login-header-top-back"></a></i>
+                <i><a href="/" class="login-header-top-back"></a></i>
                 <span>会员登录</span>
             </div>
         </div>
@@ -190,7 +191,7 @@
                     <div class="login-body-input-wrapper">
                         <div class="login-body-input-wrapper-1">
                             <img src="img/login-_01.png" alt="" class="login-img">
-                            <input type="text" id="tel" name="user_tel" placeholder="请输入登录手机号"
+                            <input type="text" id="tel" name="user_tel" maxlength="11" placeholder="请输入登录手机号"
                                    class="login-body-input-wrapper-text">
                         </div>
                     </div>
@@ -212,35 +213,51 @@
 <script src="/js/jquery.min.js"></script>
 <script>
     $(function () {
+        var a = false;
+        /*判断是否注册过*/
+        $("#tel").blur(function () {
+            var info_tel = $("#tel").val().trim();
+            $.get("/charge_Tel?info_tel=" + info_tel, function (data) {
+                /*1注册*/
+                if (!data.code) {
+                    alert("手机号不存在，请登录注册后登录");
+                    return;
+                } else {
+                    a = true;
+                }
+            }, "json")
+        });
+
         $("#btn").click(function () {
-            var a = true;
+            var b = true;
             var phone = $('#tel').val().trim();
             if (!phone) {
                 alert("请输入有效的手机号码");
-                a = false;
+                b = false;
                 return;
             }
-
             var pwd = $("#btn").val().trim();
             if (!pwd) {
                 alert("请输入密码");
-                a = false;
+                b = false;
                 return;
             }
-//            $.get("/judge_Tel?info_tel=" + info_tel, function (data) {
-//                if (data.code) {
-//                    alert("手机号已经注册，请更换手机号码")
-//                    return;
-//                } else {
-//                    a = true;
-//                }
-//            }, "json")
-//                });
-//        $(".login-body-submit").click(function () {
-            if (a) {
+            if(!a){
+                var info_tel = $("#tel").val().trim();
+                $.get("/charge_Tel?info_tel=" + info_tel, function (data) {
+                    /*1注册*/
+                    if (!data.code) {
+                        alert("手机号不存在，请登录注册后登录");
+                        return;
+                    } else {
+                        a = true;
+                    }
+                }, "json")
+            }
+            if (a == true && b == true) {
                 $("form").submit();
             } else {
-                alert('请再次点击');
+                alert('当前输入信息不完整,请检查后再次点击');
             }
         });
     });

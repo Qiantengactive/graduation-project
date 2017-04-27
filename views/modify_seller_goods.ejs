@@ -560,7 +560,43 @@
     });
 /*ajax提交数据*/
     $("#TextArea1").click(function () {
-        alert(1111)
+        var gysp = $(".gysp").val().trim();
+        var qglb = $(".qglb").val().trim();
+        var qgdj = $(".qgdj").val().trim();
+        var qgsl = $(".qgsl").val().trim();
+        var cd = $(".cd").val().trim();
+        var seller_desc = $(".seller_desc").val().trim();
+        /*判断不能为空*/
+        if (!gysp) {
+            alert("供应商品名称不能为空");
+            return;
+        }
+        if (!qglb) {
+            alert("供应商品类别不能为空");
+            return;
+        }
+        if (!qgdj) {
+            alert("供应商品单价不能为空");
+            return;
+        }
+        if (!qgsl) {
+            alert("供应商品数量不能为空");
+            return;
+        }
+        if (!cd){
+            alert("供应商品产地不能为空");
+            return;
+        }
+        if (!seller_desc){
+            alert("供应商品描述不能为空");
+            return;
+        }
+        for(var i=0;i<pictData.length;i++){
+            if(!pictData[i]){
+                alert("第"+i+"张没上传图片");
+                return;
+            }
+        }
         var userdata = {
             tel:<%= modify_seller_goods.tel %>,
             gysp: $(".gysp").val(),
@@ -571,10 +607,8 @@
             seller_desc: $(".seller_desc").val(),
             pictData: pictData
         }
-        console.log(userdata);
 
         $.post("/gongying-success", userdata, function (data) {
-            alert("window");
             window.open("/open_seller_success?tel="+data.seller_tel, "_self");
         });
     });
