@@ -931,3 +931,6 @@ exports.modify_my_qiugoulistxiangqing = function (req, res, next) {
         })
     });
 };
+exports.aaa = function (req, res, next) {
+    res.send("1111");
+};
