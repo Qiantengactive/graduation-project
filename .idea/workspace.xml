@@ -2,7 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="347262c5-a42e-4619-9bba-3b27bdc010ce" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app.js" afterPath="$PROJECT_DIR$/app.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/views/bianjiqiugouxinxi.ejs" afterPath="$PROJECT_DIR$/views/bianjiqiugouxinxi.ejs" />
     </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
     <ignored path="$PROJECT_DIR$/temp/" />
@@ -23,11 +24,21 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="app.js" pinned="false" current-in-tab="true">
+      <file leaf-file-name="app.js" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="446">
+            <state relative-caret-position="1485">
               <caret line="99" column="24" lean-forward="false" selection-start-line="99" selection-start-column="24" selection-end-line="99" selection-end-column="24" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="gongying-success.ejs" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/views/gongying-success.ejs">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="302">
+              <caret line="132" column="14" lean-forward="true" selection-start-line="132" selection-start-column="14" selection-end-line="132" selection-end-column="14" />
               <folding />
             </state>
           </provider>
@@ -53,10 +64,20 @@
           </provider>
         </entry>
       </file>
+      <file leaf-file-name="bianjiqiugouxinxi.ejs" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/views/bianjiqiugouxinxi.ejs">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="332">
+              <caret line="344" column="9" lean-forward="false" selection-start-line="344" selection-start-column="9" selection-end-line="344" selection-end-column="9" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
       <file leaf-file-name="newRouter.js" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/router/newRouter.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="109">
+            <state relative-caret-position="6345">
               <caret line="423" column="0" lean-forward="false" selection-start-line="423" selection-start-column="0" selection-end-line="423" selection-end-column="0" />
               <folding />
             </state>
@@ -66,7 +87,7 @@
       <file leaf-file-name="login.ejs" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/views/login.ejs">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="232">
+            <state relative-caret-position="3675">
               <caret line="245" column="34" lean-forward="false" selection-start-line="245" selection-start-column="24" selection-end-line="245" selection-end-column="34" />
               <folding />
             </state>
@@ -76,18 +97,8 @@
       <file leaf-file-name="regist.ejs" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/views/regist.ejs">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="245">
-              <caret line="167" column="70" lean-forward="true" selection-start-line="167" selection-start-column="10" selection-end-line="167" selection-end-column="70" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="qiugouxiangqing.ejs" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/views/qiugouxiangqing.ejs">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="5295">
-              <caret line="353" column="104" lean-forward="false" selection-start-line="353" selection-start-column="104" selection-end-line="353" selection-end-column="104" />
+            <state relative-caret-position="2505">
+              <caret line="167" column="70" lean-forward="false" selection-start-line="167" selection-start-column="10" selection-end-line="167" selection-end-column="70" />
               <folding />
             </state>
           </provider>
@@ -96,8 +107,8 @@
       <file leaf-file-name="bianjigongyingxinxi.ejs" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/views/bianjigongyingxinxi.ejs">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="285">
-              <caret line="592" column="9" lean-forward="true" selection-start-line="592" selection-start-column="9" selection-end-line="592" selection-end-column="9" />
+            <state relative-caret-position="8880">
+              <caret line="592" column="9" lean-forward="false" selection-start-line="592" selection-start-column="9" selection-end-line="592" selection-end-column="9" />
               <folding />
             </state>
           </provider>
@@ -106,18 +117,8 @@
       <file leaf-file-name="gongyingdating.ejs" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/views/gongyingdating.ejs">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="15">
+            <state relative-caret-position="1005">
               <caret line="67" column="0" lean-forward="false" selection-start-line="67" selection-start-column="0" selection-end-line="68" selection-end-column="0" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="index.ejs" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/views/index.ejs">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="10530">
-              <caret line="702" column="38" lean-forward="false" selection-start-line="702" selection-start-column="38" selection-end-line="702" selection-end-column="38" />
               <folding />
             </state>
           </provider>
@@ -226,7 +227,6 @@
         <option value="$PROJECT_DIR$/views/bianjigongyingxinxi.ejs" />
         <option value="$PROJECT_DIR$/views/modify_seller_goods.ejs" />
         <option value="$PROJECT_DIR$/views/qiugouxiangqing.ejs" />
-        <option value="$PROJECT_DIR$/views/bianjiqiugouxinxi.ejs" />
         <option value="$PROJECT_DIR$/views/modify_get_goods.ejs" />
         <option value="$PROJECT_DIR$/views/index.ejs" />
         <option value="$PROJECT_DIR$/views/login.ejs" />
@@ -234,6 +234,7 @@
         <option value="$PROJECT_DIR$/router/newRouter.js" />
         <option value="$PROJECT_DIR$/try.js" />
         <option value="$PROJECT_DIR$/app.js" />
+        <option value="$PROJECT_DIR$/views/bianjiqiugouxinxi.ejs" />
       </list>
     </option>
   </component>
@@ -253,9 +254,9 @@
     <handled-path value="$PROJECT_DIR$/node_modules" />
   </component>
   <component name="ProjectFrameBounds">
-    <option name="x" value="-8" />
-    <option name="y" value="-8" />
-    <option name="width" value="1382" />
+    <option name="x" value="-13" />
+    <option name="y" value="26" />
+    <option name="width" value="1370" />
     <option name="height" value="744" />
   </component>
   <component name="ProjectView">
@@ -273,6 +274,8 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
+      <pane id="Scratches" />
+      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <PATH>
@@ -285,10 +288,22 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="graduation-project" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="graduation-project" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="views" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
         </subPane>
       </pane>
-      <pane id="Scope" />
-      <pane id="Scratches" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -504,12 +519,14 @@
       <workItem from="1493289361362" duration="499000" />
       <workItem from="1493292454697" duration="4711000" />
       <workItem from="1493297266232" duration="3109000" />
-      <workItem from="1493301600609" duration="4094000" />
+      <workItem from="1493301600609" duration="4250000" />
+      <workItem from="1493363180581" duration="159000" />
+      <workItem from="1493715050001" duration="1103000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="364406000" />
+    <option name="totallyTimeSpent" value="365824000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -521,25 +538,25 @@
     </todo-panel>
   </component>
   <component name="ToolWindowManager">
-    <frame x="-8" y="-8" width="1382" height="744" extended-state="6" />
+    <frame x="-13" y="26" width="1370" height="744" extended-state="1" />
     <editor active="true" />
     <layout>
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.22023809" sideWeight="0.5" order="1" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.22222222" sideWeight="0.5" order="1" side_tool="false" content_ui="combo" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3295082" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
-      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3065574" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.40819672" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
-      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.39836067" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.40819672" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3065574" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.39836067" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
     </layout>
     <layout-to-restore>
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3295082" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
@@ -571,7 +588,6 @@
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/code/css/LArea.css" />
     <entry file="file://$PROJECT_DIR$/code/.idea/modules.xml" />
     <entry file="file://$PROJECT_DIR$/code/map.html" />
     <entry file="file://$PROJECT_DIR$/code/my.html" />
@@ -731,19 +747,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/views/bianjiqiugouxinxi.ejs">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="5055">
-          <caret line="337" column="1" lean-forward="false" selection-start-line="337" selection-start-column="1" selection-end-line="371" selection-end-column="7" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/views/modify_get_goods.ejs">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="4545">
           <caret line="303" column="24" lean-forward="false" selection-start-line="303" selection-start-column="24" selection-end-line="303" selection-end-column="24" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -751,7 +758,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="5955">
           <caret line="397" column="146" lean-forward="false" selection-start-line="397" selection-start-column="37" selection-end-line="397" selection-end-column="146" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -773,31 +779,23 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/views/regist.ejs">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="245">
-          <caret line="167" column="70" lean-forward="true" selection-start-line="167" selection-start-column="10" selection-end-line="167" selection-end-column="70" />
+        <state relative-caret-position="2505">
+          <caret line="167" column="70" lean-forward="false" selection-start-line="167" selection-start-column="10" selection-end-line="167" selection-end-column="70" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/views/login.ejs">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="232">
+        <state relative-caret-position="3675">
           <caret line="245" column="34" lean-forward="false" selection-start-line="245" selection-start-column="24" selection-end-line="245" selection-end-column="34" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/views/404.ejs">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="135">
-          <caret line="9" column="7" lean-forward="false" selection-start-line="9" selection-start-column="7" selection-end-line="9" selection-end-column="7" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/router/newRouter.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="109">
+        <state relative-caret-position="6345">
           <caret line="423" column="0" lean-forward="false" selection-start-line="423" selection-start-column="0" selection-end-line="423" selection-end-column="0" />
           <folding />
         </state>
@@ -805,7 +803,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/views/gongyingdating.ejs">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="15">
+        <state relative-caret-position="1005">
           <caret line="67" column="0" lean-forward="false" selection-start-line="67" selection-start-column="0" selection-end-line="68" selection-end-column="0" />
           <folding />
         </state>
@@ -813,8 +811,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/views/bianjigongyingxinxi.ejs">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="285">
-          <caret line="592" column="9" lean-forward="true" selection-start-line="592" selection-start-column="9" selection-end-line="592" selection-end-column="9" />
+        <state relative-caret-position="8880">
+          <caret line="592" column="9" lean-forward="false" selection-start-line="592" selection-start-column="9" selection-end-line="592" selection-end-column="9" />
           <folding />
         </state>
       </provider>
@@ -829,8 +827,32 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/app.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="446">
+        <state relative-caret-position="1485">
           <caret line="99" column="24" lean-forward="false" selection-start-line="99" selection-start-column="24" selection-end-line="99" selection-end-column="24" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/views/gongying-success.ejs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="302">
+          <caret line="132" column="14" lean-forward="true" selection-start-line="132" selection-start-column="14" selection-end-line="132" selection-end-column="14" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/views/404.ejs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="135">
+          <caret line="9" column="7" lean-forward="false" selection-start-line="9" selection-start-column="7" selection-end-line="9" selection-end-column="7" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/views/bianjiqiugouxinxi.ejs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="332">
+          <caret line="344" column="9" lean-forward="false" selection-start-line="344" selection-start-column="9" selection-end-line="344" selection-end-column="9" />
           <folding />
         </state>
       </provider>
