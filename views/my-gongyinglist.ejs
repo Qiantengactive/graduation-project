@@ -374,7 +374,7 @@
             border-radius: 0.1rem;
             color: #ffffff;
             background: #59bb43;
-            margin: 0.85rem auto 0.7rem auto;
+            margin: 0.85rem auto 2rem auto;
             -webkit-appearance: none; /*去除系统默认的样式*/
             -webkit-tap-highlight-color: rgba(0, 0, 0, 0); /* 点击高亮的颜色*/
         }
@@ -405,7 +405,7 @@
                     </a>
                     <div class="home-body-gongying-body-list-wrapper">
                         <a href="/my-gongyinglist-xiangqing?number=<%=i%>&tel=<%=seller_all[i].tel%>" >
-                            <h1 class=" seller-goods home-body-gongying-body-list-wrapper-title">【自营水果】<%= seller_all[i].seller_name %></h1>
+                            <h1 class=" seller-goods home-body-gongying-body-list-wrapper-title"><%= seller_all[i].seller_desc%></h1>
                         </a>
                         <a href="/my-gongyinglist-xiangqing?number=<%=i%>&tel=<%=seller_all[i].tel%>" ">
                             <p class="home-body-gongying-body-list-wrapper-price">&ensp;&ensp;<%= seller_all[i].seller_price %>
