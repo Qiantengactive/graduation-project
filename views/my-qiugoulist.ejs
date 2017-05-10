@@ -219,7 +219,8 @@
         .home-body-gongying-select-5 {
             margin-right: 0.1rem;
         }
-/*list*/
+
+        /*list*/
         .home-body-gongying-body {
             width: inherit;
             /*padding-bottom: 0.2rem;*/
@@ -274,7 +275,8 @@
             font-size: 0;
             border-bottom: 1px solid #f1f1f1;
         }
-        .home-body-qiugou-body-list-wrapper{
+
+        .home-body-qiugou-body-list-wrapper {
             position: relative;
         }
 
@@ -286,7 +288,7 @@
 
         .home-body-qiugou-body-list-wrapper-weight {
             position: absolute;
-            top:0;
+            top: 0;
             right: 0;
             font-size: 0.26rem;
             color: #ee0202;
@@ -298,6 +300,7 @@
             color: #777;
             padding-bottom: 0.17rem;
         }
+
         /*select*/
         .serch-body-nav {
             width: inherit;
@@ -309,6 +312,7 @@
             background: #f9f9f9;
 
         }
+
         .serch-body-nav-span-1:hover {
             color: #59bb43;
         }
@@ -360,14 +364,16 @@
                 <div class="home-body-gongying-body">
                     <% for(var i = 0;i < get_all.length;i++){ %>
                     <a href="/my-qiugoulist-xiangqing?number=<%= i %>&tel=<%= get_all[i].tel %>">
-                    <div class="home-body-qiugou-body-list">
-                        <div class="home-body-qiugou-body-list-wrapper">
-                            <h1 class="home-body-qiugou-body-list-wrapper-title"><%= get_all[i].get_name %></h1>
-                            <p class="home-body-qiugou-body-list-wrapper-weight"><%= get_all[i].get_weight %></p>
-                            <p class="home-body-qiugou-body-list-wrapper-price">价格：<%= get_all[i].get_price %></p>
-                            <p class="home-body-qiugou-body-list-wrapper-price">指定产地：<%= get_all[i].get_site.city %></p>
+                        <div class="home-body-qiugou-body-list">
+                            <div class="home-body-qiugou-body-list-wrapper">
+                                <h1 class="home-body-qiugou-body-list-wrapper-title"><%= get_all[i].get_name %></h1>
+                                <p class="home-body-qiugou-body-list-wrapper-weight"><%= get_all[i].get_weight %></p>
+                                <p class="home-body-qiugou-body-list-wrapper-price">价格：<%= get_all[i].get_price %></p>
+                                <p class="home-body-qiugou-body-list-wrapper-price">
+                                    指定产地：<%= get_all[i].get_site.city %></p>
+                            </div>
                         </div>
-                    </div>
+                    </a>
                     <% } %>
                 </div>
             </div>
@@ -404,20 +410,20 @@
 <script src="/js/jquery.min.js"></script>
 <script>
     $(".a1").click(function () {
-        $(".a1").css("color","#59bb43");
-        $(".a:not(.a1)").css("color","#333333");
+        $(".a1").css("color", "#59bb43");
+        $(".a:not(.a1)").css("color", "#333333");
     });
     $(".a2").click(function () {
-        $(".a2").css("color","#59bb43");
-        $(".a:not(.a2)").css("color","#333333");
+        $(".a2").css("color", "#59bb43");
+        $(".a:not(.a2)").css("color", "#333333");
     });
     $(".a3").click(function () {
-        $(".a3").css("color","#59bb43");
-        $(".a:not(.a3)").css("color","#333333");
+        $(".a3").css("color", "#59bb43");
+        $(".a:not(.a3)").css("color", "#333333");
     });
     $(".a4").click(function () {
-        $(".a4").css("color","#59bb43");
-        $(".a:not(.a4)").css("color","#333333");
+        $(".a4").css("color", "#59bb43");
+        $(".a:not(.a4)").css("color", "#333333");
     });
 </script>
 </html>
