@@ -1,0 +1,49 @@
+.top-bg{
+    background-color:#59bb43;
+}
+
+.bg-search-l{
+    background-color: #93d386;
+}
+.bg-search-s{
+    background-color: #bde4b5;
+    color: #ffffff;
+}
+.qgdt-search-text-2{
+    color: #ffffff;
+}
+
+.qgdt-search-text-2::-webkit-input-placeholder {
+    color: #ffffff;
+}
+
+.qgdt-search-text-2:-moz-placeholder {
+    color: #ffffff;
+}
+
+.qgdt-search-text-2::-moz-placeholder {
+    color: #ffffff;
+}
+
+.qgdt-search-text-2:-ms-input-placeholder {
+    color: #ffffff;
+}
+
+/*contian-info-body-info-1*/
+
+
+.contian-info-body-info-1::-webkit-input-placeholder {
+    color: #ffffff;
+}
+
+.contian-info-body-info-1:-moz-placeholder {
+    color: #ffffff;
+}
+
+.contian-info-body-info-1::-moz-placeholder {
+    color: #ffffff;
+}
+
+.contian-info-body-info-1:-ms-input-placeholder {
+    color: #ffffff;
+}

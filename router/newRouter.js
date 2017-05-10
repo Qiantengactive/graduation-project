@@ -8,6 +8,7 @@ exports.showIndex = function (req, res, next) {
         if (err) {
             console.log("show_seller_all出错");
         }
+
         for (var z = 0; z < result.length; z++) {
             if (result[z]["get_all"].length == 0) {
                 continue;
@@ -17,6 +18,10 @@ exports.showIndex = function (req, res, next) {
                 result[z]["get_all"][q].number = q;
                 get_all.push(result[z]["get_all"][q]);
             }
+            if (get_all.length > 4) {
+                get_all.splice(5, get_all.length);
+            }
+
         }
         /*出售信息*/
         // console.log(result[0]["seller_all"][0].seller_name);
@@ -29,6 +34,9 @@ exports.showIndex = function (req, res, next) {
                 result[i]["seller_all"][j].tel = result[i]["info_tel"];
                 result[i]["seller_all"][j].number = j;
                 seller_all.push(result[i]["seller_all"][j]);
+            }
+            if (seller_all.length > 4) {
+                seller_all.splice(5, get_all.length);
             }
         }
         data = {

@@ -44,7 +44,7 @@
             font-size: 0;
             border-bottom: 0.01rem solid #c1c1c1;
             text-align: center;
-            background: #ededed;
+            /*background: #ededed;*/
         }
 
         .search-header-top span {
@@ -401,19 +401,20 @@
             color: #59bb43;
         }
     </style>
+    <link href="/css/com.css" rel="stylesheet" type="text/css">
 </head>
 <body>
 <div class="contian-wrapper">
     <div class="contian search-contain">
-        <div class="search-header">
-            <div class="search-header-top">
+        <div class="search-header top-bg">
+            <div class="search-header-top top-bg">
                 <i><a href="javascript:void(0)" onclick="history.go(-1)" class="search-header-top-back"></a></i>
                 <span>供应大厅</span>
             </div>
         </div>
         <div class="search-body">
-            <div class="qgdt-search">
-                <span class="qgdt-search-text">
+            <div class="qgdt-search bg-search-l">
+                <span class="qgdt-search-text bg-search-s">
                     <img src="./img/search_03.png" class="qgdt-search-img" alt="">
                     <input type="text" class="qgdt-search-text-2" placeholder="输入商品名称">
                 </span>
@@ -433,11 +434,10 @@
                     </a>
                     <div class="home-body-gongying-body-list-wrapper">
                         <a href="gongyingxiangqing?tel=<%= seller_all[i].tel %>&number=<%= seller_all[i].number %>">
-                            <h1 class="home-body-gongying-body-list-wrapper-title">
-                                【自营水果】<%= seller_all[i].seller_name %></h1>
+                            <h1 class="home-body-gongying-body-list-wrapper-title"><%= seller_all[i].seller_desc%></h1>
                         </a>
                         <a href="gongyingxiangqing?tel=<%= seller_all[i].tel %>&number=<%= seller_all[i].number %>">
-                            <p class="home-body-gongying-body-list-wrapper-price">&ensp;&ensp;<%= seller_all[i].seller_price %>
+                            <p class="home-body-gongying-body-list-wrapper-price">&ensp;<%= seller_all[i].seller_price %>
                                 <span class="home-body-gongying-body-list-wrapper-weight"><%= seller_all[i].seller_weight %></span>
                             </p>
                         </a>

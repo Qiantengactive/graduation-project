@@ -44,7 +44,7 @@
             width: inherit;
             height: 1.3rem;
             text-align: center;
-            background: #ededed;
+            /*background: #ededed;*/
             position: fixed;
             top: 0;
             border-bottom: 0.01rem solid #c1c1c1;
@@ -110,7 +110,7 @@
             display: inline-block;
             float: right;
             height: 0.6rem;
-            width: 1.925rem;
+            /*width: 1.925rem;*/
             line-height: 0.6rem;
             margin-top: 0.25rem;
             padding: 0 0.1rem;
@@ -206,12 +206,13 @@
         }
 
     </style>
+    <link href="/css/com.css" rel="stylesheet" type="text/css">
     <link rel="stylesheet" href="css/LArea.css">
 </head>
 <body>
 <div class="contian-wrapper">
     <div class="contian login-contian">
-        <div class="login-header">
+        <div class="login-header top-bg">
             <div class="login-header-top">
                 <i><a href="javascript:void(0)" onclick="history.go(-1)" class="login-header-top-back"></a></i>
                 <span>会员注册</span>
@@ -289,7 +290,7 @@
         var RandomCode = <%= RandomCode %>;
 
         function countDown(obj) {
-            var timeRun = 5;
+            var timeRun = 121;
             var timer = setInterval(function () {
                 timeRun--;
                 var str = "获取验证码(" + timeRun + "秒)";
