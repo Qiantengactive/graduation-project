@@ -544,8 +544,6 @@ exports.edit_get_goods = function (req, res, next) {
 };
 /*发布求购信息成功*/
 exports.get_success = function (req, res, next) {
-    // console.log(req.query);
-
 // { tel: '17600000000',
 //     gysp: '草莓aa',
 //     qglb: '水果',
