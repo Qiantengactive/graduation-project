@@ -19,7 +19,7 @@ exports.showIndex = function (req, res, next) {
                 get_all.push(result[z]["get_all"][q]);
             }
             if (get_all.length > 4) {
-                get_all.splice(5, get_all.length);
+                get_all.splice(4, get_all.length);
             }
 
         }
@@ -36,7 +36,7 @@ exports.showIndex = function (req, res, next) {
                 seller_all.push(result[i]["seller_all"][j]);
             }
             if (seller_all.length > 4) {
-                seller_all.splice(5, get_all.length);
+                seller_all.splice(4, get_all.length);
             }
         }
         data = {
