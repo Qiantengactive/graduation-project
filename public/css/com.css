@@ -1,15 +1,17 @@
-.top-bg{
-    background-color:#59bb43;
+.top-bg {
+    background-color: #59bb43;
 }
 
-.bg-search-l{
+.bg-search-l {
     background-color: #93d386;
 }
-.bg-search-s{
+
+.bg-search-s {
     background-color: #bde4b5;
     color: #ffffff;
 }
-.qgdt-search-text-2{
+
+.qgdt-search-text-2 {
     color: #ffffff;
 }
 
@@ -29,8 +31,10 @@
     color: #ffffff;
 }
 
+input {
+    -webkit-appearance: none;
+}
 /*contian-info-body-info-1*/
-
 
 .contian-info-body-info-1::-webkit-input-placeholder {
     color: #ffffff;
