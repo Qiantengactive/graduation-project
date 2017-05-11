@@ -90,7 +90,7 @@
 
         /*}*/
 
-        .qiugouxinagqing-tel{
+        .qiugouxinagqing-tel {
             display: inline-block;
             width: 5.9rem;
             height: 0.8rem;
@@ -214,20 +214,24 @@
             font-size: 0.3rem;
             padding-top: 0.35rem;
         }
-        .bianji-bg{
+
+        .bianji-bg {
             background: #ffffff;
         }
-        .bianji-des-wrapper{
+
+        .bianji-des-wrapper {
             padding-bottom: 0.35rem;
             font-size: 0;
         }
-        .contian-info-body-info-1{
+
+        .contian-info-body-info-1 {
             outline: none;
             border: none;
             font-size: 0.3rem;
             color: #777777;
         }
-        .qgxq-desc{
+
+        .qgxq-desc {
             width: 6.9rem;
             height: 2rem;
             margin: 0.3rem 0.3rem 0 0.3rem;
@@ -236,25 +240,29 @@
             color: #777777;
             resize: none;
         }
-        #shengyu{
+
+        #shengyu {
             color: #777777;
             font-size: 0.3rem;
             padding: 0 0 0 0.3rem;
         }
-        .hidden{
+
+        .hidden {
             position: absolute;
-            top:0;
+            top: 0;
             left: 0;
             z-index: -100;
             opacity: 0;
         }
+
         /*图片上传*/
-        .ajax-photoseller{
+        .ajax-photoseller {
             width: inherit;
             height: 3rem;
             padding: 0 0.3rem;
         }
-        .photo{
+
+        .photo {
             position: relative;
             display: inline-block;
             width: 2rem;
@@ -262,15 +270,18 @@
             border: 1px solid #777777;
             overflow: hidden;
         }
-        .photo-1{
+
+        .photo-1 {
             margin-left: 0.1rem;
             margin-right: 0.35rem;
         }
-        .photo-3{
+
+        .photo-3 {
             margin-left: 0.35rem;
             margin-right: 0.1rem;
         }
-        .photo-file{
+
+        .photo-file {
             position: absolute;
             top: 0;
             left: 0;
@@ -282,14 +293,16 @@
             height: inherit;
             overflow: hidden;
         }
-        .photo img{
+
+        .photo img {
             position: absolute;
-            top:0;
+            top: 0;
             left: 0;
             z-index: 9;
             width: inherit;
             height: inherit;
         }
+
         /*图片上传==插件*/
         /*图片上传*/
         .upload {
@@ -352,7 +365,7 @@
         /*width: 200px;*/
         /*height: 200px;*/
         /*}*/
-        input{
+        input {
             background: transparent;
         }
     </style>
@@ -363,7 +376,8 @@
     <div class="contian qiugouxinagqing-contain">
         <div class="qiugouxinagqing-header top-bg">
             <div class="qiugouxinagqing-header-top top-bg">
-                <i><a href="javascript:void(0)" onclick="history.go(-1)"  class="qiugouxinagqing-header-top-back"></a></i>
+                <i><a href="javascript:void(0)" onclick="history.go(-1)"
+                      class="qiugouxinagqing-header-top-back"></a></i>
                 <span>编辑供应信息</span>
             </div>
         </div>
@@ -375,12 +389,13 @@
             <div class="contian-info-body">
                 <form id="form_id" action="/affirm_modify_seller_goods_info">
                     <div class="hidden">
-                        <input type="text" name="tel" value="<%=modify_seller_goods.tel%>">
-                        <input type="text" name="number" value="<%=modify_seller_goods.number%>">
+                        <input type="text" name="tel" value="<%= modify_seller_goods.tel %>">
+                        <input type="text" name="number" value="<%= modify_seller_goods.number %>">
                     </div>
                     <p id="chanpin-info-title-right-p-1" class="bianji-bg">
                         <span class="contian-info-body-title-1">供应商品：</span>
-                        <input type="text" value="<%=modify_seller_goods.seller_name%>" class="contian-info-body-info-1 gysp" name="gysp">
+                        <input type="text" value="<%= modify_seller_goods.seller_name %>"
+                               class="contian-info-body-info-1 gysp" name="gysp">
                     </p>
                     <p class="bianji-bg">
                         <!--/*-->
@@ -391,34 +406,38 @@
                         <!--其他：5-->
                         <!--*/-->
                         <span class="contian-info-body-title-1">求购类别：</span>
-                        <%if(modify_seller_goods.type==1){%>
+                        <% if(modify_seller_goods.type == 1){ %>
                         <input type="text" value="蔬菜" class="contian-info-body-info-1 qglb" name="qglb">
-                        <%}else if(modify_seller_goods.type== 2){%>
+                        <% }else if(modify_seller_goods.type == 2){ %>
                         <input type="text" value="水果" class="contian-info-body-info-1 qglb" name="qglb">
-                        <%}else if(modify_seller_goods.type== 3){%>
+                        <% }else if(modify_seller_goods.type == 3){ %>
                         <input type="text" value="禽类" class="contian-info-body-info-1 qglb" name="qglb">
-                        <%}else if(modify_seller_goods.type== 4){%>
+                        <% }else if(modify_seller_goods.type == 4){ %>
                         <input type="text" value="水产" class="contian-info-body-info-1 qglb" name="qglb">
-                        <%}else{%>
+                        <% }else{ %>
                         <input type="text" value="其他" class="contian-info-body-info-1 qglb" name="qglb">
-                        <%}%>
+                        <% } %>
 
                     </p>
                     <p class="bianji-bg">
                         <span class="contian-info-body-title-1">求购单价：</span>
-                        <input type="text" value="<%=modify_seller_goods.seller_price%>" class="contian-info-body-info-1 qgdj" name="qgdj">
+                        <input type="text" value="<%= modify_seller_goods.seller_price %>"
+                               class="contian-info-body-info-1 qgdj" name="qgdj">
                     </p>
                     <p class="bianji-bg">
                         <span class="contian-info-body-title-1">求购数量：</span>
-                        <input type="text" value="<%=modify_seller_goods.seller_weight%>" class="contian-info-body-info-1 qgsl" name="qgsl">
+                        <input type="text" value="<%= modify_seller_goods.seller_weight %>"
+                               class="contian-info-body-info-1 qgsl" name="qgsl">
                     </p>
                     <p class="bianji-bg">
                         <span class="contian-info-body-title-1">产地：</span>
-                        <input type="text" value="<%=modify_seller_goods.seller_site.city%>" class="contian-info-body-info-1 cd" name="cd">
+                        <input type="text" value="<%= modify_seller_goods.seller_site.city %>"
+                               class="contian-info-body-info-1 cd" name="cd">
                     </p>
                     <div class="bianji-bg bianji-des-wrapper">
                         <span class="contian-info-body-title-1 contian-info-body-title-1-desc">产品描述：</span>
-                        <textarea class="qgxq-desc seller_desc" form="form_id" name="seller_desc"   maxlength="120" placeholder="请对货品进行描述，如货品特色、种植情况、供货量。更详细、更精准的描述能吸引更多的供应商（不超过120字）"><%=modify_seller_goods.seller_desc%></textarea>
+                        <textarea class="qgxq-desc seller_desc" form="form_id" name="seller_desc" maxlength="120"
+                                  placeholder="请对货品进行描述，如货品特色、种植情况、供货量。更详细、更精准的描述能吸引更多的供应商（不超过120字）"><%= modify_seller_goods.seller_desc %></textarea>
                         <p id="shengyu">剩余120字</p>
                     </div>
                     <div class="ajax-photoseller bianji-bg">
@@ -437,7 +456,7 @@
                     </div>
                     <!--临时-->
                     <!--<a href="gongying-success.html">-->
-                    <input type="button" id="TextArea1"  class="qiugouxinagqing-tel" value="保存并发布">
+                    <input type="button" id="TextArea1" class="qiugouxinagqing-tel" value="保存并发布">
                     <!--</a>-->
                 </form>
             </div>
@@ -485,20 +504,24 @@
 <script>
     //    发送数据
     //    设置字体
-    $(".qgxq-desc").on("keyup",function () {
+    $(".qgxq-desc").on("keyup", function () {
         var txtval = $('.qgxq-desc').val().length;
         console.log(txtval);
-        var str = parseInt(120-txtval);
+        var str = parseInt(120 - txtval);
         console.log(str);
-        if(str > 0 ){
-            $('#shengyu').html('剩余可输入'+str+'字');
-        }else{
+        if (str > 0) {
+            $('#shengyu').html('剩余可输入' + str + '字');
+        } else {
             $('#shengyu').html('剩余可输入0字');
-            $('.qgxq-desc').val($('.qgxq-desc').val().substring(0,120));
+            $('.qgxq-desc').val($('.qgxq-desc').val().substring(0, 120));
         }
     })
-/*裁剪图片*/
+    /*裁剪图片*/
     var pictData = [];
+     pictData[0] ="+<%= modify_seller_goods.pic1 %>+";
+     pictData[1] ="+<%= modify_seller_goods.pic2 %>+";
+     pictData[2] ="+<%= modify_seller_goods.pic3 %>+";
+
     $("#clipArea1").photoClip({
         width: 120, //截取区域的宽度
         height: 120, //截取区域的高度
@@ -515,7 +538,8 @@
         },
         clipFinish: function (dataURL) { //裁剪完成的回调函数。this指向图片对象，会将裁剪出的图像数据DataURL作为参数传入。
             /*裁剪完成 上传数据*/
-            pictData[0] =dataURL+"";
+            pictData[0] = "";
+            pictData[0] = dataURL + "";
             $(".file-img-1").attr('src', dataURL);
         }
     });
@@ -533,6 +557,7 @@
         },
         clipFinish: function (dataURL) {
             /*裁剪完成 上传数据*/
+            pictData[1] = "";
             pictData[1] = dataURL;
             $(".file-img-2").attr('src', dataURL);
         }
@@ -551,6 +576,7 @@
         },
         clipFinish: function (dataURL) {
             /*裁剪完成 上传数据*/
+            pictData[2] = "";
             pictData[2] = dataURL;
             $(".file-img-3").attr('src', dataURL);
         }
@@ -559,8 +585,9 @@
         $(".upload").css("display", "none");
         console.log(pictData);
     });
-/*ajax提交数据*/
+    /*ajax提交数据*/
     $("#TextArea1").click(function () {
+        console.log(pictData);
         var gysp = $(".gysp").val().trim();
         var qglb = $(".qglb").val().trim();
         var qgdj = $(".qgdj").val().trim();
@@ -584,22 +611,23 @@
             alert("供应商品数量不能为空");
             return;
         }
-        if (!cd){
+        if (!cd) {
             alert("供应商品产地不能为空");
             return;
         }
-        if (!seller_desc){
+        if (!seller_desc) {
             alert("供应商品描述不能为空");
             return;
         }
-        for(var i=0;i<pictData.length;i++){
-            if(!pictData[i]){
-                alert("第"+i+"张没上传图片");
+        for (var i = 0; i < pictData.length; i++) {
+            if (!pictData[i]) {
+                alert("第" + i + "张没上传图片");
                 return;
             }
         }
         var userdata = {
             tel:<%= modify_seller_goods.tel %>,
+            number:<%= modify_seller_goods.number %>,
             gysp: $(".gysp").val(),
             qglb: $(".qglb").val(),
             qgdj: $(".qgdj").val(),
@@ -608,9 +636,8 @@
             seller_desc: $(".seller_desc").val(),
             pictData: pictData
         }
-
-        $.post("/gongying-success", userdata, function (data) {
-            window.open("/open_seller_success?tel="+data.seller_tel, "_self");
+        $.post("/affirm_modify_seller_goods_info", userdata, function (data) {
+            window.open("/open_seller_success?tel=" + data.seller_tel, "_self");
         });
     });
 </script>

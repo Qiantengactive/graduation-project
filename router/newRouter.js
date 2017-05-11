@@ -838,34 +838,37 @@ exports.modify_seller_goods = function (req, res, next) {
 /*求购数据确认修改成功 ==》 1.success页面 2.渲染到修改页面继续修改*/
 exports.affirm_modify_seller_goods = function (req, res, next) {
     // console.log(req.query);
-    var tel = req.query.tel;
-    var number = req.query.number;
+    console.log("affirm_modify_seller_goods");
+    console.log(req.query.number);
+    var tel = req.body.tel;
+    var number = req.body.number;
 
     /*type判断*/
-    if (req.query.qglb == "蔬菜") {
-        req.query.qglb = 1;
-    } else if (req.query.qglb == "水果") {
-        req.query.qglb = 2;
+    if (req.body.qglb == "蔬菜") {
+        req.body.qglb = 1;
+    } else if (req.body.qglb == "水果") {
+        req.body.qglb = 2;
 
-    } else if (req.query.qglb == "禽类") {
-        req.query.qglb = 3;
+    } else if (req.body.qglb == "禽类") {
+        req.body.qglb = 3;
 
-    } else if (req.query.qglb == "水产") {
-        req.query.qglb = 4;
+    } else if (req.body.qglb == "水产") {
+        req.body.qglb = 4;
     } else {
-        req.query.qglb = 5;
+        req.body.qglb = 5;
     }
 
     var seller_data = {
-        "seller_desc": req.query.form_id,
-        "seller_name": req.query.gysp,
-        "type": req.query.qglb,
-        "seller_weight": req.query.qgsl,
-        "seller_price": req.query.qgdj,
+        "seller_desc": req.body.form_id,
+        "seller_name": req.body.gysp,
+        "type": req.body.qglb,
+        "seller_weight": req.body.qgsl,
+        "seller_price": req.body.qgdj,
         "seller_site": {
-            "city": req.query.cd,
+            "city": req.body.cd,
             "pro": "河南"
         },
+        "pics": req.body.pictData
     };
     /*
      * 1.使用tel查询数据  ==>tel
@@ -880,21 +883,22 @@ exports.affirm_modify_seller_goods = function (req, res, next) {
         if (err) {
             console.log("失败");
         }
+        //拿到数据==》删除相应数据==>插入新数据
         var obj = result[0].seller_all[number];
-        huinong_info.delet_seller_id(tel, obj, function (err, result) {
+        huinong_info.delet_seller_id(tel, result[0].seller_all[number], function (err, result) {
             if (err) {
                 console.log("错误");
-            }
-            ;
+            };
             //添加数据
             huinong_info.add_seller_id(tel, seller_data, function (err) {
                 if (err) {
                     console.log("修改错误");
                 } else {
                     console.log("修改ok");
-                    res.render('gongying-success.ejs', {
-                        seller_tel: tel
-                    });
+                    res.json({seller_tel: tel});
+                    // res.render('gongying-success.ejs', {
+                    //     seller_tel: tel
+                    // });
                 }
             })
         })
