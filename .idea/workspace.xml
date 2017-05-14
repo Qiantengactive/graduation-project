@@ -2,7 +2,6 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="347262c5-a42e-4619-9bba-3b27bdc010ce" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/views/index.ejs" afterPath="$PROJECT_DIR$/views/index.ejs" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/views/login.ejs" afterPath="$PROJECT_DIR$/views/login.ejs" />
     </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
@@ -614,12 +613,12 @@
       <workItem from="1494580274135" duration="2378000" />
       <workItem from="1494744531391" duration="4166000" />
       <workItem from="1494749402389" duration="918000" />
-      <workItem from="1494760668032" duration="2276000" />
+      <workItem from="1494760668032" duration="2336000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="395789000" />
+    <option name="totallyTimeSpent" value="395849000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
