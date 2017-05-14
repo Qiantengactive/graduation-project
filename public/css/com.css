@@ -82,3 +82,10 @@ input {
     background-size: contain;
     background-position:0.05rem;
 }
+#colorTitle{
+    color: #ffffff;
+}
+
+.swiper-pagination-bullet-active{
+    background: #ffffff !important;
+}
