@@ -524,20 +524,18 @@
      pictData[2] ="+<%= modify_seller_goods.pic3 %>+";
 
     $("#clipArea1").photoClip({
-        width: 120, //截取区域的宽度
-        height: 120, //截取区域的高度
-        file: ".file1",  //上传图片的<input      type="file">控件的选择器或者DOM对象
-//        view: "#view",  //显示截取后图像的容器的选择器或者DOM对象。
-        ok: "#clipBtn1", //确认截图按钮的选择器或者DOM对象。
-        loadStart: function () {  //开始加载的回调函数。this指向 fileReader 对象，并将正在加载的 file 对象作为参数传入。
+        width: 120,
+        height: 120,
+        file: ".file1",
+        ok: "#clipBtn1",
+        loadStart: function () {
             console.log("照片读取中");
             $(".upload1").css("display", "block")
         },
-        loadComplete: function () { //loadComplete：加载完成的回调函数。this指向图片对象，并将图片地址作为参数传入。
+        loadComplete: function () {
             console.log("照片读取完成");
-            //打开截图页面   截图页面有两个按钮 一个上传完成一个退出
         },
-        clipFinish: function (dataURL) { //裁剪完成的回调函数。this指向图片对象，会将裁剪出的图像数据DataURL作为参数传入。
+        clipFinish: function (dataURL) {
             /*裁剪完成 上传数据*/
             pictData[0] = "";
             pictData[0] = dataURL + "";
@@ -621,11 +619,14 @@
             return;
         }
         for (var i = 0; i < pictData.length; i++) {
-            if (!pictData[i]) {
+            if (!pictData[i].trim()) {
                 alert("第" + i + "张没上传图片");
                 return;
             }
         }
+        pictData[0]= $(".file-img-1").attr("src");
+        pictData[1]= $(".file-img-2").attr("src");
+        pictData[2]= $(".file-img-3").attr("src");
         var userdata = {
             tel:<%= modify_seller_goods.tel %>,
             number:<%= modify_seller_goods.number %>,

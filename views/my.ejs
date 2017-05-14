@@ -202,7 +202,7 @@
         }
 
         .my-body-top-2-info-title-1 {
-            padding-left:0.55rem;
+            padding-left: 0.55rem;
             font-size: 0.3rem;
             color: #333333;
         }
@@ -218,7 +218,6 @@
             width: 100%;
         }
 
-
         .my-body-top-wrapper p span {
             display: inline-block;
             width: 1.5rem;
@@ -230,7 +229,7 @@
             border: none;
             outline: none;
             font-size: 0.3rem;
-            margin-left:0.8rem;
+            margin-left: 0.8rem;
             background: transparent;
         }
 
@@ -314,7 +313,8 @@
             background-size: contain;
             color: #59bb43;
         }
-        #active{
+
+        #active {
             background: url("/img/index_icon-1-_4.png") no-repeat;
             background-size: contain;
             color: #59bb43;
@@ -375,34 +375,40 @@
         /*width: 200px;*/
         /*height: 200px;*/
         /*}*/
-        .avater{
-            border-radius:50%;
+        .avater {
+            border-radius: 50%;
         }
-        .mongo-pic{
-            background-image: url("<%=user_info.info_avater%>") ;
-            background-repeat:no-repeat ;
+
+        .mongo-pic {
+            background-image: url("<%=user_info.info_avater%>");
+            background-repeat: no-repeat;
             background-size: contain;
         }
+
         /*.no-mongo-pic{*/
-            /*background: url("/img/my-img.png") no-repeat;*/
+        /*background: url("/img/my-img.png") no-repeat;*/
         /*}*/
-        #fontColor{
+        #fontColor {
             color: #59bb43;
         }
-        #title-name{
+
+        #title-name {
             padding-left: 0.45rem;
             height: inherit;
             /*width: 1rem;*/
             line-height: 1.5rem;
         }
-        .my-body-top-wrapper{
+
+        .my-body-top-wrapper {
             background: #ffffff;
             position: relative;
         }
-        .colorFont{
+
+        .colorFont {
             color: #777777;
         }
-        .back-system{
+
+        .back-system {
             display: inline-block;
             width: 0.5rem;
             height: 0.43rem;
@@ -429,7 +435,7 @@
             <div class="my-body-space"></div>
             <div class="my-body-top">
                 <div class="my-body-top-1">
-                    <i class="avater mongo-pic" >
+                    <i class="avater mongo-pic">
                         <input type="file" id="file1" class="my-file">
                         <img src="/img/my-camera.png" alt="" class="my-camera">
                         <!--<img src="/img/my-rp.png" alt="" class="my-rp">-->
@@ -472,23 +478,25 @@
                     <div class="my-body-top-wrapper">
                         <p>
                             <span class="colorFont">联系人:</span>
-                            <input class="colorFont my-input1" type="text" id="user_name" value="<%= user_info.info_name %>"
+                            <input class="colorFont my-input1" type="text" id="user_name"
+                                   value="<%= user_info.info_name %>"
                                    name="user_name" readonly>
                         </p>
                         <p>
-                            <span class="colorFont" >联系电话:</span>
+                            <span class="colorFont">联系电话:</span>
                             <input class="colorFont " type="text" id="user_tel" value="<%= user_info.info_tel %>"
                                    name="user_tel" readonly>
                         </p>
                         <p>
-                            <span class="colorFont" >地址:</span>
+                            <span class="colorFont">地址:</span>
                             <input class="colorFont my-input1" type="text" id="user_city"
                                    value="<%= user_info.info_site.info_pro %>-<%= user_info.info_site.info_city %>"
                                    name="user_city" readonly>
                         </p>
                         <p>
-                            <span class="colorFont" >详细地址:</span>
-                            <input class="colorFon my-input1" type="text" id="user_add" value="<%=user_info.info_site.info_detail_add %>" name="user_add" readonly>
+                            <span class="colorFont">详细地址:</span>
+                            <input class="colorFont my-input1" type="text" id="user_add"
+                                   value="<%= user_info.info_site.info_detail_add %>" name="user_add" readonly>
                         </p>
                         <div class="hidden-ceng"></div>
                     </div>
@@ -540,26 +548,39 @@
 <script>
     var i = 1;
     $(".my-body-top-2-info-title-2").click(function () {
-        i++;
-        if (i % 2 == 0) {
-            $(".my-input1").attr("readonly", false).css("color", '#ff0000');
-            $(".my-body-top-2-info-title-2").html("保存");
-        } else {
-            $(".my-body-top-2-info-title-2").html("编辑");
-//            $(".my-input").attr("readonly", true).css("color", '#333333');
-            $(".my-input1").removeAttr("readonly").css("color", '#333333');
-
-            var data = {
-                "info_name": $("#user_name").val(),
-                "info_site": {
-                    "info_pro": "河南省",
-                    "info_city":  $("#user_city").val(),
-                    "info_detail_add":  $("#user_add").val()
-                }
+            var objVal = $(".my-body-top-2-info-title-2").html();
+            alert(objVal);
+//        改为可以操作的
+            if (objVal == "编辑") {
+                $(".my-input1").removeAttr("readonly").css("color", '#ff0000');
+                $(".my-body-top-2-info-title-2").html("保存");
             }
-            console.log(data);
+            if (objVal == "保存") {
+                $(".my-input1").attr("readonly", "true").css("color", '#777');
+                $(".my-body-top-2-info-title-2").html("编辑");
+                var data = {
+                    "info_name": $("#user_name").val(),
+                    "info_site": {
+                        "info_pro": "河南省",
+                        "info_city": $("#user_city").val(),
+                        "info_detail_add": $("#user_add").val()
+                    }
+                }
+                console.log(data);
+            }
+
+
+//        i++;
+//        if (i % 2 == 0) {
+//            $(".my-input1").attr("readonly", false).css("color", '#ff0000');
+//            $(".my-body-top-2-info-title-2").html("保存");
+//        } else {
+//            $(".my-body-top-2-info-title-2").html("编辑");
+////            $(".my-input").attr("readonly", true).css("color", '#333333');
+//            $(".my-input1").removeAttr("readonly").css("color", '#333333');
+
         }
-    });
+    )
     $("#clipArea").photoClip({
         width: 120, //截取区域的宽度
         height: 120, //截取区域的高度

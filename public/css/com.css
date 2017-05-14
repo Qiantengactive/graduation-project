@@ -34,6 +34,7 @@
 input {
     -webkit-appearance: none;
 }
+
 /*contian-info-body-info-1*/
 
 .contian-info-body-info-1::-webkit-input-placeholder {
@@ -51,11 +52,13 @@ input {
 .contian-info-body-info-1:-ms-input-placeholder {
     color: #ffffff;
 }
-.home-body-gongying-body-list-wrapper>a>h1{
+
+.home-body-gongying-body-list-wrapper > a > h1 {
     margin-bottom: 0.1rem;
     height: 0.88rem;
 }
-.hidden-ceng{
+
+.hidden-ceng {
     position: absolute;
     top: 0;
     left: 0;
@@ -63,4 +66,19 @@ input {
     height: inherit;
     display: block;
     background: transparent;
+}
+
+/*index.ejs*/
+.nav-div-1 {
+    background-image: url('/img/swiper-_03.png');
+}
+
+.nav-div-2 {
+    background-image: url('/img/swiper-_06.png');
+}
+
+.nav-div-p {
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position:0.05rem;
 }
