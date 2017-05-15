@@ -437,7 +437,9 @@
                 <div class="my-body-top-1">
                     <i class="avater mongo-pic">
                         <input type="file" id="file1" class="my-file">
-                        <img src="/img/my-camera.png" alt="" class="my-camera">
+                        <% if(user_info.info_avater == "/img/my-img.png"){ %>
+                            <img src="/img/my-camera.png" alt="" class="my-camera">
+                        <% } %>
                         <!--<img src="/img/my-rp.png" alt="" class="my-rp">-->
                     </i>
                     <p id="title-name"><%= user_info.info_name %></p>

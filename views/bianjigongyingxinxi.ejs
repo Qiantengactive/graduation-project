@@ -527,8 +527,8 @@
         },
         clipFinish: function (dataURL) { //裁剪完成的回调函数。this指向图片对象，会将裁剪出的图像数据DataURL作为参数传入。
             /*裁剪完成 上传数据*/
-            alert("裁剪完成了");
-            alert(typeof dataURL);
+//            alert("裁剪完成了");
+//            alert(typeof dataURL);
             pictData[0] = dataURL + "";
             $(".file-img-1").attr('src', dataURL);
         }
@@ -547,7 +547,7 @@
         },
         clipFinish: function (dataURL) {
             /*裁剪完成 上传数据*/
-            alert("裁剪完成了");
+//            alert("裁剪完成了");
             pictData[1] = dataURL;
             $(".file-img-2").attr('src', dataURL);
         }
@@ -566,7 +566,7 @@
         },
         clipFinish: function (dataURL) {
             /*裁剪完成 上传数据*/
-            alert("裁剪完成了");
+//            alert("裁剪完成了");
             pictData[2] = dataURL;
             $(".file-img-3").attr('src', dataURL);
         }
@@ -624,7 +624,6 @@
                 seller_desc: $(".seller_desc").val(),
                 pictData: pictData
             }
-
 
         $.post("/gongying-success", userdata, function (data) {
             window.open("/open_seller_success?tel=" + data.seller_tel, "_self");

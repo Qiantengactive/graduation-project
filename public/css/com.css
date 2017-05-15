@@ -89,3 +89,20 @@ input {
 .swiper-pagination-bullet-active{
     background: #ffffff !important;
 }
+.photo-clip-rotateLayer{
+    width: 50vw !important;
+    height: 50vh !important;
+}
+
+#clipArea3{
+    margin: 0.2rem;
+    height: 50vh;
+}
+#clipArea2{
+    margin: 0.2rem;
+    height: 50vh;
+}
+#clipArea1{
+    margin: 0.2rem;
+    height: 50vh;
+}
