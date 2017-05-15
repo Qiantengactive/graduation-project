@@ -793,7 +793,20 @@
                     </span>
                 </div>
                 <div class="home-body-gongying-body">
-
+                    <% for (var i = 0; i < get_all.length; i++){ %>
+                    <a href="/qiugouxiangqing?tel=<%= get_all[i].tel %>&number=<%= get_all[i].number %>">
+                        <div class="home-body-qiugou-body-list ">
+                            <div class="home-body-qiugou-body-list-wrapper">
+                                <h1 class="home-body-qiugou-body-list-wrapper-title"><%= get_all[i].get_name %>
+                                </h1>
+                                <p class="home-body-qiugou-body-list-wrapper-weight"><%= get_all[i].get_weight %>
+                                </p>
+                                <p class="home-body-qiugou-body-list-wrapper-price">价格：<%= get_all[i].get_price %></p>
+                                <p class="home-body-qiugou-body-list-wrapper-price">指定产地：<%= get_all[i].get_site.city %></p>
+                            </div>
+                        </div>
+                    </a>
+                    <% } %>
                 </div>
             </div>
         </div>
@@ -840,7 +853,7 @@
         var mySwiper = new Swiper('.swiper-container-topic', {
             autoplay: 3000,
             loop: true,
-            direction: 'vertical',
+            direction: 'vertical'
         })
 
 
