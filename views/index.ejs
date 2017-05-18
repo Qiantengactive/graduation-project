@@ -614,6 +614,7 @@
         .swiper-container-topic {
             height: 1.08rem !important;
         }
+
         /*.input-search*/
 
         input::-webkit-input-placeholder {
@@ -631,12 +632,14 @@
         input:-ms-input-placeholder {
             color: #ffffff;
         }
-        .input-search-2{
+
+        .input-search-2 {
             position: absolute;
             top: 0;
             right: 0.1rem;
             width: 0.59rem;
         }
+
         input::-webkit-search-decoration,
         input::-webkit-search-cancel-button {
             display: none;
@@ -677,30 +680,24 @@
                              <div class="swiper-slide swiper-slide-topic">
                                 <div class="nav-div">
                                     <p class="nav-div-p nav-div-1">
-                                        <!--<span class="nav-div-p-span">最新</span>农业品牌大会代表团参观点赞郑州农业品牌企业-->
                                     </p>
                                     <p class="nav-div-p nav-div-2">
-                                        <!--<span class="nav-div-p-span">最新</span>农业部副部长屈冬玉在中国农业品牌发展论坛上强调推动品牌...-->
                                     </p>
                                 </div>
                             </div>
                             <div class="swiper-slide swiper-slide-topic">
                                  <div class="nav-div">
                                    <p class="nav-div-p nav-div-1">
-                                        <!--<span class="nav-div-p-span">最新</span>农业品牌大会代表团参观点赞郑州农业品牌企业-->
                                     </p>
                                     <p class="nav-div-p nav-div-2">
-                                        <!--<span class="nav-div-p-span">最新</span>农业部副部长屈冬玉在中国农业品牌发展论坛上强调推动品牌...-->
                                     </p>
                                 </div>
                              </div>
                             <div class="swiper-slide swiper-slide-topic">
                                 <div class="nav-div">
                                     <p class="nav-div-p nav-div-1">
-                                        <!--<span class="nav-div-p-span">最新</span>农业品牌大会代表团参观点赞郑州农业品牌企业-->
                                     </p>
                                     <p class="nav-div-p nav-div-2">
-                                        <!--<span class="nav-div-p-span">最新</span>农业部副部长屈冬玉在中国农业品牌发展论坛上强调推动品牌...-->
                                     </p>
                                 </div>
                             </div>
@@ -719,7 +716,7 @@
                         <span class="home-body-gongying-top-font home-body-gongying-top-font-1-1 home-body-gongying-top-font-2">更多</span>
                     </a>
                 </div>
-                <div class="home-body-gongying-select">
+                <div class="home-body-gongying-select select-seller">
                     <span class="select  be-select-2-span" id="home-body-gongying-select-1">
                         <b class="select-1 be-select-2-img"></b>
                         <p class="p1 be-select-2-p" id="p1">全部</p>
@@ -741,7 +738,7 @@
                         <p class="p5">水产</p>
                     </span>
                 </div>
-                <div class="home-body-gongying-body">
+                <div class="home-body-gongying-body a-1">
                     <% for (var i = 0; i < 1; i++){ %>
                     <div class="home-body-gongying-body-list home-body-gongying-body-1">
                         <a href="gongyingxiangqing?tel=<%= seller_all[i].tel %>&number=<%= seller_all[i].number %>">
@@ -749,7 +746,7 @@
                         </a>
                         <div class="home-body-gongying-body-list-wrapper">
                             <a href="gongyingxiangqing?tel=<%= seller_all[i].tel %>&number=<%= seller_all[i].number %>">
-                                <h1 class="home-body-gongying-body-list-wrapper-title"><%= seller_all[i].seller_desc%></h1>
+                                <h1 class="home-body-gongying-body-list-wrapper-title"><%= seller_all[i].seller_desc %></h1>
                             </a>
                             <a href="gongyingxiangqing?tel=<%= seller_all[i].tel %>&number=<%= seller_all[i].number %>">
                                 <p class="home-body-gongying-body-list-wrapper-price"><%= seller_all[i].seller_price %>
@@ -770,7 +767,7 @@
                         <span class="home-body-gongying-top-font home-body-gongying-top-font-1-1 home-body-gongying-top-font-2">更多</span>
                     </a>
                 </div>
-                <div class="home-body-gongying-select">
+                <div class="home-body-gongying-select select-get">
                     <span class="select-2  be-select-2-span-2" id="home-body-gongying-select-1">
                         <b class="select-1 be-select-2-img-2"></b>
                         <p class="p1 be-select-2-p-2" id="p1">全部</p>
@@ -792,7 +789,7 @@
                         <p class="p5">水产</p>
                     </span>
                 </div>
-                <div class="home-body-gongying-body">
+                <div class="home-body-gongying-body a-2">
                     <% for (var i = 0; i < get_all.length; i++){ %>
                     <a href="/qiugouxiangqing?tel=<%= get_all[i].tel %>&number=<%= get_all[i].number %>">
                         <div class="home-body-qiugou-body-list ">
@@ -802,7 +799,8 @@
                                 <p class="home-body-qiugou-body-list-wrapper-weight"><%= get_all[i].get_weight %>
                                 </p>
                                 <p class="home-body-qiugou-body-list-wrapper-price">价格：<%= get_all[i].get_price %></p>
-                                <p class="home-body-qiugou-body-list-wrapper-price">指定产地：<%= get_all[i].get_site.city %></p>
+                                <p class="home-body-qiugou-body-list-wrapper-price">
+                                    指定产地：<%= get_all[i].get_site.city %></p>
                             </div>
                         </div>
                     </a>
@@ -836,7 +834,6 @@
                 </a>
             </div>
         </div>
-        <div class="welcome"></div>
     </div>
 </div>
 </body>
@@ -854,10 +851,7 @@
             autoplay: 3000,
             loop: true,
             direction: 'vertical'
-        })
-
-
-        $(".welcome").fadeOut(2000);
+        });
         /*选择框-默认选择全部*/
         $(".be-select-2-span").css("backgroundImage", "url(/img/bg-index-_03.png)");
         $(".be-select-2-img").css("backgroundImage", "url(/img/index-2-1.png)");
@@ -865,28 +859,305 @@
         $(".be-select-2-span-2").css("backgroundImage", "url(/img/bg-index-_03.png)");
         $(".be-select-2-img-2").css("backgroundImage", "url(/img/index-2-1.png)");
         $(".be-select-2-p-2").css("color", "#ffffff");
-
-        $(".select:not(.be-select-2-span)").click(function () {
-            $(".be-select-2-span").css("backgroundImage", "url(/img/bg-index-_05.png)");
-            $(".be-select-2-img").css("backgroundImage", "url(/img/index-1-1.png)");
-            $(".be-select-2-p").css("color", "#333333");
-        })
-        $(".be-select-2-span").click(function () {
-            $(".be-select-2-span").css("backgroundImage", "url(/img/bg-index-_03.png)");
-            $(".be-select-2-img").css("backgroundImage", "url(/img/index-2-1.png)");
-            $(".be-select-2-p").css("color", "#ffffff");
-        })
-
-        $(".select-2:not(.be-select-2-span-2)").click(function () {
-            $(".be-select-2-span-2").css("backgroundImage", "url(/img/bg-index-_05.png)");
-            $(".be-select-2-img-2").css("backgroundImage", "url(/img/index-1-1.png)");
-            $(".be-select-2-p-2").css("color", "#333333");
-        })
-        $(".be-select-2-span-2").click(function () {
-            $(".be-select-2-span-2").css("backgroundImage", "url(/img/bg-index-_03.png)");
-            $(".be-select-2-img-2").css("backgroundImage", "url(/img/index-2-1.png)");
-            $(".be-select-2-p-2").css("color", "#ffffff");
-        })
     })
+</script>
+<script type="text/template" id="template-1-1">
+    <% for (var i = 0; i < seller_all.length; i++ ){ %>
+    <% if(seller_all[i].type == 2){ %>
+        <div class="home-body-gongying-body-list home-body-gongying-body-1">
+            <a href="gongyingxiangqing?tel=<%= seller_all[i].tel %>&number=<%= seller_all[i].number %>">
+                <img src="<%= seller_all[i].pics[0] %>" class="home-body-gongying-body-list-img">
+            </a>
+            <div class="home-body-gongying-body-list-wrapper">
+                <a href="gongyingxiangqing?tel=<%= seller_all[i].tel %>&number=<%= seller_all[i].number %>">
+                    <h1 class="home-body-gongying-body-list-wrapper-title"><%= seller_all[i].seller_desc %></h1>
+                </a>
+                <a href="gongyingxiangqing?tel=<%= seller_all[i].tel %>&number=<%= seller_all[i].number %>">
+                    <p class="home-body-gongying-body-list-wrapper-price"><%= seller_all[i].seller_price %>
+                        <span class="home-body-gongying-body-list-wrapper-weight">&ensp;&ensp;<%= seller_all[i].seller_weight %></span>
+                    </p>
+                </a>
+            </div>
+        </div>
+    <%}else{
+        continue
+    }
+    } %>
+</script>
+<script type="text/template" id="template-1-2">
+    <% for (var i = 0; i < seller_all.length; i++ ){ %>
+    <% if(seller_all[i].type == 1){ %>
+        <div class="home-body-gongying-body-list home-body-gongying-body-1">
+            <a href="gongyingxiangqing?tel=<%= seller_all[i].tel %>&number=<%= seller_all[i].number %>">
+                <img src="<%= seller_all[i].pics[0] %>" class="home-body-gongying-body-list-img">
+            </a>
+            <div class="home-body-gongying-body-list-wrapper">
+                <a href="gongyingxiangqing?tel=<%= seller_all[i].tel %>&number=<%= seller_all[i].number %>">
+                    <h1 class="home-body-gongying-body-list-wrapper-title"><%= seller_all[i].seller_desc %></h1>
+                </a>
+                <a href="gongyingxiangqing?tel=<%= seller_all[i].tel %>&number=<%= seller_all[i].number %>">
+                    <p class="home-body-gongying-body-list-wrapper-price"><%= seller_all[i].seller_price %>
+                        <span class="home-body-gongying-body-list-wrapper-weight">&ensp;&ensp;<%= seller_all[i].seller_weight %></span>
+                    </p>
+                </a>
+            </div>
+        </div>
+    <%}else{
+        continue
+    }
+    } %>
+</script>
+<script type="text/template" id="template-1-3">
+    <% for (var i = 0; i < seller_all.length; i++ ){ %>
+    <% if(seller_all[i].type == 3){ %>
+        <div class="home-body-gongying-body-list home-body-gongying-body-1">
+            <a href="gongyingxiangqing?tel=<%= seller_all[i].tel %>&number=<%= seller_all[i].number %>">
+                <img src="<%= seller_all[i].pics[0] %>" class="home-body-gongying-body-list-img">
+            </a>
+            <div class="home-body-gongying-body-list-wrapper">
+                <a href="gongyingxiangqing?tel=<%= seller_all[i].tel %>&number=<%= seller_all[i].number %>">
+                    <h1 class="home-body-gongying-body-list-wrapper-title"><%= seller_all[i].seller_desc %></h1>
+                </a>
+                <a href="gongyingxiangqing?tel=<%= seller_all[i].tel %>&number=<%= seller_all[i].number %>">
+                    <p class="home-body-gongying-body-list-wrapper-price"><%= seller_all[i].seller_price %>
+                        <span class="home-body-gongying-body-list-wrapper-weight">&ensp;&ensp;<%= seller_all[i].seller_weight %></span>
+                    </p>
+                </a>
+            </div>
+        </div>
+    <%}else{
+        continue
+    }
+    } %>
+</script>
+<script type="text/template" id="template-1-4">
+    <% for (var i = 0; i < seller_all.length; i++ ){ %>
+    <% if(seller_all[i].type == 4){ %>
+        <div class="home-body-gongying-body-list home-body-gongying-body-1">
+            <a href="gongyingxiangqing?tel=<%= seller_all[i].tel %>&number=<%= seller_all[i].number %>">
+                <img src="<%= seller_all[i].pics[0] %>" class="home-body-gongying-body-list-img">
+            </a>
+            <div class="home-body-gongying-body-list-wrapper">
+                <a href="gongyingxiangqing?tel=<%= seller_all[i].tel %>&number=<%= seller_all[i].number %>">
+                    <h1 class="home-body-gongying-body-list-wrapper-title"><%= seller_all[i].seller_desc %></h1>
+                </a>
+                <a href="gongyingxiangqing?tel=<%= seller_all[i].tel %>&number=<%= seller_all[i].number %>">
+                    <p class="home-body-gongying-body-list-wrapper-price"><%= seller_all[i].seller_price %>
+                        <span class="home-body-gongying-body-list-wrapper-weight">&ensp;&ensp;<%= seller_all[i].seller_weight %></span>
+                    </p>
+                </a>
+            </div>
+        </div>
+    <%}else{
+        continue
+    }
+    } %>
+</script>
+<script type="text/template" id="template-2-1">
+    <% for (var i = 0; i < get_all.length; i++ ){ %>
+    <% if(get_all[i].type == 2){ %>
+    <a href="/qiugouxiangqing?tel=<%= get_all[i].tel %>&number=<%= get_all[i].number %>">
+        <div class="home-body-qiugou-body-list ">
+            <div class="home-body-qiugou-body-list-wrapper">
+                <h1 class="home-body-qiugou-body-list-wrapper-title"><%= get_all[i].get_name %>
+                </h1>
+                <p class="home-body-qiugou-body-list-wrapper-weight"><%= get_all[i].get_weight %>
+                </p>
+                <p class="home-body-qiugou-body-list-wrapper-price">价格：<%= get_all[i].get_price %></p>
+                <p class="home-body-qiugou-body-list-wrapper-price">
+                    指定产地：<%= get_all[i].get_site.city %></p>
+            </div>
+        </div>
+    </a>
+    <%}else{
+        continue
+    }
+    } %>
+</script>
+<script type="text/template" id="template-2-2">
+    <% for (var i = 0; i < get_all.length; i++ ){ %>
+    <% if(get_all[i].type == 1){ %>
+    <a href="/qiugouxiangqing?tel=<%= get_all[i].tel %>&number=<%= get_all[i].number %>">
+        <div class="home-body-qiugou-body-list ">
+            <div class="home-body-qiugou-body-list-wrapper">
+                <h1 class="home-body-qiugou-body-list-wrapper-title"><%= get_all[i].get_name %>
+                </h1>
+                <p class="home-body-qiugou-body-list-wrapper-weight"><%= get_all[i].get_weight %>
+                </p>
+                <p class="home-body-qiugou-body-list-wrapper-price">价格：<%= get_all[i].get_price %></p>
+                <p class="home-body-qiugou-body-list-wrapper-price">
+                    指定产地：<%= get_all[i].get_site.city %></p>
+            </div>
+        </div>
+    </a>
+    <%}else{
+        continue
+    }
+    } %>
+</script>
+<script type="text/template" id="template-2-3">
+    <% for (var i = 0; i < get_all.length; i++ ){ %>
+    <% if(get_all[i].type == 3){ %>
+    <a href="/qiugouxiangqing?tel=<%= get_all[i].tel %>&number=<%= get_all[i].number %>">
+        <div class="home-body-qiugou-body-list ">
+            <div class="home-body-qiugou-body-list-wrapper">
+                <h1 class="home-body-qiugou-body-list-wrapper-title"><%= get_all[i].get_name %>
+                </h1>
+                <p class="home-body-qiugou-body-list-wrapper-weight"><%= get_all[i].get_weight %>
+                </p>
+                <p class="home-body-qiugou-body-list-wrapper-price">价格：<%= get_all[i].get_price %></p>
+                <p class="home-body-qiugou-body-list-wrapper-price">
+                    指定产地：<%= get_all[i].get_site.city %></p>
+            </div>
+        </div>
+    </a>
+    <%}else{
+        continue
+    }
+    } %>
+</script>
+<script type="text/template" id="template-2-4">
+    <% for (var i = 0; i < get_all.length; i++ ){ %>
+    <% if(get_all[i].type == 4){ %>
+    <a href="/qiugouxiangqing?tel=<%= get_all[i].tel %>&number=<%= get_all[i].number %>">
+        <div class="home-body-qiugou-body-list ">
+            <div class="home-body-qiugou-body-list-wrapper">
+                <h1 class="home-body-qiugou-body-list-wrapper-title"><%= get_all[i].get_name %>
+                </h1>
+                <p class="home-body-qiugou-body-list-wrapper-weight"><%= get_all[i].get_weight %>
+                </p>
+                <p class="home-body-qiugou-body-list-wrapper-price">价格：<%= get_all[i].get_price %></p>
+                <p class="home-body-qiugou-body-list-wrapper-price">
+                    指定产地：<%= get_all[i].get_site.city %></p>
+            </div>
+        </div>
+    </a>
+    <%}else{
+        continue
+    }
+    } %>
+</script>
+<script>
+    var DomobjAll=$(".a-1").html();
+    $(".select-seller span:nth-child(1)").click(function () {
+        $(".a-1").empty().append(DomobjAll);
+        //设置自己为绿色
+        //设置其他为灰色
+        //设置自己的背景图片为彩色
+
+        $(".select-seller span").css("backgroundImage", "url(/img/bg-index-_05.png)");
+        $(this).css("backgroundImage", "url(/img/bg-index-_03.png)");
+        $(".select-seller span:nth-child(1) p").css("color","#fff")
+        $(".select-seller span:nth-child(1) b").css("backgroundImage","url(/img/index-2-1.png)")
+        $(".select-seller span:nth-child(2) b").css("backgroundImage","url(/img/index-1-2.png)")
+        $(".select-seller span:nth-child(3) b").css("backgroundImage","url(/img/index-1-3.png)")
+        $(".select-seller span:nth-child(4) b").css("backgroundImage","url(/img/index-1-4.png)")
+        $(".select-seller span:nth-child(5) b").css("backgroundImage","url(/img/index-1-5.png)")
+    });
+    $(".select-seller span:nth-child(2)").click(function () {
+        $(".a-1").empty().append($("#template-1-1").html());
+        $(".select-seller span").css("backgroundImage", "url(/img/bg-index-_05.png)");
+        $(this).css("backgroundImage", "url(/img/bg-index-_03.png)");
+        $(".select-seller span:nth-child(1) p").css("color","#333333")
+        $(".select-seller span:nth-child(1) b").css("backgroundImage","url(/img/index-1-1.png)")
+        $(".select-seller span:nth-child(2) b").css("backgroundImage","url(/img/index-2-2.png)");
+        $(".select-seller span:nth-child(3) b").css("backgroundImage","url(/img/index-1-3.png)")
+        $(".select-seller span:nth-child(4) b").css("backgroundImage","url(/img/index-1-4.png)")
+        $(".select-seller span:nth-child(5) b").css("backgroundImage","url(/img/index-1-5.png)")
+    });
+
+    $(".select-seller span:nth-child(3)").click(function () {
+        $(".a-1").empty().append($("#template-1-2").html());
+        $(".select-seller span").css("backgroundImage", "url(/img/bg-index-_05.png)");
+        $(this).css("backgroundImage", "url(/img/bg-index-_03.png)");
+        $(".select-seller span:nth-child(1) p").css("color","#333333")
+        $(".select-seller span:nth-child(1) b").css("backgroundImage","url(/img/index-1-1.png)")
+        $(".select-seller span:nth-child(2) b").css("backgroundImage","url(/img/index-1-2.png)")
+        $(".select-seller span:nth-child(3) b").css("backgroundImage","url(/img/index-2-3.png)");
+        $(".select-seller span:nth-child(4) b").css("backgroundImage","url(/img/index-1-4.png)")
+        $(".select-seller span:nth-child(5) b").css("backgroundImage","url(/img/index-1-5.png)")
+    });
+    $(".select-seller span:nth-child(4)").click(function () {
+        $(".a-1").empty().append($("#template-1-3").html());
+        $(".select-seller span").css("backgroundImage", "url(/img/bg-index-_05.png)");
+        $(this).css("backgroundImage", "url(/img/bg-index-_03.png)");
+        $(".select-seller span:nth-child(1) p").css("color","#333333")
+        $(".select-seller span:nth-child(1) b").css("backgroundImage","url(/img/index-1-1.png)")
+        $(".select-seller span:nth-child(2) b").css("backgroundImage","url(/img/index-1-2.png)")
+        $(".select-seller span:nth-child(3) b").css("backgroundImage","url(/img/index-1-3.png)")
+        $(".select-seller span:nth-child(4) b").css("backgroundImage","url(/img/index-2-4.png)");
+        $(".select-seller span:nth-child(5) b").css("backgroundImage","url(/img/index-1-5.png)")
+    });
+    $(".select-seller span:nth-child(5)").click(function () {
+        $(".a-1").empty().append($("#template-1-4").html());
+        $(".select-seller span").css("backgroundImage", "url(/img/bg-index-_05.png)");
+        $(this).css("backgroundImage", "url(/img/bg-index-_03.png)");
+        $(".select-seller span:nth-child(1) p").css("color","#333333")
+        $(".select-seller span:nth-child(1) b").css("backgroundImage","url(/img/index-1-1.png)");
+        $(".select-seller span:nth-child(2) b").css("backgroundImage","url(/img/index-1-2.png)");
+        $(".select-seller span:nth-child(3) b").css("backgroundImage","url(/img/index-1-3.png)");
+        $(".select-seller span:nth-child(4) b").css("backgroundImage","url(/img/index-1-4.png)");
+        $(".select-seller span:nth-child(5) b").css("backgroundImage","url(/img/index-2-5.png)");
+    });
+
+
+
+
+    var DomobjAll2=$(".a-2").html();
+    $(".select-get span:nth-child(1)").click(function () {
+        $(".a-2").empty().append(DomobjAll2);
+        $(".select-get span").css("backgroundImage", "url(/img/bg-index-_05.png)");
+        $(this).css("backgroundImage", "url(/img/bg-index-_03.png)");
+        $(".select-get span:nth-child(1) p").css("color","#fff")
+        $(".select-get span:nth-child(1) b").css("backgroundImage","url(/img/index-2-1.png)")
+        $(".select-get span:nth-child(2) b").css("backgroundImage","url(/img/index-1-2.png)")
+        $(".select-get span:nth-child(3) b").css("backgroundImage","url(/img/index-1-3.png)")
+        $(".select-get span:nth-child(4) b").css("backgroundImage","url(/img/index-1-4.png)")
+        $(".select-get span:nth-child(5) b").css("backgroundImage","url(/img/index-1-5.png)")
+    });
+    $(".select-get span:nth-child(2)").click(function () {
+        $(".a-2").empty().append($("#template-2-1").html());
+        $(".select-get span").css("backgroundImage", "url(/img/bg-index-_05.png)");
+        $(this).css("backgroundImage", "url(/img/bg-index-_03.png)");
+        $(".select-get span:nth-child(1) p").css("color","#333333")
+        $(".select-get span:nth-child(1) b").css("backgroundImage","url(/img/index-1-1.png)")
+        $(".select-get span:nth-child(2) b").css("backgroundImage","url(/img/index-2-2.png)")
+        $(".select-get span:nth-child(3) b").css("backgroundImage","url(/img/index-1-3.png)")
+        $(".select-get span:nth-child(4) b").css("backgroundImage","url(/img/index-1-4.png)")
+        $(".select-get span:nth-child(5) b").css("backgroundImage","url(/img/index-1-5.png)")
+    });
+    $(".select-get span:nth-child(3)").click(function () {
+        $(".a-2").empty().append($("#template-2-2").html());
+        $(".select-get span").css("backgroundImage", "url(/img/bg-index-_05.png)");
+        $(this).css("backgroundImage", "url(/img/bg-index-_03.png)");
+        $(".select-get span:nth-child(1) p").css("color","#333333")
+        $(".select-get span:nth-child(1) b").css("backgroundImage","url(/img/index-1-1.png)")
+        $(".select-get span:nth-child(2) b").css("backgroundImage","url(/img/index-1-2.png)")
+        $(".select-get span:nth-child(3) b").css("backgroundImage","url(/img/index-2-3.png)")
+        $(".select-get span:nth-child(4) b").css("backgroundImage","url(/img/index-1-4.png)")
+        $(".select-get span:nth-child(5) b").css("backgroundImage","url(/img/index-1-5.png)")
+    });
+    $(".select-get span:nth-child(4)").click(function () {
+        $(".a-2").empty().append($("#template-2-3").html());
+        $(".select-get span").css("backgroundImage", "url(/img/bg-index-_05.png)");
+        $(this).css("backgroundImage", "url(/img/bg-index-_03.png)");
+        $(".select-get span:nth-child(1) p").css("color","#333333")
+        $(".select-get span:nth-child(1) b").css("backgroundImage","url(/img/index-1-1.png)")
+        $(".select-get span:nth-child(2) b").css("backgroundImage","url(/img/index-1-2.png)")
+        $(".select-get span:nth-child(3) b").css("backgroundImage","url(/img/index-1-3.png)")
+        $(".select-get span:nth-child(4) b").css("backgroundImage","url(/img/index-2-4.png)")
+        $(".select-get span:nth-child(5) b").css("backgroundImage","url(/img/index-1-5.png)")
+    });
+    $(".select-get span:nth-child(5)").click(function () {
+        $(".a-2").empty().append($("#template-2-4").html());
+        $(".select-get span").css("backgroundImage", "url(/img/bg-index-_05.png)");
+        $(this).css("backgroundImage", "url(/img/bg-index-_03.png)");
+        $(".select-get span:nth-child(1) p").css("color","#333333")
+        $(".select-get span:nth-child(1) b").css("backgroundImage","url(/img/index-1-1.png)")
+        $(".select-get span:nth-child(2) b").css("backgroundImage","url(/img/index-1-2.png)")
+        $(".select-get span:nth-child(3) b").css("backgroundImage","url(/img/index-1-3.png)")
+        $(".select-get span:nth-child(4) b").css("backgroundImage","url(/img/index-1-4.png)")
+        $(".select-get span:nth-child(5) b").css("backgroundImage","url(/img/index-2-5.png)")
+    });
 </script>
 </html>

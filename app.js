@@ -24,7 +24,7 @@ app.use(session({
 
 app.use(express.static("./public"));
 // app.use("/avatar",express.static("./avatar"));
-
+app.get("/guide",newRouter.guide);
 app.post("/info_avater", newRouter.info_avater);
 app.get("/charge_tel", newRouter.charge_Tel);
 // 显示首页

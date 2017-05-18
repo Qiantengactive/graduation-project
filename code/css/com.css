@@ -106,19 +106,16 @@ input {
     margin: 0.2rem;
     height: 50vh;
 }
-
-
 /*yindaoye*/
 .guide-welcome{
     width: 100vw;
     height: 100vh;
-    background-image: url("/img/welcome-bg.png");
+    background-image: url("../img/welcome-bg.png");
     background-size: cover;
     background-repeat:no-repeat ;
     position: relative;
     z-index: 90;
 }
-
 .guide-welcome img{
     position: absolute;
     top: 0;

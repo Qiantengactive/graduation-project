@@ -1,6 +1,9 @@
 var huinong_info = require("../models/huinong_info.js");
 var isOkCode = require("../models/isOkCode");
 
+exports.guide=function (req, res, next) {
+  res.render("guide.ejs");
+};
 exports.showIndex = function (req, res, next) {
     var get_all = [];
     var seller_all = [];

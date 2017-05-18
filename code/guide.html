@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
+    <title>Title</title>
+    <script src="js/resize.js"></script>
+    <script src="js/jquery.min.js"></script>
+    <link rel="stylesheet" href="css/swiper-3.4.2.min.css">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            font-weight: normal;
+            list-style: none;
+            font-family: 微软雅黑;
+            text-decoration: none;
+            box-sizing: border-box;
+        }
+
+        body {
+            background: #f3f3f4;
+        }
+
+        .contian-wrapper {
+            width: 100%;
+            position: relative;
+        }
+
+        .contian {
+            width: 7.5rem;
+            height: 100vh;
+            margin: 0 auto;
+        }
+
+
+        /*欢迎页*/
+        /*.welcome {*/
+        /*position: fixed;*/
+        /*top: 0;*/
+        /*left: 0;*/
+        /*z-index: 2000;*/
+        /*width: 100%;*/
+        /*height: 100vh;*/
+        /*background: url("/img/welcome.png") no-repeat;*/
+        /*background-size: 100% 100%;*/
+        /*}*/
+
+    </style>
+    <link href="css/com.css" rel="stylesheet" type="text/css">
+</head>
+<body>
+<div class="contian-wrapper">
+    <div class="contian">
+        <div class="guide-welcome">
+            <img src="img/wel-logo_01.png" alt="">
+        </div>
+    </div>
+</div>
+</body>
+<script src="js/swiper-3.4.2.min.js"></script>
+<script>
+    $(document).ready(function () {
+//        $(".welcome").fadeOut(2000);
+        setTimeout(function () {
+            alert(1);
+        },2000)
+
+    })
+</script>
+</html>
