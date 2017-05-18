@@ -21,9 +21,6 @@ exports.showIndex = function (req, res, next) {
                 result[z]["get_all"][q].number = q;
                 get_all.push(result[z]["get_all"][q]);
             }
-            if (get_all.length > 4) {
-                get_all.splice(4, get_all.length);
-            }
 
         }
         /*出售信息*/
@@ -37,9 +34,6 @@ exports.showIndex = function (req, res, next) {
                 result[i]["seller_all"][j].tel = result[i]["info_tel"];
                 result[i]["seller_all"][j].number = j;
                 seller_all.push(result[i]["seller_all"][j]);
-            }
-            if (seller_all.length > 4) {
-                seller_all.splice(4, get_all.length);
             }
         }
         data = {
