@@ -126,3 +126,36 @@ input {
     z-index: 100;
     width: 7.5rem;
 }
+.login-body-submit {
+    display: block;
+    width: 6.7rem;
+    height: 0.8rem;
+    font-size: 0.3rem;
+    outline: none;
+    border: none;
+    border-radius: 0.1rem;
+    color: #ffffff;
+    background: #59bb43;
+    margin: 0.85rem auto 2rem auto;
+    -webkit-appearance: none; /*去除系统默认的样式*/
+    -webkit-tap-highlight-color: rgba(0, 0, 0, 0); /* 点击高亮的颜色*/
+}
+.contian-info-body-info-1{
+    color: #a3a3a3;
+}
+
+.contian-info-body-info-1::-webkit-input-placeholder {
+    color: #a3a3a3;
+}
+
+.contian-info-body-info-1:-moz-placeholder {
+    color: #a3a3a3;
+}
+
+.contian-info-body-info-1::-moz-placeholder {
+    color: #a3a3a3;
+}
+
+.contian-info-body-info-1:-ms-input-placeholder {
+    color: #a3a3a3;
+}

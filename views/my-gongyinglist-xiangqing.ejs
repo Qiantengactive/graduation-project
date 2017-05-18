@@ -343,15 +343,17 @@
                         <% if(my_seller.type == 1){ %>
                         <span class="contian-info-body-info-1">蔬菜</span>
                         <% } %>
-                        <% if(my_seller.type == 2){ %>
+                        <% else if(my_seller.type == 2){ %>
                         <span class="contian-info-body-info-1">水果</span>
-                        <% } %>
-                        <% if(my_seller.type == 3){ %>
-                        <span class="contian-info-body-info-1">禽类</span>
-                        <% } %>
-                        <% if(my_seller.type == 4){ %>
+                        <% else if(my_seller.type == 3){ %>
+                        <span class="contian-info-body-info-1">禽畜</span>
+                        <% else if(my_seller.type == 4){ %>
                         <span class="contian-info-body-info-1">水产</span>
+                        <% } else{ %>
+                        <span class="contian-info-body-info-1">其他</span>
                         <% } %>
+
+
                     </p>
                     <p>
                         <span class="contian-info-body-title-1">供求单价：</span>

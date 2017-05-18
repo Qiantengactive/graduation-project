@@ -97,6 +97,6 @@ app.get("/delete_my-qiugoulist-xiangqing", newRouter.delete_my_qiugoulistxiangqi
 app.get("/modify_my-qiugoulist-xiangqing", newRouter.modify_my_qiugoulistxiangqing);
 
 app.use(function (req, res) {
-    res.render('404.ejs');
+    res.redirect('/');
 });
 app.listen(3030);

@@ -256,7 +256,23 @@
                     </p>
                     <p>
                         <span class="contian-info-body-title-1">求购类别：</span>
-                        <span class="contian-info-body-info-1"><%=my_get.type%></span>
+
+                            <% if(my_get.type == 1){ %>
+                             <span class="contian-info-body-info-1">蔬菜</span>
+                            <% } %>
+                            <% if(my_get.type == 2){ %>
+                            <span class="contian-info-body-info-1">水果</span>
+                            <% } %>
+                            <% if(my_get.type == 3){ %>
+                            <span class="contian-info-body-info-1">禽畜</span>
+                            <% } %>
+                            <% if(my_get.type == 4){ %>
+                            <span class="contian-info-body-info-1">水产</span>
+                            <% } %>
+                            <% if(my_get.type == 5){ %>
+                            <span class="contian-info-body-info-1">其他</span>
+                            <% } %>
+                        </span>
                     </p>
                     <p>
                         <span class="contian-info-body-title-1">求购单价：</span>

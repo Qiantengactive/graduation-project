@@ -1,8 +1,8 @@
 var huinong_info = require("../models/huinong_info.js");
 var isOkCode = require("../models/isOkCode");
 
-exports.guide=function (req, res, next) {
-  res.render("guide.ejs");
+exports.guide = function (req, res, next) {
+    res.render("guide.ejs");
 };
 exports.showIndex = function (req, res, next) {
     var get_all = [];
@@ -24,12 +24,10 @@ exports.showIndex = function (req, res, next) {
 
         }
         /*出售信息*/
-        // console.log(result[0]["seller_all"][0].seller_name);
         for (var i = 0; i < result.length; i++) {
             if (result[i]["seller_all"].length == 0) {
                 continue;
             }
-            console.log(result[i].seller_all);
             for (var j = 0; j < result[i]["seller_all"].length; j++) {
                 result[i]["seller_all"][j].tel = result[i]["info_tel"];
                 result[i]["seller_all"][j].number = j;
@@ -146,7 +144,6 @@ exports.my_get_info = function (req, res, next) {
         var my_get_details = {
             my_get: obj
         };
-        console.log(obj);
         res.render('my-qiugoulist-xiangqing.ejs', my_get_details);
     });
 };
@@ -155,14 +152,10 @@ exports.seller_info = function (req, res, next) {
     /*判断是不是自己操作如果是则传回1 显示修改 删除按钮*/
     var IS_ME = 1;
     var NOT_IS_ME = 0;
-
-    // console.log(req.query);
-    // { tel: '17600000001', number: '0' }
     var user_data = {
         "info_tel": req.query.tel
     };
     huinong_info.login_info(user_data, function (err, result) {
-        // console.log(result[0]["seller_all"][req.query.number]);
         // 插入数据
         var obj = result[0]["seller_all"][req.query.number];
         obj.info_tel = result[0].info_tel;
@@ -198,7 +191,6 @@ exports.seller_info = function (req, res, next) {
         var obj_data = {
             seller_obj: obj
         };
-        // console.log(obj);
         res.render("gongyingxiangqing.ejs", obj_data);
     });
 }
@@ -207,7 +199,6 @@ exports.get_info = function (req, res, next) {
     /*判断是不是自己操作如果是则传回1 显示修改 删除按钮*/
     var IS_ME = 1;
     var NOT_IS_ME = 0;
-    // console.log(req.query);
     // { tel: '17600000001', number: '0' }==>查询数据 返回相应内容渲染到详情页面
     var user_data = {
         "info_tel": req.query.tel
@@ -266,7 +257,6 @@ exports.do_login = function (req, res, next) {
         /*查询数据返回密码(info_pwd)*/
         //数据库密码
         // var database_pwd = result[0]["info_pwd"];
-        // console.log(result);
         if (result.length == 0) {
             // 取不到数据 登录失败==>继续登录
             res.render("/login.ejs");
@@ -437,7 +427,6 @@ exports.charge_Tel = function (req, res, next) {
             // 错误
             // res.json({"code": 1});
         }
-        console.log(result);
         if (result.length == 0) {
             // 不存在不可以登录
             res.json({"code": 0});
@@ -621,16 +610,19 @@ exports.my_seller = function (req, res, next) {
             console.log("do页面失败");
         }
         var seller_all = result[0].seller_all;
+
         if (seller_all.length != 0) {
             for (var i = 0; i < seller_all.length; i++) {
                 seller_all[i].tel = result[0].info_tel;
             }
         }
+        seller_all.tel=info_tel;
         // console.log(seller_all);
         /*查询数据库显示 个人资料*/
         var my_data = {
             seller_all: seller_all
         };
+        console.log(seller_all.tel);
         res.render('my-gongyinglist.ejs', my_data);
     })
 };
@@ -653,6 +645,7 @@ exports.my_get = function (req, res, next) {
                 get_all[i].tel = result[0].info_tel;
             }
         }
+        get_all.tel=info_tel;
         /*查询数据库显示 个人资料*/
         my_data = {
             get_all: get_all
@@ -696,7 +689,6 @@ exports.modify_get_goods = function (req, res, next) {
     huinong_info.login_info(user_tel_data, function (err, result) {
         result[0].get_all[number].tel = tel;
         result[0].get_all[number].number = number;
-        // console.log(result[0].get_all[number]);
         res.render("modify_get_goods.ejs", {
             modify_get_goods: result[0].get_all[number]
         })
@@ -704,7 +696,6 @@ exports.modify_get_goods = function (req, res, next) {
 };
 /*求购数据确认修改成功 ==》 1.success页面 2.渲染到修改页面继续修改*/
 exports.affirm_modify_get_goods = function (req, res, next) {
-    // console.log(req.query);
     var tel = req.query.tel;
     var number = req.query.number;
 
@@ -714,7 +705,7 @@ exports.affirm_modify_get_goods = function (req, res, next) {
     } else if (req.query.qglb == "水果") {
         req.query.qglb = 2;
 
-    } else if (req.query.qglb == "禽类") {
+    } else if (req.query.qglb == "禽畜") {
         req.query.qglb = 3;
 
     } else if (req.query.qglb == "水产") {
@@ -769,7 +760,6 @@ exports.affirm_modify_get_goods = function (req, res, next) {
 };
 
 exports.delete_seller_goods = function (req, res, next) {
-    // console.log(req.query);
     // 查询数据 ==》删除时数据
 
     var number = req.query.delete_seller_number;
@@ -778,7 +768,6 @@ exports.delete_seller_goods = function (req, res, next) {
         info_tel: tel
     };
     huinong_info.login_info(user_tel_data, function (err, result) {
-        // console.log(result[0].seller_all[number]);
         // 删除数据
         huinong_info.delet_seller_id(tel, result[0].seller_all[number], function (err) {
             if (err) {
@@ -795,7 +784,6 @@ exports.delete_seller_goods = function (req, res, next) {
 /*修改供应信息*/
 exports.modify_seller_goods = function (req, res, next) {
     // 传递数据到前台进行渲染
-    // console.log(req.query);
     var number = req.query.modify_seller_number;
     var tel = req.query.detele_tel;
     var user_tel_data = {
@@ -834,9 +822,6 @@ exports.modify_seller_goods = function (req, res, next) {
 
 /*求购数据确认修改成功 ==》 1.success页面 2.渲染到修改页面继续修改*/
 exports.affirm_modify_seller_goods = function (req, res, next) {
-    // console.log(req.query);
-    console.log("affirm_modify_seller_goods");
-    console.log(req.query.number);
     var tel = req.body.tel;
     var number = req.body.number;
 
@@ -846,7 +831,7 @@ exports.affirm_modify_seller_goods = function (req, res, next) {
     } else if (req.body.qglb == "水果") {
         req.body.qglb = 2;
 
-    } else if (req.body.qglb == "禽类") {
+    } else if (req.body.qglb == "禽畜") {
         req.body.qglb = 3;
 
     } else if (req.body.qglb == "水产") {
@@ -885,7 +870,8 @@ exports.affirm_modify_seller_goods = function (req, res, next) {
         huinong_info.delet_seller_id(tel, result[0].seller_all[number], function (err, result) {
             if (err) {
                 console.log("错误");
-            };
+            }
+            ;
             //添加数据
             huinong_info.add_seller_id(tel, seller_data, function (err) {
                 if (err) {
@@ -910,7 +896,6 @@ exports.delete_my_qiugoulistxiangqing = function (req, res, next) {
         info_tel: tel
     };
     huinong_info.login_info(user_tel_data, function (err, result) {
-        // console.log(result[0].get_all[number]);
         // 删除数据
         huinong_info.delet_get_id(tel, result[0].get_all[number], function (err) {
             if (err) {
