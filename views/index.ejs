@@ -724,11 +724,11 @@
                     </a>
                 </div>
                 <div class="home-body-gongying-select select-seller">
-                    <span class="select  be-select-2-span" id="home-body-gongying-select-1">
+                    <span class="select   be-select-2-span" id="home-body-gongying-select-1">
                         <b class="select-1 be-select-2-img"></b>
                         <p class="p1 be-select-2-p" id="p1">全部</p>
                     </span>
-                    <span class="select ">
+                    <span class="select">
                         <b class="select-1"></b>
                         <p class="p2">水果</p>
                     </span>
@@ -1087,7 +1087,7 @@
         //设置其他为灰色
         //设置自己的背景图片为彩色
 
-        $(".select-seller span").css("backgroundImage", "url(/img/bg-index-_05.png)");
+        $(".select-seller span:not(.select-seller span:nth-child(1))").css("backgroundImage", "url(/img/bg-index-_05.png)");
         $(this).css("backgroundImage", "url(/img/bg-index-_03.png)");
         $(".select-seller span:nth-child(1) p").css("color", "#fff")
         $(".select-seller span:nth-child(1) b").css("backgroundImage", "url(/img/index-2-1.png)")
