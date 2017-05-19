@@ -214,6 +214,9 @@
 <script src="/js/baidu.js"></script>
 <script>
     $(function () {
+        <% if(not){ %>
+              alert("您的密码错误,请输入正确密码");
+        <% } %>
         var a = false;
         /*判断是否注册过*/
         $("#tel").blur(function () {
@@ -243,7 +246,7 @@
                 b = false;
                 return;
             }
-            if(!a){
+            if (!a) {
                 var info_tel = $("#tel").val().trim();
                 $.get("/charge_tel?info_tel=" + info_tel, function (data) {
                     /*1注册*/

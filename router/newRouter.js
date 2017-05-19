@@ -233,7 +233,9 @@ exports.judge_login = function (req, res, next) {
     } else {
         // 2 不存在 进行登录
         /*跳转到login页面进行登录*/
-        res.render('login.ejs');
+        res.render('login.ejs', {
+            "not": 0
+        });
     }
 };
 
@@ -257,18 +259,28 @@ exports.do_login = function (req, res, next) {
         /*查询数据返回密码(info_pwd)*/
         //数据库密码
         // var database_pwd = result[0]["info_pwd"];
+        // console.log(result);
         if (result.length == 0) {
             // 取不到数据 登录失败==>继续登录
-            res.render("/login.ejs");
+            res.render("login.ejs", {
+                "not": 1
+            });
         } else {
-            // 登录成功
-            console.log("登录成功");
-            // 设置session
+
             req.session.login = 1;
             req.session.user_tel = result[0].info_tel;
 
             res.redirect("/my/" + result[0].info_tel);
         }
+        // } else {
+        //     // 登录成功
+        //     console.log("登录成功");
+        //     // 设置session
+        //     req.session.login = 1;
+        //     req.session.user_tel = result[0].info_tel;
+        //
+        //     res.redirect("/my/" + result[0].info_tel);
+        // }
     });
 };
 /*注册功能
@@ -443,7 +455,9 @@ exports.edit_seller_goods = function (req, res, next) {
     var info_tel = req.params["info_tel"];
     /*没有电话 没登录*/
     if (!info_tel) {
-        res.render("login.ejs");
+        res.render("login.ejs", {
+            "not": 0
+        });
     }
     var data_tel = {
         info_tel: info_tel
@@ -459,7 +473,9 @@ exports.edit_seller_goods_index = function (req, res, next) {
         res.redirect("/bianjigongyingxinxi/" + req.session.user_tel);
     } else {
         // console.log("登录吧");
-        res.render("login.ejs");
+        res.render("login.ejs", {
+            "not": 0
+        });
     }
 };
 
@@ -528,7 +544,9 @@ exports.edit_get_goods = function (req, res, next) {
     var info_tel = req.params["info_tel"];
 
     if (!info_tel) {
-        res.render("login.ejs");
+        res.render("login.ejs", {
+            "not": 0
+        });
     }
     ;
     var data_tel = {
@@ -592,7 +610,9 @@ exports.edit_get_goods_index = function (req, res, next) {
         res.redirect("/bianjiqiugouxinxi/" + req.session.user_tel);
     } else {
         // console.log("登录吧");
-        res.render("login.ejs");
+        res.render("login.ejs", {
+            "not": 0
+        });
     }
 };
 
@@ -616,7 +636,7 @@ exports.my_seller = function (req, res, next) {
                 seller_all[i].tel = result[0].info_tel;
             }
         }
-        seller_all.tel=info_tel;
+        seller_all.tel = info_tel;
         // console.log(seller_all);
         /*查询数据库显示 个人资料*/
         var my_data = {
@@ -645,7 +665,7 @@ exports.my_get = function (req, res, next) {
                 get_all[i].tel = result[0].info_tel;
             }
         }
-        get_all.tel=info_tel;
+        get_all.tel = info_tel;
         /*查询数据库显示 个人资料*/
         my_data = {
             get_all: get_all
