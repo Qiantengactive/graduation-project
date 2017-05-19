@@ -2,7 +2,6 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="347262c5-a42e-4619-9bba-3b27bdc010ce" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/router/newRouter.js" afterPath="$PROJECT_DIR$/router/newRouter.js" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/views/login.ejs" afterPath="$PROJECT_DIR$/views/login.ejs" />
     </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
@@ -28,7 +27,7 @@
         <entry file="file://$PROJECT_DIR$/router/newRouter.js">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="123">
-              <caret line="227" column="0" lean-forward="false" selection-start-line="227" selection-start-column="0" selection-end-line="227" selection-end-column="0" />
+              <caret line="917" column="22" lean-forward="false" selection-start-line="917" selection-start-column="17" selection-end-line="917" selection-end-column="22" />
               <folding />
             </state>
           </provider>
@@ -87,8 +86,8 @@
       <file leaf-file-name="login.ejs" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/views/login.ejs">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="257">
-              <caret line="216" column="17" lean-forward="false" selection-start-line="216" selection-start-column="17" selection-end-line="216" selection-end-column="17" />
+            <state relative-caret-position="197">
+              <caret line="212" column="41" lean-forward="true" selection-start-line="212" selection-start-column="41" selection-end-line="212" selection-end-column="41" />
               <folding />
             </state>
           </provider>
@@ -159,12 +158,12 @@
       <find>qgdt-search-text-2</find>
       <find>red</find>
       <find>render</find>
-      <find>login</find>
       <find>not</find>
       <find>res.render(&quot;login.ejs&quot;</find>
       <find>login.ejs</find>
       <find>show</find>
       <find>con</find>
+      <find>login</find>
       <find>rela</find>
     </findStrings>
     <replaceStrings>
@@ -591,12 +590,12 @@
       <workItem from="1495106220898" duration="1139000" />
       <workItem from="1495109704796" duration="5507000" />
       <workItem from="1495122132603" duration="213000" />
-      <workItem from="1495191591266" duration="6011000" />
+      <workItem from="1495191591266" duration="6236000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="440606000" />
+    <option name="totallyTimeSpent" value="440831000" />
   </component>
   <component name="TodoView" selected-index="3">
     <todo-panel id="selected-file">
@@ -953,6 +952,14 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/views/my.ejs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="2116">
+          <caret line="548" column="36" lean-forward="true" selection-start-line="548" selection-start-column="36" selection-end-line="548" selection-end-column="36" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/app.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="206">
@@ -964,7 +971,7 @@
     <entry file="file://$PROJECT_DIR$/router/newRouter.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="123">
-          <caret line="227" column="0" lean-forward="false" selection-start-line="227" selection-start-column="0" selection-end-line="227" selection-end-column="0" />
+          <caret line="917" column="22" lean-forward="false" selection-start-line="917" selection-start-column="17" selection-end-line="917" selection-end-column="22" />
           <folding />
         </state>
       </provider>
@@ -977,18 +984,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/views/my.ejs">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="2116">
-          <caret line="548" column="36" lean-forward="true" selection-start-line="548" selection-start-column="36" selection-end-line="548" selection-end-column="36" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/views/login.ejs">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="257">
-          <caret line="216" column="17" lean-forward="false" selection-start-line="216" selection-start-column="17" selection-end-line="216" selection-end-column="17" />
+        <state relative-caret-position="197">
+          <caret line="212" column="41" lean-forward="true" selection-start-line="212" selection-start-column="41" selection-end-line="212" selection-end-column="41" />
           <folding />
         </state>
       </provider>
