@@ -233,7 +233,7 @@ exports.judge_login = function (req, res, next) {
     } else {
         // 2 不存在 进行登录
         /*跳转到login页面进行登录*/
-        res.render('login.ejs', {
+        res.render('login.ejs',{
             "not": 0
         });
     }

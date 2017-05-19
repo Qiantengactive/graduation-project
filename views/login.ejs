@@ -214,9 +214,10 @@
 <script src="/js/baidu.js"></script>
 <script>
     $(function () {
-        <% if(not){ %>
+        if(<%=not%>){
+
               alert("您的密码错误,请输入正确密码");
-        <% } %>
+        }
         var a = false;
         /*判断是否注册过*/
         $("#tel").blur(function () {
