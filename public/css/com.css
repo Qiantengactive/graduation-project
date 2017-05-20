@@ -1,5 +1,7 @@
 .top-bg {
-    background-color: #59bb43;
+    background-image: url("/img/top-bg.png");
+    background-repeat: repeat-x;
+    /*background-size: 100%;*/
 }
 
 .bg-search-l {
