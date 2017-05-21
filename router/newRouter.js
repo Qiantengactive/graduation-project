@@ -21,7 +21,6 @@ exports.showIndex = function (req, res, next) {
                 result[z]["get_all"][q].number = q;
                 get_all.push(result[z]["get_all"][q]);
             }
-
         }
         /*出售信息*/
         for (var i = 0; i < result.length; i++) {

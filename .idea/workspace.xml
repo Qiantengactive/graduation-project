@@ -2,7 +2,18 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="347262c5-a42e-4619-9bba-3b27bdc010ce" name="Default" comment="">
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/img/back_04.png" afterPath="$PROJECT_DIR$/public/img/back_04.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/img/login-body-img.png" afterPath="$PROJECT_DIR$/public/img/login-body-img.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/img/my-img.png" afterPath="$PROJECT_DIR$/public/img/my-img.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/css/com.css" afterPath="$PROJECT_DIR$/public/css/com.css" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/css/index.css" afterPath="$PROJECT_DIR$/public/css/index.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/router/newRouter.js" afterPath="$PROJECT_DIR$/router/newRouter.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/views/bianjigongyingxinxi.ejs" afterPath="$PROJECT_DIR$/views/bianjigongyingxinxi.ejs" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/views/gongyingxiangqing.ejs" afterPath="$PROJECT_DIR$/views/gongyingxiangqing.ejs" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/views/modify_seller_goods.ejs" afterPath="$PROJECT_DIR$/views/modify_seller_goods.ejs" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/views/my-gongyinglist-xiangqing.ejs" afterPath="$PROJECT_DIR$/views/my-gongyinglist-xiangqing.ejs" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/views/my.ejs" afterPath="$PROJECT_DIR$/views/my.ejs" />
     </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
     <ignored path="$PROJECT_DIR$/temp/" />
@@ -23,70 +34,21 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="back_04.png" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/public/img/back_04.png">
-          <provider selected="true" editor-type-id="images">
-            <state />
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="back_03-2.png" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/public/img/back_03-2.png">
-          <provider selected="true" editor-type-id="images">
-            <state />
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="back_03.png" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/public/img/back_03.png">
-          <provider selected="true" editor-type-id="images">
-            <state />
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="arrow_05.png" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/public/img/arrow_05.png">
-          <provider selected="true" editor-type-id="images">
-            <state />
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="arr_03.png" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/public/img/arr_03.png">
-          <provider selected="true" editor-type-id="images">
-            <state />
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="welcome.png" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/public/img/welcome.png">
-          <provider selected="true" editor-type-id="images">
-            <state />
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="wel-logo_01.png" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/public/img/wel-logo_01.png">
-          <provider selected="true" editor-type-id="images">
-            <state />
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="index.ejs" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/views/index.ejs">
+      <file leaf-file-name="modify_seller_goods.ejs" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/views/modify_seller_goods.ejs">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="285">
-              <caret line="19" column="7" lean-forward="true" selection-start-line="0" selection-start-column="0" selection-end-line="567" selection-end-column="0" />
+            <state relative-caret-position="181">
+              <caret line="451" column="30" lean-forward="true" selection-start-line="451" selection-start-column="30" selection-end-line="451" selection-end-column="30" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="index.css" pinned="false" current-in-tab="true">
+      <file leaf-file-name="index.css" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/public/css/index.css">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1065">
-              <caret line="0" column="8149" lean-forward="true" selection-start-line="0" selection-start-column="8149" selection-end-line="0" selection-end-column="8149" />
+            <state relative-caret-position="111">
+              <caret line="172" column="37" lean-forward="false" selection-start-line="172" selection-start-column="34" selection-end-line="172" selection-end-column="37" />
               <folding />
             </state>
           </provider>
@@ -95,8 +57,78 @@
       <file leaf-file-name="com.css" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/public/css/com.css">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="2535">
-              <caret line="169" column="0" lean-forward="false" selection-start-line="169" selection-start-column="0" selection-end-line="170" selection-end-column="0" />
+            <state relative-caret-position="302">
+              <caret line="119" column="46" lean-forward="false" selection-start-line="119" selection-start-column="46" selection-end-line="119" selection-end-column="46" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="bianjigongyingxinxi.ejs" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/views/bianjigongyingxinxi.ejs">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="196">
+              <caret line="438" column="62" lean-forward="true" selection-start-line="438" selection-start-column="62" selection-end-line="438" selection-end-column="62" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="bianjiqiugouxinxi.ejs" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/views/bianjiqiugouxinxi.ejs">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="180">
+              <caret line="12" column="11" lean-forward="true" selection-start-line="12" selection-start-column="11" selection-end-line="12" selection-end-column="11" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="regist.ejs" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/views/regist.ejs">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="-1830">
+              <caret line="16" column="32" lean-forward="true" selection-start-line="16" selection-start-column="32" selection-end-line="16" selection-end-column="32" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="my-gongyinglist.ejs" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/views/my-gongyinglist.ejs">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="150">
+              <caret line="10" column="24" lean-forward="true" selection-start-line="10" selection-start-column="24" selection-end-line="10" selection-end-column="24" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="my-gongyinglist-xiangqing.ejs" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/views/my-gongyinglist-xiangqing.ejs">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="-89">
+              <caret line="383" column="30" lean-forward="true" selection-start-line="383" selection-start-column="30" selection-end-line="383" selection-end-column="30" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="my-qiugoulist.ejs" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/views/my-qiugoulist.ejs">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="150">
+              <caret line="10" column="24" lean-forward="true" selection-start-line="10" selection-start-column="24" selection-end-line="10" selection-end-column="24" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="gongyingxiangqing.ejs" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/views/gongyingxiangqing.ejs">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="226">
+              <caret line="447" column="16" lean-forward="true" selection-start-line="447" selection-start-column="16" selection-end-line="447" selection-end-column="16" />
               <folding />
             </state>
           </provider>
@@ -114,9 +146,6 @@
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>input</find>
-      <find>/gongying-success</find>
-      <find>delet</find>
       <find>script</find>
       <find>my-body-top-2-info-title-2</find>
       <find>link</find>
@@ -144,6 +173,9 @@
       <find>seller_desc</find>
       <find>affirm_modify_seller_goods_info</find>
       <find>url</find>
+      <find>png</find>
+      <find>pho</find>
+      <find>photo</find>
     </findStrings>
     <replaceStrings>
       <replace>huinong_info</replace>
@@ -187,21 +219,15 @@
         <option value="$PROJECT_DIR$/code/css/com.css" />
         <option value="$PROJECT_DIR$/app.js" />
         <option value="$PROJECT_DIR$/public/js/baidu.js" />
-        <option value="$PROJECT_DIR$/public/css/com.css" />
         <option value="$PROJECT_DIR$/models/db.js" />
         <option value="$PROJECT_DIR$/router/newRouter.js" />
-        <option value="$PROJECT_DIR$/views/bianjigongyingxinxi.ejs" />
         <option value="$PROJECT_DIR$/views/bianjiqiugouxinxi.ejs" />
         <option value="$PROJECT_DIR$/views/gongying-success.ejs" />
         <option value="$PROJECT_DIR$/views/gongyingdating.ejs" />
-        <option value="$PROJECT_DIR$/views/gongyingxiangqing.ejs" />
         <option value="$PROJECT_DIR$/views/guide.ejs" />
         <option value="$PROJECT_DIR$/views/login.ejs" />
         <option value="$PROJECT_DIR$/views/modify_get_goods.ejs" />
-        <option value="$PROJECT_DIR$/views/modify_seller_goods.ejs" />
-        <option value="$PROJECT_DIR$/views/my.ejs" />
         <option value="$PROJECT_DIR$/views/my-gongyinglist.ejs" />
-        <option value="$PROJECT_DIR$/views/my-gongyinglist-xiangqing.ejs" />
         <option value="$PROJECT_DIR$/views/my-qiugoulist.ejs" />
         <option value="$PROJECT_DIR$/views/my-qiugoulist-xiangqing.ejs" />
         <option value="$PROJECT_DIR$/views/qiugou-success.ejs" />
@@ -213,7 +239,13 @@
         <option value="$PROJECT_DIR$/views/404.ejs" />
         <option value="$PROJECT_DIR$/public/css/1.css" />
         <option value="$PROJECT_DIR$/views/index.ejs" />
+        <option value="$PROJECT_DIR$/views/my.ejs" />
         <option value="$PROJECT_DIR$/public/css/index.css" />
+        <option value="$PROJECT_DIR$/views/modify_seller_goods.ejs" />
+        <option value="$PROJECT_DIR$/views/gongyingxiangqing.ejs" />
+        <option value="$PROJECT_DIR$/public/css/com.css" />
+        <option value="$PROJECT_DIR$/views/bianjigongyingxinxi.ejs" />
+        <option value="$PROJECT_DIR$/views/my-gongyinglist-xiangqing.ejs" />
       </list>
     </option>
   </component>
@@ -253,7 +285,6 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <PATH>
@@ -308,6 +339,24 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
+              <option name="myItemId" value="img" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="graduation-project" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="graduation-project" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="public" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
               <option name="myItemId" value="css" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
@@ -328,6 +377,7 @@
           </PATH>
         </subPane>
       </pane>
+      <pane id="Scope" />
       <pane id="Scratches" />
     </panes>
   </component>
@@ -579,12 +629,15 @@
       <workItem from="1495340618762" duration="1103000" />
       <workItem from="1495344967589" duration="86000" />
       <workItem from="1495346629094" duration="593000" />
-      <workItem from="1495347957172" duration="4417000" />
+      <workItem from="1495347957172" duration="4577000" />
+      <workItem from="1495371123972" duration="211000" />
+      <workItem from="1495371370598" duration="1695000" />
+      <workItem from="1495386601908" duration="2657000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="458705000" />
+    <option name="totallyTimeSpent" value="463428000" />
   </component>
   <component name="TodoView" selected-index="3">
     <todo-panel id="selected-file">
@@ -597,13 +650,13 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1382" height="744" extended-state="6" />
-    <editor active="true" />
+    <editor active="false" />
     <layout>
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.22098215" sideWeight="0.5" order="1" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.22098215" sideWeight="0.5" order="1" side_tool="false" content_ui="combo" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3295082" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3295082" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.3622951" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.22131148" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3295082" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
@@ -646,11 +699,6 @@
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/public/img/index-2-2.png">
-      <provider selected="true" editor-type-id="images">
-        <state />
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/code/css/com.css">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="1740">
@@ -704,7 +752,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="90">
           <caret line="6" column="41" lean-forward="false" selection-start-line="6" selection-start-column="41" selection-end-line="6" selection-end-column="41" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -712,15 +759,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="45">
           <caret line="3" column="0" lean-forward="false" selection-start-line="3" selection-start-column="0" selection-end-line="3" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="100">
-          <caret line="92" column="77" lean-forward="true" selection-start-line="92" selection-start-column="77" selection-end-line="92" selection-end-column="77" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -728,15 +766,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="648">
           <caret line="844" column="14" lean-forward="true" selection-start-line="844" selection-start-column="14" selection-end-line="844" selection-end-column="14" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/views/bianjiqiugouxinxi.ejs">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="180">
-          <caret line="12" column="11" lean-forward="true" selection-start-line="12" selection-start-column="11" selection-end-line="12" selection-end-column="11" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -744,7 +773,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="150">
           <caret line="10" column="24" lean-forward="true" selection-start-line="10" selection-start-column="24" selection-end-line="10" selection-end-column="24" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -752,15 +780,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="150">
           <caret line="10" column="24" lean-forward="true" selection-start-line="10" selection-start-column="24" selection-end-line="10" selection-end-column="24" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/views/gongyingxiangqing.ejs">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="150">
-          <caret line="10" column="24" lean-forward="true" selection-start-line="10" selection-start-column="24" selection-end-line="10" selection-end-column="24" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -768,7 +787,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="150">
           <caret line="10" column="24" lean-forward="true" selection-start-line="10" selection-start-column="24" selection-end-line="10" selection-end-column="24" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -776,7 +794,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="150">
           <caret line="10" column="24" lean-forward="true" selection-start-line="10" selection-start-column="24" selection-end-line="10" selection-end-column="24" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -784,47 +801,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="150">
           <caret line="10" column="24" lean-forward="true" selection-start-line="10" selection-start-column="24" selection-end-line="10" selection-end-column="24" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/views/modify_seller_goods.ejs">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="120">
-          <caret line="10" column="24" lean-forward="true" selection-start-line="10" selection-start-column="24" selection-end-line="10" selection-end-column="24" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/views/my.ejs">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="150">
-          <caret line="10" column="24" lean-forward="true" selection-start-line="10" selection-start-column="24" selection-end-line="10" selection-end-column="24" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/views/my-gongyinglist.ejs">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="150">
-          <caret line="10" column="24" lean-forward="true" selection-start-line="10" selection-start-column="24" selection-end-line="10" selection-end-column="24" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/views/my-gongyinglist-xiangqing.ejs">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="150">
-          <caret line="10" column="24" lean-forward="true" selection-start-line="10" selection-start-column="24" selection-end-line="10" selection-end-column="24" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/views/my-qiugoulist.ejs">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="150">
-          <caret line="10" column="24" lean-forward="true" selection-start-line="10" selection-start-column="24" selection-end-line="10" selection-end-column="24" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -832,7 +808,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="150">
           <caret line="10" column="24" lean-forward="true" selection-start-line="10" selection-start-column="24" selection-end-line="10" selection-end-column="24" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -840,7 +815,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="150">
           <caret line="10" column="24" lean-forward="true" selection-start-line="10" selection-start-column="24" selection-end-line="10" selection-end-column="24" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -848,7 +822,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="150">
           <caret line="10" column="24" lean-forward="true" selection-start-line="10" selection-start-column="24" selection-end-line="10" selection-end-column="24" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -856,23 +829,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="150">
           <caret line="10" column="24" lean-forward="true" selection-start-line="10" selection-start-column="24" selection-end-line="10" selection-end-column="24" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/views/regist.ejs">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="150">
-          <caret line="10" column="24" lean-forward="true" selection-start-line="10" selection-start-column="24" selection-end-line="10" selection-end-column="24" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/views/regist_info.ejs">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="150">
-          <caret line="10" column="24" lean-forward="true" selection-start-line="10" selection-start-column="24" selection-end-line="10" selection-end-column="24" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -880,15 +836,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="225">
           <caret line="15" column="23" lean-forward="true" selection-start-line="15" selection-start-column="23" selection-end-line="15" selection-end-column="23" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/views/bianjigongyingxinxi.ejs">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="45">
-          <caret line="3" column="0" lean-forward="false" selection-start-line="3" selection-start-column="0" selection-end-line="3" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -896,7 +843,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="195">
           <caret line="13" column="6" lean-forward="true" selection-start-line="13" selection-start-column="6" selection-end-line="13" selection-end-column="6" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -931,11 +877,6 @@
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/public/img/bg-index-_03.png">
-      <provider selected="true" editor-type-id="images">
-        <state />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/public/img/back_04.png">
       <provider selected="true" editor-type-id="images">
         <state />
       </provider>
@@ -975,26 +916,124 @@
         <state />
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/public/css/com.css">
+    <entry file="file://$PROJECT_DIR$/views/regist_info.ejs">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="2535">
-          <caret line="169" column="0" lean-forward="false" selection-start-line="169" selection-start-column="0" selection-end-line="170" selection-end-column="0" />
+        <state relative-caret-position="150">
+          <caret line="10" column="24" lean-forward="false" selection-start-line="10" selection-start-column="24" selection-end-line="10" selection-end-column="24" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="341">
+          <caret line="92" column="77" lean-forward="true" selection-start-line="92" selection-start-column="77" selection-end-line="92" selection-end-column="77" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/public/img/back_04.png">
+      <provider selected="true" editor-type-id="images">
+        <state />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/public/img/my-img.png">
+      <provider selected="true" editor-type-id="images">
+        <state />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/views/my.ejs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="210">
+          <caret line="416" column="37" lean-forward="true" selection-start-line="416" selection-start-column="37" selection-end-line="416" selection-end-column="37" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/views/index.ejs">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="285">
-          <caret line="19" column="7" lean-forward="true" selection-start-line="0" selection-start-column="0" selection-end-line="567" selection-end-column="0" />
+        <state relative-caret-position="3675">
+          <caret line="245" column="47" lean-forward="true" selection-start-line="245" selection-start-column="47" selection-end-line="245" selection-end-column="47" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/public/css/index.css">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1065">
-          <caret line="0" column="8149" lean-forward="true" selection-start-line="0" selection-start-column="8149" selection-end-line="0" selection-end-column="8149" />
+        <state relative-caret-position="111">
+          <caret line="172" column="37" lean-forward="false" selection-start-line="172" selection-start-column="34" selection-end-line="172" selection-end-column="37" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/views/modify_seller_goods.ejs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="181">
+          <caret line="451" column="30" lean-forward="true" selection-start-line="451" selection-start-column="30" selection-end-line="451" selection-end-column="30" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/views/gongyingxiangqing.ejs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="226">
+          <caret line="447" column="16" lean-forward="true" selection-start-line="447" selection-start-column="16" selection-end-line="447" selection-end-column="16" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/public/css/com.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="302">
+          <caret line="119" column="46" lean-forward="false" selection-start-line="119" selection-start-column="46" selection-end-line="119" selection-end-column="46" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/views/bianjigongyingxinxi.ejs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="196">
+          <caret line="438" column="62" lean-forward="true" selection-start-line="438" selection-start-column="62" selection-end-line="438" selection-end-column="62" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/views/bianjiqiugouxinxi.ejs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="180">
+          <caret line="12" column="11" lean-forward="true" selection-start-line="12" selection-start-column="11" selection-end-line="12" selection-end-column="11" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/views/my-gongyinglist.ejs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="150">
+          <caret line="10" column="24" lean-forward="true" selection-start-line="10" selection-start-column="24" selection-end-line="10" selection-end-column="24" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/views/my-qiugoulist.ejs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="150">
+          <caret line="10" column="24" lean-forward="true" selection-start-line="10" selection-start-column="24" selection-end-line="10" selection-end-column="24" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/views/my-gongyinglist-xiangqing.ejs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-89">
+          <caret line="383" column="30" lean-forward="true" selection-start-line="383" selection-start-column="30" selection-end-line="383" selection-end-column="30" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/views/regist.ejs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-1830">
+          <caret line="16" column="32" lean-forward="true" selection-start-line="16" selection-start-column="32" selection-end-line="16" selection-end-column="32" />
           <folding />
         </state>
       </provider>

@@ -117,7 +117,7 @@ input {
     left: 0;
     width: 100vw;
     height: 100vh;
-    background-image: url("/img/welcome-bg.png");
+    background-image: url("/img/welcome-bg.jpg");
     background-size: cover;
     background-repeat:no-repeat ;
     z-index: 900;
@@ -165,7 +165,11 @@ input {
     color: #a3a3a3;
 }
 
-
 .sel-goods{
     border: 0.01rem solid #c1c1c1;
+}
+
+
+.sele-photo{
+    border: 1px solid #c1c1c1;
 }
