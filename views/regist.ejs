@@ -176,10 +176,16 @@
             }, "json")
         });
         $(".login-body-submit").click(function () {
-            if (a) {
-                $("form").submit();
-            }else{
-                alert('请再次点击');
+            if (!$("#info_tel").val()) {
+                alert("请您输入手机号进行注册");
+                return;
+            } else {
+                if (a) {
+                    $("form").submit();
+                }
+                else {
+                    alert('您此次操作不对，请再试');
+                }
             }
         });
     })
