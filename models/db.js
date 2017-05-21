@@ -1,6 +1,6 @@
 var mongoose=require("mongoose");
-// mongoose.connect("mongodb://localhost/yunongguanjia5");
-mongoose.connect("mongodb://localhost/new");
+mongoose.connect("mongodb://localhost/yunongguanjia5");
+// mongoose.connect("mongodb://localhost/new");
 
 var db=mongoose.connection;
 
