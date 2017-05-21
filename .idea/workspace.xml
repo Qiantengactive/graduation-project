@@ -2,28 +2,9 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="347262c5-a42e-4619-9bba-3b27bdc010ce" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/views/404.ejs" afterPath="$PROJECT_DIR$/views/404.ejs" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/views/bianjigongyingxinxi.ejs" afterPath="$PROJECT_DIR$/views/bianjigongyingxinxi.ejs" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/views/bianjiqiugouxinxi.ejs" afterPath="$PROJECT_DIR$/views/bianjiqiugouxinxi.ejs" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/views/gongying-success.ejs" afterPath="$PROJECT_DIR$/views/gongying-success.ejs" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/views/gongyingdating.ejs" afterPath="$PROJECT_DIR$/views/gongyingdating.ejs" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/views/gongyingxiangqing.ejs" afterPath="$PROJECT_DIR$/views/gongyingxiangqing.ejs" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/views/guide.ejs" afterPath="$PROJECT_DIR$/views/guide.ejs" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/css/index.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/views/index.ejs" afterPath="$PROJECT_DIR$/views/index.ejs" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/views/login.ejs" afterPath="$PROJECT_DIR$/views/login.ejs" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/views/modify_get_goods.ejs" afterPath="$PROJECT_DIR$/views/modify_get_goods.ejs" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/views/modify_seller_goods.ejs" afterPath="$PROJECT_DIR$/views/modify_seller_goods.ejs" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/views/my-gongyinglist-xiangqing.ejs" afterPath="$PROJECT_DIR$/views/my-gongyinglist-xiangqing.ejs" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/views/my-gongyinglist.ejs" afterPath="$PROJECT_DIR$/views/my-gongyinglist.ejs" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/views/my-qiugoulist-xiangqing.ejs" afterPath="$PROJECT_DIR$/views/my-qiugoulist-xiangqing.ejs" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/views/my-qiugoulist.ejs" afterPath="$PROJECT_DIR$/views/my-qiugoulist.ejs" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/views/my.ejs" afterPath="$PROJECT_DIR$/views/my.ejs" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/views/qiugou-success.ejs" afterPath="$PROJECT_DIR$/views/qiugou-success.ejs" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/views/qiugoudating.ejs" afterPath="$PROJECT_DIR$/views/qiugoudating.ejs" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/views/qiugouxiangqing.ejs" afterPath="$PROJECT_DIR$/views/qiugouxiangqing.ejs" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/views/regist.ejs" afterPath="$PROJECT_DIR$/views/regist.ejs" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/views/regist_info.ejs" afterPath="$PROJECT_DIR$/views/regist_info.ejs" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/views/search.ejs" afterPath="$PROJECT_DIR$/views/search.ejs" />
     </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
     <ignored path="$PROJECT_DIR$/temp/" />
@@ -44,101 +25,80 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="my-qiugoulist-xiangqing.ejs" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/views/my-qiugoulist-xiangqing.ejs">
+      <file leaf-file-name="back_04.png" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/public/img/back_04.png">
+          <provider selected="true" editor-type-id="images">
+            <state />
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="back_03-2.png" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/public/img/back_03-2.png">
+          <provider selected="true" editor-type-id="images">
+            <state />
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="back_03.png" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/public/img/back_03.png">
+          <provider selected="true" editor-type-id="images">
+            <state />
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="arrow_05.png" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/public/img/arrow_05.png">
+          <provider selected="true" editor-type-id="images">
+            <state />
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="arr_03.png" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/public/img/arr_03.png">
+          <provider selected="true" editor-type-id="images">
+            <state />
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="welcome.png" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/public/img/welcome.png">
+          <provider selected="true" editor-type-id="images">
+            <state />
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="wel-logo_01.png" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/public/img/wel-logo_01.png">
+          <provider selected="true" editor-type-id="images">
+            <state />
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="index.ejs" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/views/index.ejs">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="150">
-              <caret line="10" column="24" lean-forward="true" selection-start-line="10" selection-start-column="24" selection-end-line="10" selection-end-column="24" />
+            <state relative-caret-position="-4599">
+              <caret line="244" column="9" lean-forward="true" selection-start-line="244" selection-start-column="9" selection-end-line="244" selection-end-column="9" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="qiugou-success.ejs" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/views/qiugou-success.ejs">
+      <file leaf-file-name="index.css" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/public/css/index.css">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="150">
-              <caret line="10" column="24" lean-forward="true" selection-start-line="10" selection-start-column="24" selection-end-line="10" selection-end-column="24" />
+            <state relative-caret-position="180">
+              <caret line="12" column="18" lean-forward="false" selection-start-line="12" selection-start-column="18" selection-end-line="12" selection-end-column="18" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="qiugoudating.ejs" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/views/qiugoudating.ejs">
+      <file leaf-file-name="com.css" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/public/css/com.css">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="150">
-              <caret line="10" column="24" lean-forward="true" selection-start-line="10" selection-start-column="24" selection-end-line="10" selection-end-column="24" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="qiugouxiangqing.ejs" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/views/qiugouxiangqing.ejs">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="150">
-              <caret line="10" column="24" lean-forward="true" selection-start-line="10" selection-start-column="24" selection-end-line="10" selection-end-column="24" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="regist.ejs" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/views/regist.ejs">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="150">
-              <caret line="10" column="24" lean-forward="true" selection-start-line="10" selection-start-column="24" selection-end-line="10" selection-end-column="24" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="regist_info.ejs" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/views/regist_info.ejs">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="150">
-              <caret line="10" column="24" lean-forward="true" selection-start-line="10" selection-start-column="24" selection-end-line="10" selection-end-column="24" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="search.ejs" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/views/search.ejs">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="225">
-              <caret line="15" column="23" lean-forward="true" selection-start-line="15" selection-start-column="23" selection-end-line="15" selection-end-column="23" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="404.ejs" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/views/404.ejs">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="195">
-              <caret line="13" column="6" lean-forward="true" selection-start-line="13" selection-start-column="6" selection-end-line="13" selection-end-column="6" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="bianjigongyingxinxi.ejs" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/views/bianjigongyingxinxi.ejs">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="45">
-              <caret line="3" column="0" lean-forward="false" selection-start-line="3" selection-start-column="0" selection-end-line="3" selection-end-column="0" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="my-qiugoulist.ejs" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/views/my-qiugoulist.ejs">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="150">
-              <caret line="10" column="24" lean-forward="true" selection-start-line="10" selection-start-column="24" selection-end-line="10" selection-end-column="24" />
+            <state relative-caret-position="2535">
+              <caret line="169" column="0" lean-forward="false" selection-start-line="169" selection-start-column="0" selection-end-line="170" selection-end-column="0" />
               <folding />
             </state>
           </provider>
@@ -156,7 +116,6 @@
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>user_add</find>
       <find>input</find>
       <find>/gongying-success</find>
       <find>delet</find>
@@ -186,6 +145,7 @@
       <find>Title</find>
       <find>seller_desc</find>
       <find>affirm_modify_seller_goods_info</find>
+      <find>url</find>
     </findStrings>
     <replaceStrings>
       <replace>huinong_info</replace>
@@ -205,7 +165,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/code/my-qiugoulist-xiangqing.html" />
         <option value="$PROJECT_DIR$/code/qiugouxiangqing.html" />
         <option value="$PROJECT_DIR$/models/yanzhengma.js" />
         <option value="$PROJECT_DIR$/models/isOkCode.js" />
@@ -234,7 +193,6 @@
         <option value="$PROJECT_DIR$/public/css/com.css" />
         <option value="$PROJECT_DIR$/models/db.js" />
         <option value="$PROJECT_DIR$/router/newRouter.js" />
-        <option value="$PROJECT_DIR$/views/index.ejs" />
         <option value="$PROJECT_DIR$/views/bianjigongyingxinxi.ejs" />
         <option value="$PROJECT_DIR$/views/bianjiqiugouxinxi.ejs" />
         <option value="$PROJECT_DIR$/views/gongying-success.ejs" />
@@ -256,6 +214,8 @@
         <option value="$PROJECT_DIR$/views/regist_info.ejs" />
         <option value="$PROJECT_DIR$/views/search.ejs" />
         <option value="$PROJECT_DIR$/views/404.ejs" />
+        <option value="$PROJECT_DIR$/public/css/1.css" />
+        <option value="$PROJECT_DIR$/views/index.ejs" />
       </list>
     </option>
   </component>
@@ -319,6 +279,38 @@
             </PATH_ELEMENT>
             <PATH_ELEMENT>
               <option name="myItemId" value="views" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="graduation-project" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="graduation-project" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="public" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="graduation-project" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="graduation-project" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="public" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="css" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -589,12 +581,12 @@
       <workItem from="1495340618762" duration="1103000" />
       <workItem from="1495344967589" duration="86000" />
       <workItem from="1495346629094" duration="593000" />
-      <workItem from="1495347957172" duration="2429000" />
+      <workItem from="1495347957172" duration="4022000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="456717000" />
+    <option name="totallyTimeSpent" value="458310000" />
   </component>
   <component name="TodoView" selected-index="3">
     <todo-panel id="selected-file">
@@ -606,7 +598,7 @@
     </todo-panel>
   </component>
   <component name="ToolWindowManager">
-    <frame x="-8" y="-8" width="1382" height="744" extended-state="6" />
+    <frame x="-8" y="-8" width="1382" height="744" extended-state="7" />
     <editor active="true" />
     <layout>
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.22098215" sideWeight="0.5" order="1" side_tool="false" content_ui="combo" />
@@ -656,92 +648,6 @@
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/public/img/swiper-_06.png">
-      <provider selected="true" editor-type-id="images">
-        <state />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/public/img/welcome.png">
-      <provider selected="true" editor-type-id="images">
-        <state />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/public/js/underscore-modify.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/code/js/jquery.min.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/code/img/welcome.png">
-      <provider selected="true" editor-type-id="images">
-        <state />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/code/img/welcome-bg.png">
-      <provider selected="true" editor-type-id="images">
-        <state />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/code/img/wel-logo_01.png">
-      <provider selected="true" editor-type-id="images">
-        <state />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/node_modules/ejs/lib/ejs.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="157">
-          <caret line="594" column="18" lean-forward="false" selection-start-line="594" selection-start-column="18" selection-end-line="594" selection-end-column="18" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/public/img/icon-body-_04.png">
-      <provider selected="true" editor-type-id="images">
-        <state />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/public/img/icon-body-_02.png">
-      <provider selected="true" editor-type-id="images">
-        <state />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/public/img/iconn1.png">
-      <provider selected="true" editor-type-id="images">
-        <state />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/public/img/bg-index-_05.png">
-      <provider selected="true" editor-type-id="images">
-        <state />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/public/img/bg-index-_03.png">
-      <provider selected="true" editor-type-id="images">
-        <state />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/public/img/index-2-1.png">
-      <provider selected="true" editor-type-id="images">
-        <state />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/public/img/index-1-2.png">
-      <provider selected="true" editor-type-id="images">
-        <state />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/public/img/index-1-1.png">
-      <provider selected="true" editor-type-id="images">
-        <state />
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/public/img/index-2-2.png">
       <provider selected="true" editor-type-id="images">
         <state />
@@ -796,13 +702,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/public/css/com.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1081">
-          <caret line="169" column="0" lean-forward="false" selection-start-line="169" selection-start-column="0" selection-end-line="170" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/models/huinong_info.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="90">
@@ -831,14 +730,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="648">
           <caret line="844" column="14" lean-forward="true" selection-start-line="844" selection-start-column="14" selection-end-line="844" selection-end-column="14" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/views/index.ejs">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="45">
-          <caret line="3" column="4" lean-forward="false" selection-start-line="3" selection-start-column="4" selection-end-line="9" selection-end-column="46" />
           <folding />
         </state>
       </provider>
@@ -1007,6 +898,105 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="195">
           <caret line="13" column="6" lean-forward="true" selection-start-line="13" selection-start-column="6" selection-end-line="13" selection-end-column="6" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/public/img/home-header-submit-button__03-1.png">
+      <provider selected="true" editor-type-id="images">
+        <state />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/public/img/home-header-submit-button__03-2.png">
+      <provider selected="true" editor-type-id="images">
+        <state />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/public/img/home-header-submit-button__04.png">
+      <provider selected="true" editor-type-id="images">
+        <state />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/public/img/home-header-submit-button__03.png">
+      <provider selected="true" editor-type-id="images">
+        <state />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/public/img/home-gongying-_03.png">
+      <provider selected="true" editor-type-id="images">
+        <state />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/public/img/bg-index-_05.png">
+      <provider selected="true" editor-type-id="images">
+        <state />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/public/img/bg-index-_03.png">
+      <provider selected="true" editor-type-id="images">
+        <state />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/public/img/back_04.png">
+      <provider selected="true" editor-type-id="images">
+        <state />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/public/img/back_03-2.png">
+      <provider selected="true" editor-type-id="images">
+        <state />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/public/img/back_03.png">
+      <provider selected="true" editor-type-id="images">
+        <state />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/public/img/arrow_05.png">
+      <provider selected="true" editor-type-id="images">
+        <state />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/public/img/arr_03.png">
+      <provider selected="true" editor-type-id="images">
+        <state />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/public/img/wel-logo_01.png">
+      <provider selected="true" editor-type-id="images">
+        <state />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/public/img/welcome-bg.png">
+      <provider selected="true" editor-type-id="images">
+        <state />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/public/img/welcome.png">
+      <provider selected="true" editor-type-id="images">
+        <state />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/public/css/com.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="2535">
+          <caret line="169" column="0" lean-forward="false" selection-start-line="169" selection-start-column="0" selection-end-line="170" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/public/css/index.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="180">
+          <caret line="12" column="18" lean-forward="false" selection-start-line="12" selection-start-column="18" selection-end-line="12" selection-end-column="18" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/views/index.ejs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-4599">
+          <caret line="244" column="9" lean-forward="true" selection-start-line="244" selection-start-column="9" selection-end-line="244" selection-end-column="9" />
           <folding />
         </state>
       </provider>
