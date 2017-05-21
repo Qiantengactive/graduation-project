@@ -94,17 +94,17 @@ body {
 }
 
 .swiper-slide-1 {
-    background: url("img/index_banner-_01.png") no-repeat;
+    background: url("/img/index_banner-_01.png") no-repeat;
     background-size: 100% 100%;
 }
 
 .swiper-slide-2 {
-    background: url("img/index_banner-_02.png") no-repeat;
+    background: url("/img/index_banner-_02.png") no-repeat;
     background-size: 100% 100%;
 }
 
 .swiper-slide-3 {
-    background: url("img/index_banner-_03.png") no-repeat;
+    background: url("/img/index_banner-_03.png") no-repeat;
     background-size: 100% 100%;
 }
 
