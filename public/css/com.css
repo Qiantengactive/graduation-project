@@ -164,3 +164,8 @@ input {
 .contian-info-body-info-1:-ms-input-placeholder {
     color: #a3a3a3;
 }
+
+
+.sel-goods{
+    border: 0.01rem solid #c1c1c1;
+}
