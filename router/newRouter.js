@@ -124,8 +124,6 @@ exports.my_seller_info = function (req, res, next) {
         var my_seller_details = {
             my_seller: obj
         };
-
-        // /modify_gongyingxiangqing?detele_tel=<%= seller_obj.info_tel %>&modify_seller_number=<%= seller_obj.number %>"
         res.render('my-gongyinglist-xiangqing', my_seller_details);
     });
 };
@@ -844,7 +842,6 @@ exports.modify_seller_goods = function (req, res, next) {
 exports.affirm_modify_seller_goods = function (req, res, next) {
     var tel = req.body.tel;
     var number = req.body.number;
-
     /*type判断*/
     if (req.body.qglb == "蔬菜") {
         req.body.qglb = 1;
@@ -861,7 +858,7 @@ exports.affirm_modify_seller_goods = function (req, res, next) {
     }
 
     var seller_data = {
-        "seller_desc": req.body.form_id,
+        "seller_desc": req.body.seller_desc,
         "seller_name": req.body.gysp,
         "type": req.body.qglb,
         "seller_weight": req.body.qgsl,
