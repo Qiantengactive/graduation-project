@@ -172,3 +172,6 @@ input {
 .sele-photo{
     border: 1px solid #c1c1c1;
 }
+.btn-i{
+    display: inline-block;
+}
